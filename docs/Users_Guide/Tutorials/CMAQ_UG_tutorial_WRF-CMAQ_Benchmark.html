@@ -1,42 +1,330 @@
+
 <!DOCTYPE html>
 
-<html lang="en" data-content_root="../../">
+
+<html lang="en" data-content_root="../../" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>WRF-CMAQ Benchmarking Tutorial &#8212; CMAQ_Documentation 0.2 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=2bf1fcf8" />
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
     <script src="../../_static/documentation_options.js?v=10f1778b"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Users_Guide/Tutorials/CMAQ_UG_tutorial_WRF-CMAQ_Benchmark';</script>
     <link rel="canonical" href="https://jbrunto.github.io/CMAQ_Docs_v55/Users_Guide/Tutorials/CMAQ_UG_tutorial_WRF-CMAQ_Benchmark.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">CMAQ_Documentation 0.2 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">WRF-CMAQ Benchmarking Tutorial</a></li> 
-      </ul>
-    </div>  
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CMAQ_Documentation 0.2 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Docs_README.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Docs_README.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">WRF-CMAQ Benchmarking Tutorial</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="wrf-cmaq-benchmarking-tutorial">
-<h1>WRF-CMAQ Benchmarking Tutorial<a class="headerlink" href="#wrf-cmaq-benchmarking-tutorial" title="Link to this heading">¶</a></h1>
+<h1>WRF-CMAQ Benchmarking Tutorial<a class="headerlink" href="#wrf-cmaq-benchmarking-tutorial" title="Link to this heading">#</a></h1>
 <p><strong>Purpose</strong>: This guide describes how to install and run the WRF-CMAQ test case, which serves two different purposes. The first being to familiarize the user with the WRF-CMAQ suite of programs and how they work together, and secondly to verify the installation of the software on your system via benchmarking.</p>
 <p>Users are highly encouraged to work through the <a class="reference internal" href="#../CMAQ_UG_tutorial_benchmark.md"><span class="xref myst">CMAQ Benchmark Tutorial</span></a> and <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/">WRF Installation Guide</a> to familiarize themselves with the individuals program components.</p>
 <p>The following support software are required for compiling and running WRF-CMAQ.</p>
@@ -57,14 +345,14 @@ https://github.com/USEPA/CMAQ/tree/main/DOCS/Users_Guide/Tutorials</strong></p>
 <li><p>400 GB hard drive storage</p></li>
 </ol>
 <section id="installing-wrf-cmaq">
-<h2>Installing WRF-CMAQ<a class="headerlink" href="#installing-wrf-cmaq" title="Link to this heading">¶</a></h2>
+<h2>Installing WRF-CMAQ<a class="headerlink" href="#installing-wrf-cmaq" title="Link to this heading">#</a></h2>
 <p>In the directory where you would like to install WRF-CMAQ, create the directory issuing the following command to clone the EPA GitHub repository for CMAQv5.5:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="n">main</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">USEPA</span><span class="o">/</span><span class="n">CMAQ</span><span class="o">.</span><span class="n">git</span> <span class="n">CMAQ_REPO</span>
 </pre></div>
 </div>
 </section>
 <section id="check-out-a-new-branch-in-the-cmaq-repository">
-<h2>Check Out a new Branch in the CMAQ Repository<a class="headerlink" href="#check-out-a-new-branch-in-the-cmaq-repository" title="Link to this heading">¶</a></h2>
+<h2>Check Out a new Branch in the CMAQ Repository<a class="headerlink" href="#check-out-a-new-branch-in-the-cmaq-repository" title="Link to this heading">#</a></h2>
 <p>Checking out a new branch is a good idea even if you are not doing code development, per se. It is likely that you will want to retrieve new updates in the future, and an easy way to do this is through the main branch in the git repo. Thus, it is beneficial to leave it unperturbed if possible.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">CMAQ_REPO</span>
 <span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">my_branch</span>
@@ -72,7 +360,7 @@ https://github.com/USEPA/CMAQ/tree/main/DOCS/Users_Guide/Tutorials</strong></p>
 </div>
 </section>
 <section id="building-and-running-in-a-user-specified-directory-outside-of-the-repository">
-<h2>Building and running in a user-specified directory outside of the repository<a class="headerlink" href="#building-and-running-in-a-user-specified-directory-outside-of-the-repository" title="Link to this heading">¶</a></h2>
+<h2>Building and running in a user-specified directory outside of the repository<a class="headerlink" href="#building-and-running-in-a-user-specified-directory-outside-of-the-repository" title="Link to this heading">#</a></h2>
 <p>In the top level of CMAQ_REPO, the bldit_project.csh script will automatically replicate the CMAQ folder structure and copy every build and run script out of the repository so that you may modify them freely without version control.</p>
 <p>In bldit_project.csh, modify the variable $CMAQ_HOME to identify the folder that you would like to install the CMAQ package under. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">CMAQ_HOME</span> <span class="o">=</span> <span class="p">[</span><span class="n">your_install_path</span><span class="p">]</span><span class="o">/</span><span class="n">CMAQv5</span><span class="mf">.5</span>
@@ -85,7 +373,7 @@ https://github.com/USEPA/CMAQ/tree/main/DOCS/Users_Guide/Tutorials</strong></p>
 <p>CMAQ_HOME will be the location of your newly created WRF_CMAQ project directory (where you will compile and run WRF-CMAQ).</p>
 </section>
 <section id="configuring-the-wrf-cmaq-environment">
-<h2>Configuring the WRF-CMAQ Environment<a class="headerlink" href="#configuring-the-wrf-cmaq-environment" title="Link to this heading">¶</a></h2>
+<h2>Configuring the WRF-CMAQ Environment<a class="headerlink" href="#configuring-the-wrf-cmaq-environment" title="Link to this heading">#</a></h2>
 <p>Compiling WRF-CMAQ requires several libraries and include files to be made avialable. Because these libraries and include files are not expected to be in standard locations, users need to explicitly provide the path to this via environmental variables.</p>
 <p>The environmental variables that need to be set are located in the config_cmaq.csh script, located at the root of the WRF-CMAQ project directory.</p>
 <p>Note: WRF source code expects that you have already collated the netCDF-C and netCDF-Fortran libraires into one directory. If you have done so, please follow the example instructions:</p>
@@ -142,10 +430,10 @@ Enter selection [1-75] : -------------------------------------------------------
 </ul>
 </section>
 <section id="compiling-wrf-cmaq">
-<h2>Compiling WRF-CMAQ<a class="headerlink" href="#compiling-wrf-cmaq" title="Link to this heading">¶</a></h2>
+<h2>Compiling WRF-CMAQ<a class="headerlink" href="#compiling-wrf-cmaq" title="Link to this heading">#</a></h2>
 <p><em>Before proceeding, it should be noted that building the ICON and BCON executables are optional steps when working specifically with the benchmark data. This is because the initial condition and boundary condition files have been provided for you within the benchmark data set. For further information on these preprocessors please reference <a class="reference internal" href="../CMAQ_UG_ch04_model_inputs.html"><span class="std std-doc">Chapter 4</span></a>.</em></p>
 <section id="modify-the-bldit-cctm-csh">
-<h3>Modify the bldit_cctm.csh<a class="headerlink" href="#modify-the-bldit-cctm-csh" title="Link to this heading">¶</a></h3>
+<h3>Modify the bldit_cctm.csh<a class="headerlink" href="#modify-the-bldit-cctm-csh" title="Link to this heading">#</a></h3>
 <p>Navigate to the WRF-CMAQ project directory and from there navigate to the CCTM/scripts directory.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">CCTM</span><span class="o">/</span><span class="n">scripts</span>
 </pre></div>
@@ -174,7 +462,7 @@ Enter selection [1-75] : -------------------------------------------------------
 <a class="reference internal" href="../Appendix/CMAQ_UG_appendixA_model_options.html"><span class="std std-doc">Appendix A</span></a>.</p>
 </section>
 <section id="run-the-bldit-cctm-csh-script">
-<h3>Run the bldit_cctm.csh script<a class="headerlink" href="#run-the-bldit-cctm-csh-script" title="Link to this heading">¶</a></h3>
+<h3>Run the bldit_cctm.csh script<a class="headerlink" href="#run-the-bldit-cctm-csh-script" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">bldit_cctm</span><span class="o">.</span><span class="n">csh</span> <span class="n">gcc</span> <span class="o">|&amp;</span> <span class="n">tee</span> <span class="n">bldit_cctm_twoway</span><span class="o">.</span><span class="n">log</span>
 </pre></div>
 </div>
@@ -193,7 +481,7 @@ Enter selection [1-75] : -------------------------------------------------------
 <p>If the User sees this, the WRF-CMAQ model has been successfully compiled and built. If not, the User should double check the library paths above and try again. If it still fails, please reach post on the <a class="reference external" href="https://forum.cmascenter.org/c/wrf-cmaq">CMAS Forum</a>.</p>
 </section>
 <section id="install-the-wrf-cmaq-reference-input-benchmark-data">
-<h3>Install the WRF-CMAQ reference input benchmark data<a class="headerlink" href="#install-the-wrf-cmaq-reference-input-benchmark-data" title="Link to this heading">¶</a></h3>
+<h3>Install the WRF-CMAQ reference input benchmark data<a class="headerlink" href="#install-the-wrf-cmaq-reference-input-benchmark-data" title="Link to this heading">#</a></h3>
 <p>Download the CMAQ two day reference input data from the <a class="reference external" href="https://drive.google.com/drive/folders/1AFUB-4kzIXXoZr4hOHNBqRvy9JQ9_MDp?usp=sharing">CMAS Center Data Warehouse Google Drive</a> or from the <a class="reference external" href="https://cmaq-release-benchmark-data-for-easy-download.s3.amazonaws.com/index.html#v5_5/">CMAS Center Data Warehouse Amazon Web Services S3 Bucket</a>, file CMAQv5.4_2018_12NE3_Benchmark_2Day_Input.tar.gz. The CMAQ benchmark test case is a two day simulation for July 1-2 2018 on a 100 column x 105 row x 35 layer 12-km resolution domain over the northeast U.S.</p>
 <ul class="simple">
 <li><p>Use the gdrive command if you are downloading the dataset from Google Drive.</p></li>
@@ -212,7 +500,7 @@ tar xvzf CMAQv5.4_2018_12NE3_Benchmark_2Day_Input.tar.gz
 </section>
 </section>
 <section id="running-the-wrf-cmaq-model">
-<h2>Running the WRF-CMAQ model<a class="headerlink" href="#running-the-wrf-cmaq-model" title="Link to this heading">¶</a></h2>
+<h2>Running the WRF-CMAQ model<a class="headerlink" href="#running-the-wrf-cmaq-model" title="Link to this heading">#</a></h2>
 <p>Note, in this new coupled model design, the namelist is used to modify settings for WRF.
 Environment variables such as WRF_CMAQ_FREQ are no longer used.<br />
 The following commonly modified namelist options for WRF-CMAQ are specified in the run script.</p>
@@ -275,7 +563,7 @@ set NPROCS =    32
 </pre></div>
 </div>
 <section id="verify-that-the-run-was-successful">
-<h3>Verify that the run was successful<a class="headerlink" href="#verify-that-the-run-was-successful" title="Link to this heading">¶</a></h3>
+<h3>Verify that the run was successful<a class="headerlink" href="#verify-that-the-run-was-successful" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>look for the output directory</p></li>
 </ul>
@@ -292,69 +580,114 @@ set NPROCS =    32
 </section>
 
 
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">WRF-CMAQ Benchmarking Tutorial</a><ul>
-<li><a class="reference internal" href="#installing-wrf-cmaq">Installing WRF-CMAQ</a></li>
-<li><a class="reference internal" href="#check-out-a-new-branch-in-the-cmaq-repository">Check Out a new Branch in the CMAQ Repository</a></li>
-<li><a class="reference internal" href="#building-and-running-in-a-user-specified-directory-outside-of-the-repository">Building and running in a user-specified directory outside of the repository</a></li>
-<li><a class="reference internal" href="#configuring-the-wrf-cmaq-environment">Configuring the WRF-CMAQ Environment</a></li>
-<li><a class="reference internal" href="#compiling-wrf-cmaq">Compiling WRF-CMAQ</a><ul>
-<li><a class="reference internal" href="#modify-the-bldit-cctm-csh">Modify the bldit_cctm.csh</a></li>
-<li><a class="reference internal" href="#run-the-bldit-cctm-csh-script">Run the bldit_cctm.csh script</a></li>
-<li><a class="reference internal" href="#install-the-wrf-cmaq-reference-input-benchmark-data">Install the WRF-CMAQ reference input benchmark data</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#running-the-wrf-cmaq-model">Running the WRF-CMAQ model</a><ul>
-<li><a class="reference internal" href="#verify-that-the-run-was-successful">Verify that the run was successful</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../../_sources/Users_Guide/Tutorials/CMAQ_UG_tutorial_WRF-CMAQ_Benchmark.md.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<search id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-wrf-cmaq">Installing WRF-CMAQ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-out-a-new-branch-in-the-cmaq-repository">Check Out a new Branch in the CMAQ Repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-and-running-in-a-user-specified-directory-outside-of-the-repository">Building and running in a user-specified directory outside of the repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuring-the-wrf-cmaq-environment">Configuring the WRF-CMAQ Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compiling-wrf-cmaq">Compiling WRF-CMAQ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-the-bldit-cctm-csh">Modify the bldit_cctm.csh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-bldit-cctm-csh-script">Run the bldit_cctm.csh script</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-wrf-cmaq-reference-input-benchmark-data">Install the WRF-CMAQ reference input benchmark data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-wrf-cmaq-model">Running the WRF-CMAQ model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-that-the-run-was-successful">Verify that the run was successful</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/Users_Guide/Tutorials/CMAQ_UG_tutorial_WRF-CMAQ_Benchmark.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
     </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, CMAQ Developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
     </div>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">CMAQ_Documentation 0.2 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">WRF-CMAQ Benchmarking Tutorial</a></li> 
-      </ul>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
     </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2024, CMAQ Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
-    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>

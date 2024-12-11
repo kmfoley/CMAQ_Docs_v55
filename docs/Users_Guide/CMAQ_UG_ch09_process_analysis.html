@@ -1,47 +1,335 @@
+
 <!DOCTYPE html>
 
-<html lang="en" data-content_root="../">
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>9. Process Analysis and Budget &#8212; CMAQ_Documentation 0.2 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
     <script src="../_static/documentation_options.js?v=10f1778b"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Users_Guide/CMAQ_UG_ch09_process_analysis';</script>
     <link rel="canonical" href="https://jbrunto.github.io/CMAQ_Docs_v55/Users_Guide/CMAQ_UG_ch09_process_analysis.html" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="../index.html">CMAQ_Documentation 0.2 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">9. Process Analysis and Budget</a></li> 
-      </ul>
-    </div>  
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CMAQ_Documentation 0.2 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Docs_README.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="Tutorials/README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Developers_Guide/CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Docs_README.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="Tutorials/README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Developers_Guide/CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">9. Process Analysis and Budget</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="CMAQ_UG_ch08_analysis_tools.html"><span class="std std-doc">&lt;&lt; Previous Chapter</span></a> - <a class="reference internal" href="README.html"><span class="std std-doc">Home</span></a> - <a class="reference internal" href="CMAQ_UG_ch10_HDDM-3D.html"><span class="std std-doc">Next Chapter &gt;&gt;</span></a></p>
 <!-- END COMMENT -->
 <section id="process-analysis-and-budget">
-<h1>9. Process Analysis and Budget<a class="headerlink" href="#process-analysis-and-budget" title="Link to this heading">¶</a></h1>
+<h1>9. Process Analysis and Budget<a class="headerlink" href="#process-analysis-and-budget" title="Link to this heading">#</a></h1>
 <section id="introduction">
-<h2>9.1 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<h2>9.1 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>Most applications of CMAQ, as well as other 3-D grid models, output concentration fields of chemical species of interest at selected time steps that reflect the cumulative effect of all processes (emissions, chemical reaction, transport, etc.) that act on the chemical species over the time period. Several features in CMAQ allow the user to better understand which processes impacted model predicted concentrations. These options provide information about specific chemical and physical processes to provide insight about contribution and uncertainty. Process Analysis (PA) is a technique for separating out and quantifying the contributions of individual physical and chemical processes to the changes in the predicted concentrations of a pollutant. PA does <em>not</em> have to be activated in a CMAQ simulation but including PA in a simulation during runtime provides additional information that can be useful in interpreting CMAQ results. PA has two components: Integrated Process Rate (IPR) analysis and Integrated Reaction Rate (IRR) analysis. IPR analysis quantifies the net change in species through physical processes of advection, diffusion, emissions, dry deposition, aerosol processes, and cloud processes. It also provides an estimate of the overall impact of chemical processes. IRR analysis allows the output of individual chemical reaction rates or user-specified combinations of chemical reactions and species cycling. The Budget Tool (section 9.7) is an optional ascii output that summarizes the domain-wide process changes gathered by the IPR analysis.</p>
 <p>As a tool for identifying the relative importance of individual chemical and physical processes, PA has many applications, including:</p>
 <ul class="simple">
@@ -54,7 +342,7 @@
 <p>A user activates PA during CMAQ runtime and includes a PA input file to specify whether IPR, IRR or both analyses are performed, and defining what variables are required for each analysis. The IRR parameters are highly customizable and can be easily modified but must be checked carefully before running the model to ensure that they correspond to the mechanism being used. A control file is distributed with CMAQ that corresponds to each chemical mechanism supported by that version of the model. This file can be used as distributed or modified to meet program specific objectives. The derivation of PA and format of input files specific to CMAQ incorporation is detailed in Gipson et al., (1999), and a further description of the science behind PA is provided in Tonnesen (1994) and Jeffries and Tonnesen (1994).</p>
 </section>
 <section id="use-of-process-analysis">
-<h2>9.2 Use of Process Analysis<a class="headerlink" href="#use-of-process-analysis" title="Link to this heading">¶</a></h2>
+<h2>9.2 Use of Process Analysis<a class="headerlink" href="#use-of-process-analysis" title="Link to this heading">#</a></h2>
 <p><strong>Step 1: Activate Process Analysis and specify control files</strong></p>
 <ul class="simple">
 <li><p>setenv CTM_PROCAN Y:N</p></li>
@@ -90,7 +378,7 @@
 </ul>
 </section>
 <section id="description-of-the-pacm-infile">
-<h2>9.3 Description of the PACM_INFILE<a class="headerlink" href="#description-of-the-pacm-infile" title="Link to this heading">¶</a></h2>
+<h2>9.3 Description of the PACM_INFILE<a class="headerlink" href="#description-of-the-pacm-infile" title="Link to this heading">#</a></h2>
 <p>The PA input file (PACM_INFILE) is the user-tailored file that controls the parameters that are calculated and output at each time step.  Depending on the specificity of the output, the file will need to be tailored to the chemical mechanism used in the simulation, because species names and reaction numbers vary among different mechanisms.  For example, components of oxidized nitrogen, such as organic nitrates, are represented by species NTR1 + NTR2 + INTR in CB6, but  by RNO3 in SAPRC07. In addition, if IRR outputs are specified by label, the user must ensure that the labels are appropriate for the mechanism being used.</p>
 <p>The user can define families of similar pollutants, specify cycles, and reaction sums that can be used in subsequent IPR and IRR equations, which can simplify the specification of quantities.  DEFINE FAMILY is useful when the user wants to follow the sum of several different species, for example:</p>
 <ul class="simple">
@@ -107,7 +395,7 @@
 <p>This will store the net throughput of the reaction labeled CL28 minus reaction labeled CL30 (i.e. in CMAQ-CB6, the net production of species CLNO3) in a user-specified variable named CLNO3cyc.</p>
 <p><a id=Table9-1></a></p>
 <p><strong>Table 9-1. Parameters used in PACM_INFILE</strong></p>
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p><strong>First string</strong></p></th>
 <th class="head text-left"><p><strong>Second string</strong></p></th>
@@ -148,9 +436,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="parameters-for-ipr">
-<h2>9.4 Parameters for IPR<a class="headerlink" href="#parameters-for-ipr" title="Link to this heading">¶</a></h2>
+<h2>9.4 Parameters for IPR<a class="headerlink" href="#parameters-for-ipr" title="Link to this heading">#</a></h2>
 <p>Each line for IPR output begins with IPR_OUTPUT, followed by the chemical species or the species family for which output is desired and the processes to be output.  If the processes are omitted, then the default is all processes.  The available processes are listed in Table 9-2.  In the sample file, for example:</p>
 <p>IPR_OUTPUT O3    =  CHEM+DDEP+CLDS+AERO+TRNM;</p>
 <p>specifies that the output includes the change in species O3 over the time step for the net sum of
@@ -159,7 +448,7 @@ processes, and total transport.  If the species is a family name instead of a sp
 will be calculated for the sum of each species in the family.</p>
 <p><a id=Table9-2></a></p>
 <p><strong>Table 9-2. Allowable parameters for process outputs</strong></p>
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p><strong>LPROC</strong></p></th>
 <th class="head text-left"><p><strong>process</strong></p></th>
@@ -245,15 +534,16 @@ will be calculated for the sum of each species in the family.</p>
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="parameters-for-irr">
-<h2>9.5 Parameters for IRR<a class="headerlink" href="#parameters-for-irr" title="Link to this heading">¶</a></h2>
+<h2>9.5 Parameters for IRR<a class="headerlink" href="#parameters-for-irr" title="Link to this heading">#</a></h2>
 <p>The specification for parameters in IRR output begins with IRR_OUTPUT followed by a user-defined name for the quantity and an equation specifying how it is to be calculated. The operators used in constructing these equations are explained in more detail in Gipson et al. (1999), and a brief summary of the allowable operators is included in Table 9-3.  The equation could include a reaction label or an operator for a chemical species or family.  For example:</p>
 <p>IRR_OUTPUT NewClrad = 2.0*&lt;CL1&gt; + &lt;CL2&gt; + &lt;CL8&gt; + &lt;CL25&gt;</p>
 <p>would sum the throughput of reactions labeled CL2, CL8, and CL25 and 2 times the throughput of reaction labeled CL1. The sum for each time step and each grid would be in the variable NewCLrad defined by the user.</p>
 <p><a id=Table9-3></a></p>
 <p><strong>Table 9-3. Allowable operators for Integrated Reaction Rate outputs</strong></p>
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p><strong>Operator</strong></p></th>
 <th class="head text-left"><p><strong>Description</strong></p></th>
@@ -280,9 +570,10 @@ will be calculated for the sum of each species in the family.</p>
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="example-irr-applications">
-<h2>9.6 Example IRR applications<a class="headerlink" href="#example-irr-applications" title="Link to this heading">¶</a></h2>
+<h2>9.6 Example IRR applications<a class="headerlink" href="#example-irr-applications" title="Link to this heading">#</a></h2>
 <p>IRR can be endlessly customized to examine many different processes and combinations of processes.  Below are two examples of how IRR can be used.</p>
 <p><strong>Example 1: Examine fate of VOC reactions</strong>.  In this example, we have defined a family “aVOC” to be the sum of all (mostly) anthropogenic VOCs used in CMAQ-CB6 (Luecken et al., 2019), and then quantified the loss of the family through reaction with the oxidants OH, O3 and NO3:</p>
 <ul class="simple">
@@ -313,7 +604,7 @@ will be calculated for the sum of each species in the family.</p>
 <p><strong>Figure 9-2. Relative contribution of HNO3 formation pathways at three grid locations</strong></p>
 </section>
 <section id="budget-tool">
-<h2>9.7 Budget Tool<a class="headerlink" href="#budget-tool" title="Link to this heading">¶</a></h2>
+<h2>9.7 Budget Tool<a class="headerlink" href="#budget-tool" title="Link to this heading">#</a></h2>
 <p>The existing Process Analysis module outputs process rates for variables or families of variables on a gridded domain.
 The Budget Tool outputs as a text file (CCTM_BUDGET_xxx.txt), the domain-wide process rates and total abundance change for every variable or family requested by the user in the CMAQ_Control_Misc.nml file.
 Output is produced for every output time step (generally hourly). Units for both gases and particles are in kilograms per output time step.</p>
@@ -325,7 +616,7 @@ Lastly, if an aerosol species name is provided (e.g. ‘ASO4’, ‘AEC’) with
 <p><strong>Figure 9-3. Contribution of model processes to O<sub>3</sub> production and loss during a CMAQ simulation of the U.S. for 2016</strong></p>
 </section>
 <section id="references">
-<h2>9.8 References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h2>
+<h2>9.8 References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <p>Gipson, G.L. (1999). Chapter 16: Process analysis. In science algorithms of the EPA models-3 Community Multiscale Air Quality (CMAQ) Modeling System. EPA/600/R-99/030.</p>
 <p>Jeffries, H. E., &amp; Tonnesen, S. (1994). A comparison of two photochemical reaction mechanisms using mass balance and process analysis. Atmos. Env., 28(18), 2991-3003.</p>
 <p>Luecken, D.J., Yarwood, G., &amp; Hutzell, W.H. (2019). Multipollutant modeling of ozone, reactive nitrogen and HAPs across the continental US with CMAQ-CB6. Atmospheric Environment, 201, 62-72.</p>
@@ -338,63 +629,108 @@ CMAQv5.5 User’s Guide <br></p>
 </section>
 
 
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">9. Process Analysis and Budget</a><ul>
-<li><a class="reference internal" href="#introduction">9.1 Introduction</a></li>
-<li><a class="reference internal" href="#use-of-process-analysis">9.2 Use of Process Analysis</a></li>
-<li><a class="reference internal" href="#description-of-the-pacm-infile">9.3 Description of the PACM_INFILE</a></li>
-<li><a class="reference internal" href="#parameters-for-ipr">9.4 Parameters for IPR</a></li>
-<li><a class="reference internal" href="#parameters-for-irr">9.5 Parameters for IRR</a></li>
-<li><a class="reference internal" href="#example-irr-applications">9.6 Example IRR applications</a></li>
-<li><a class="reference internal" href="#budget-tool">9.7 Budget Tool</a></li>
-<li><a class="reference internal" href="#references">9.8 References</a></li>
-</ul>
-</li>
-</ul>
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Users_Guide/CMAQ_UG_ch09_process_analysis.md.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<search id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">9.1 Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-of-process-analysis">9.2 Use of Process Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-the-pacm-infile">9.3 Description of the PACM_INFILE</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters-for-ipr">9.4 Parameters for IPR</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters-for-irr">9.5 Parameters for IRR</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-irr-applications">9.6 Example IRR applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#budget-tool">9.7 Budget Tool</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">9.8 References</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/Users_Guide/CMAQ_UG_ch09_process_analysis.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
     </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, CMAQ Developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
     </div>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="nav-item nav-item-0"><a href="../index.html">CMAQ_Documentation 0.2 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">9. Process Analysis and Budget</a></li> 
-      </ul>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
     </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2024, CMAQ Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
-    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>

@@ -1,45 +1,333 @@
+
 <!DOCTYPE html>
 
-<html lang="en" data-content_root="../../">
+
+<html lang="en" data-content_root="../../" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>CMAQ-ISAM Benchmark Tutorial &#8212; CMAQ_Documentation 0.2 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=2bf1fcf8" />
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
     <script src="../../_static/documentation_options.js?v=10f1778b"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Users_Guide/Tutorials/CMAQ_UG_tutorial_ISAM';</script>
     <link rel="canonical" href="https://jbrunto.github.io/CMAQ_Docs_v55/Users_Guide/Tutorials/CMAQ_UG_tutorial_ISAM.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">CMAQ_Documentation 0.2 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">CMAQ-ISAM Benchmark Tutorial</a></li> 
-      </ul>
-    </div>  
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CMAQ_Documentation 0.2 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Docs_README.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Docs_README.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">CMAQ-ISAM Benchmark Tutorial</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="cmaq-isam-benchmark-tutorial">
-<h1>CMAQ-ISAM Benchmark Tutorial<a class="headerlink" href="#cmaq-isam-benchmark-tutorial" title="Link to this heading">¶</a></h1>
+<h1>CMAQ-ISAM Benchmark Tutorial<a class="headerlink" href="#cmaq-isam-benchmark-tutorial" title="Link to this heading">#</a></h1>
 <p>Procedure to build and run the CMAQ-ISAM model using gnu compiler for the cb6r5_ae7_aq mechanism with the m3dry dry deposition scheme:</p>
 <section id="step-1-download-and-run-the-cmaqv5-5-benchmark-case-without-isam-to-confirm-that-your-model-run-is-consistent-with-the-provided-benchmark-output">
-<h2>Step 1: Download and run the CMAQv5.5 benchmark case (without ISAM) to confirm that your model run is consistent with the provided benchmark output.<a class="headerlink" href="#step-1-download-and-run-the-cmaqv5-5-benchmark-case-without-isam-to-confirm-that-your-model-run-is-consistent-with-the-provided-benchmark-output" title="Link to this heading">¶</a></h2>
+<h2>Step 1: Download and run the CMAQv5.5 benchmark case (without ISAM) to confirm that your model run is consistent with the provided benchmark output.<a class="headerlink" href="#step-1-download-and-run-the-cmaqv5-5-benchmark-case-without-isam-to-confirm-that-your-model-run-is-consistent-with-the-provided-benchmark-output" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="CMAQ_UG_tutorial_benchmark.html"><span class="std std-doc">CMAQ Benchmark Tutorial</span></a></p></li>
 </ul>
@@ -47,7 +335,7 @@
 <p>https://forum.cmascenter.org/</p>
 </section>
 <section id="step-2-read-the-user-guide-chapter-on-integrated-source-apportionment-method">
-<h2>Step 2: Read the User Guide Chapter on Integrated Source Apportionment Method.<a class="headerlink" href="#step-2-read-the-user-guide-chapter-on-integrated-source-apportionment-method" title="Link to this heading">¶</a></h2>
+<h2>Step 2: Read the User Guide Chapter on Integrated Source Apportionment Method.<a class="headerlink" href="#step-2-read-the-user-guide-chapter-on-integrated-source-apportionment-method" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="../CMAQ_UG_ch11_ISAM.html"><span class="std std-doc">CMAQ User Guide Chapter on ISAM</span></a></p></li>
 </ul>
@@ -78,7 +366,7 @@ CMAQ_Control_DESID_${MECH}.nml
 </div>
 </section>
 <section id="step-3-optional-choose-your-compiler-and-load-it-using-the-module-command-if-it-is-available-on-your-system">
-<h2>Step 3 (optional): choose your compiler, and load it using the module command if it is available on your system<a class="headerlink" href="#step-3-optional-choose-your-compiler-and-load-it-using-the-module-command-if-it-is-available-on-your-system" title="Link to this heading">¶</a></h2>
+<h2>Step 3 (optional): choose your compiler, and load it using the module command if it is available on your system<a class="headerlink" href="#step-3-optional-choose-your-compiler-and-load-it-using-the-module-command-if-it-is-available-on-your-system" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">avail</span>
 </pre></div>
 </div>
@@ -87,14 +375,14 @@ CMAQ_Control_DESID_${MECH}.nml
 </div>
 </section>
 <section id="step-4-optional-install-i-o-api-note-this-assumes-you-have-already-installed-netcdf-c-and-fortran-libraries">
-<h2>Step 4 (optional): Install I/O API (note, this assumes you have already installed netCDF C and Fortran Libraries)<a class="headerlink" href="#step-4-optional-install-i-o-api-note-this-assumes-you-have-already-installed-netcdf-c-and-fortran-libraries" title="Link to this heading">¶</a></h2>
+<h2>Step 4 (optional): Install I/O API (note, this assumes you have already installed netCDF C and Fortran Libraries)<a class="headerlink" href="#step-4-optional-install-i-o-api-note-this-assumes-you-have-already-installed-netcdf-c-and-fortran-libraries" title="Link to this heading">#</a></h2>
 <p>I/O APIv3.2 supports up to MXFILE3=256 open files, each with up to MXVARS3=2048. ISAM applications configured to calculate source attribution of a large number of sources may exceed this upper limit of model variables, leading to a model crash. To avoid this issue, users may use I/O API version 3.2 “large” that increases MXFILE3 to 512 and MXVARS3 to 16384. Instructions to build this version are found in Chapter 3. Note, using this ioapi-large version is <b>NOT REQUIRED</b> for the CMAQ-ISAM Benchmark Case. If a user needs to use these larger setting for MXFILE3 and MXVAR3 to support their application, the memory requirements will be increased. If needed, this version is available as a zip file from the following address:</p>
 <p>https://www.cmascenter.org/ioapi/download/ioapi-3.2-large-20200828.tar.gz</p>
 <p>Otherwise, use the I/O API version available here:
 https://www.cmascenter.org/ioapi/download/ioapi-3.2-20200828.tar.gz</p>
 </section>
 <section id="step-5-install-cmaq-with-isam">
-<h2>Step 5: Install CMAQ with ISAM<a class="headerlink" href="#step-5-install-cmaq-with-isam" title="Link to this heading">¶</a></h2>
+<h2>Step 5: Install CMAQ with ISAM<a class="headerlink" href="#step-5-install-cmaq-with-isam" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="n">main</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">USEPA</span><span class="o">/</span><span class="n">CMAQ</span><span class="o">.</span><span class="n">git</span> <span class="n">CMAQ_REPO</span>
 </pre></div>
 </div>
@@ -114,10 +402,10 @@ https://www.cmascenter.org/ioapi/download/ioapi-3.2-20200828.tar.gz</p>
 </div>
 </section>
 <section id="step-6-edit-the-config-cmaq-csh-to-specify-the-paths-of-the-ioapi-and-netcdf-libraries">
-<h2>Step 6. Edit the config_cmaq.csh to specify the paths of the ioapi and netCDF libraries<a class="headerlink" href="#step-6-edit-the-config-cmaq-csh-to-specify-the-paths-of-the-ioapi-and-netcdf-libraries" title="Link to this heading">¶</a></h2>
+<h2>Step 6. Edit the config_cmaq.csh to specify the paths of the ioapi and netCDF libraries<a class="headerlink" href="#step-6-edit-the-config-cmaq-csh-to-specify-the-paths-of-the-ioapi-and-netcdf-libraries" title="Link to this heading">#</a></h2>
 </section>
 <section id="step-7-modify-the-bldit-cctm-csh-to-activate-isam">
-<h2>Step 7: Modify the bldit_cctm.csh to activate ISAM<a class="headerlink" href="#step-7-modify-the-bldit-cctm-csh-to-activate-isam" title="Link to this heading">¶</a></h2>
+<h2>Step 7: Modify the bldit_cctm.csh to activate ISAM<a class="headerlink" href="#step-7-modify-the-bldit-cctm-csh-to-activate-isam" title="Link to this heading">#</a></h2>
 <p>Change directory to CCTM/scripts</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">CCTM</span><span class="o">/</span><span class="n">scripts</span>
 <span class="n">cp</span> <span class="n">bldit_cctm</span><span class="o">.</span><span class="n">csh</span> <span class="n">bldit_cctm_isam</span><span class="o">.</span><span class="n">csh</span>
@@ -130,7 +418,7 @@ https://www.cmascenter.org/ioapi/download/ioapi-3.2-20200828.tar.gz</p>
 </div>
 </section>
 <section id="step-8-modify-the-bldit-cctm-csh-to-specify-the-cb6r5-ae7-aq-mechanism-and-the-m3dry-dry-deposition-scheme-and-update-the-bld-directory-name">
-<h2>Step 8: Modify the bldit_cctm.csh to specify the cb6r5_ae7_aq mechanism and the m3dry dry deposition scheme and update the BLD directory name.<a class="headerlink" href="#step-8-modify-the-bldit-cctm-csh-to-specify-the-cb6r5-ae7-aq-mechanism-and-the-m3dry-dry-deposition-scheme-and-update-the-bld-directory-name" title="Link to this heading">¶</a></h2>
+<h2>Step 8: Modify the bldit_cctm.csh to specify the cb6r5_ae7_aq mechanism and the m3dry dry deposition scheme and update the BLD directory name.<a class="headerlink" href="#step-8-modify-the-bldit-cctm-csh-to-specify-the-cb6r5-ae7-aq-mechanism-and-the-m3dry-dry-deposition-scheme-and-update-the-bld-directory-name" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">DepMod</span>    <span class="o">=</span> <span class="n">m3dry</span>                 <span class="c1">#&gt; dry deposition scheme (m3dry or stage)</span>
 <span class="n">setenv</span> <span class="n">Mechanism</span> <span class="n">cb6r5_ae7_aq</span>              <span class="c1">#&gt; chemical mechanism (see $CMAQ_MODEL/CCTM/src/MECHS) </span>
 </pre></div>
@@ -147,13 +435,13 @@ https://www.cmascenter.org/ioapi/download/ioapi-3.2-20200828.tar.gz</p>
 </div>
 </section>
 <section id="step-9-run-the-bldit-cctm-isam-csh-script">
-<h2>Step 9: Run the bldit_cctm_isam.csh script<a class="headerlink" href="#step-9-run-the-bldit-cctm-isam-csh-script" title="Link to this heading">¶</a></h2>
+<h2>Step 9: Run the bldit_cctm_isam.csh script<a class="headerlink" href="#step-9-run-the-bldit-cctm-isam-csh-script" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">bldit_cctm_isam</span><span class="o">.</span><span class="n">csh</span> <span class="n">gcc</span> <span class="o">|&amp;</span> <span class="n">tee</span> <span class="n">bldit_cctm_isam</span><span class="o">.</span><span class="n">log</span>
 </pre></div>
 </div>
 </section>
 <section id="step-10-edit-the-emission-control-namelist-to-recognize-the-cmaq-regions-file">
-<h2>Step 10: Edit the Emission Control Namelist to recognize the CMAQ_REGIONS file<a class="headerlink" href="#step-10-edit-the-emission-control-namelist-to-recognize-the-cmaq-regions-file" title="Link to this heading">¶</a></h2>
+<h2>Step 10: Edit the Emission Control Namelist to recognize the CMAQ_REGIONS file<a class="headerlink" href="#step-10-edit-the-emission-control-namelist-to-recognize-the-cmaq-regions-file" title="Link to this heading">#</a></h2>
 <p>Change directories to the build directory</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">BLD_CCTM_v55_ISAM_gcc_cb6r5_ae7_aq_m3dry</span>
 </pre></div>
@@ -176,7 +464,7 @@ https://www.cmascenter.org/ioapi/download/ioapi-3.2-20200828.tar.gz</p>
 </div>
 </section>
 <section id="step-11-example-of-emissions-scaling-reduce-the-pt-egu-emissions-in-ny-by-25-optional-step-described-here-but-not-used">
-<h2>Step 11: Example of emissions scaling (Reduce the PT_EGU emissions in NY by 25%) (Optional step, described here, but not used)<a class="headerlink" href="#step-11-example-of-emissions-scaling-reduce-the-pt-egu-emissions-in-ny-by-25-optional-step-described-here-but-not-used" title="Link to this heading">¶</a></h2>
+<h2>Step 11: Example of emissions scaling (Reduce the PT_EGU emissions in NY by 25%) (Optional step, described here, but not used)<a class="headerlink" href="#step-11-example-of-emissions-scaling-reduce-the-pt-egu-emissions-in-ny-by-25-optional-step-described-here-but-not-used" title="Link to this heading">#</a></h2>
 <p>edit the DESID chemical control namelist file, note please specify the mechanism or define the MECH environment variable.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>gedit CMAQ_Control_DESID_${MECH}.nml
 </pre></div>
@@ -189,7 +477,7 @@ https://www.cmascenter.org/ioapi/download/ioapi-3.2-20200828.tar.gz</p>
 </div>
 </section>
 <section id="step-12-install-the-cmaq-isam-reference-input-and-output-benchmark-data">
-<h2>Step 12: Install the CMAQ-ISAM reference input and output benchmark data<a class="headerlink" href="#step-12-install-the-cmaq-isam-reference-input-and-output-benchmark-data" title="Link to this heading">¶</a></h2>
+<h2>Step 12: Install the CMAQ-ISAM reference input and output benchmark data<a class="headerlink" href="#step-12-install-the-cmaq-isam-reference-input-and-output-benchmark-data" title="Link to this heading">#</a></h2>
 <p>Download the CMAQ two day reference input and output data from the  <a class="reference external" href="https://cmaq-release-benchmark-data-for-easy-download.s3.amazonaws.com/index.html#v5_5/">CMAS Center Data Warehouse Amazon Web Services S3 Bucket</a>: CMAQv5.4_2018_12NE3_Benchmark_2Day_Input.tar.gz and output_CCTM_v55_ISAM_gcc_Bench_2018_12NE3_cracmm2_stage.tar.gz.</p>
 <p>Download and copy the data to <code class="docutils literal notranslate"><span class="pre">$CMAQ_DATA</span></code>. Navigate to the <code class="docutils literal notranslate"><span class="pre">$CMAQ_DATA</span></code> directory, unzip and untar the two day benchmark input and output files:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $CMAQ_DATA
@@ -204,7 +492,7 @@ tar xzvf output_CCTM_v55_ISAM_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_m3dry.tar.gz
 <p>The input files for the CMAQv5.4 ISAM benchmark case are the same as the benchmark inputs for the base model. Output source apportionment files associated with the sample isam_control.txt provided in this release package are included in the benchmark outputs for the base model.</p>
 </section>
 <section id="step-13-edit-the-cmaq-isam-runscript">
-<h2>Step 13: Edit the CMAQ-ISAM runscript<a class="headerlink" href="#step-13-edit-the-cmaq-isam-runscript" title="Link to this heading">¶</a></h2>
+<h2>Step 13: Edit the CMAQ-ISAM runscript<a class="headerlink" href="#step-13-edit-the-cmaq-isam-runscript" title="Link to this heading">#</a></h2>
 <p>Note: there is an example of the run script on the AWS S3 bucket.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">CMAQ_v5</span><span class="mf">.5</span><span class="o">/</span><span class="n">CCTM</span><span class="o">/</span><span class="n">scripts</span>
 <span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cmaq</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="n">benchmark</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">easy</span><span class="o">-</span><span class="n">download</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">amazonaws</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">v5_5</span><span class="o">/</span><span class="n">ISAM_Benchmark</span><span class="o">/</span><span class="n">CCTM</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">run_cctm_Bench_2018_12NE3_cb6r5_m3dry_ISAM</span><span class="o">.</span><span class="n">csh</span>
@@ -255,7 +543,7 @@ setenv ISAM_REGIONS $INPDIR/GRIDMASK_STATES_12NE3.nc
 </div>
 </section>
 <section id="step-14-verify-that-the-run-was-successful">
-<h2>Step 14: Verify that the run was successful<a class="headerlink" href="#step-14-verify-that-the-run-was-successful" title="Link to this heading">¶</a></h2>
+<h2>Step 14: Verify that the run was successful<a class="headerlink" href="#step-14-verify-that-the-run-was-successful" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>look for the output directory</p></li>
 </ul>
@@ -269,7 +557,7 @@ setenv ISAM_REGIONS $INPDIR/GRIDMASK_STATES_12NE3.nc
 <p>|&gt;—   PROGRAM COMPLETED SUCCESSFULLY   —&lt;|</p>
 </section>
 <section id="step-15-compare-output-with-the-2-day-benchmark-outputs-provided-on-the-google-drive">
-<h2>Step 15: Compare output with the 2 day benchmark outputs provided on the google drive<a class="headerlink" href="#step-15-compare-output-with-the-2-day-benchmark-outputs-provided-on-the-google-drive" title="Link to this heading">¶</a></h2>
+<h2>Step 15: Compare output with the 2 day benchmark outputs provided on the google drive<a class="headerlink" href="#step-15-compare-output-with-the-2-day-benchmark-outputs-provided-on-the-google-drive" title="Link to this heading">#</a></h2>
 <p>The following ISAM output files are generated in addition to the standard CMAQ output files. Note, the ACONC files created for the  benchmark case without ISAM and this run will not be comparible if emission scaling is used (Step 11 - optional), but if emission scaling was not used, the files should be identical.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CCTM_SA_CONC_v55_ISAM_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_m3dry_20180702</span><span class="o">.</span><span class="n">nc</span>
 <span class="n">CCTM_SA_WETDEP_v55_ISAM_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_m3dry_20180702</span><span class="o">.</span><span class="n">nc</span>
@@ -280,7 +568,7 @@ setenv ISAM_REGIONS $INPDIR/GRIDMASK_STATES_12NE3.nc
 </div>
 </section>
 <section id="step-16-compare-the-tagged-species-in-cctm-sa-aconc-output-file-to-the-species-in-cctm-aconc-output-file">
-<h2>Step 16: Compare the tagged species in <code class="docutils literal notranslate"><span class="pre">CCTM_SA_ACONC</span></code> output file to the species in <code class="docutils literal notranslate"><span class="pre">CCTM_ACONC</span></code> output file<a class="headerlink" href="#step-16-compare-the-tagged-species-in-cctm-sa-aconc-output-file-to-the-species-in-cctm-aconc-output-file" title="Link to this heading">¶</a></h2>
+<h2>Step 16: Compare the tagged species in <code class="docutils literal notranslate"><span class="pre">CCTM_SA_ACONC</span></code> output file to the species in <code class="docutils literal notranslate"><span class="pre">CCTM_ACONC</span></code> output file<a class="headerlink" href="#step-16-compare-the-tagged-species-in-cctm-sa-aconc-output-file-to-the-species-in-cctm-aconc-output-file" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ncdump</span> <span class="o">-</span><span class="n">h</span> <span class="n">CCTM_SA_ACONC_v55_ISAM_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_m3dry_20180701</span><span class="o">.</span><span class="n">nc</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">SO2_</span>
 </pre></div>
 </div>
@@ -317,7 +605,7 @@ setenv ISAM_REGIONS $INPDIR/GRIDMASK_STATES_12NE3.nc
 <p>Both tagged species EGU and BIO contribute to the bulk concentration, therefore the sum of all tagged species including boundary conditions (BCO) and initial conditions (ICO) and other (all untagged emissions) (OTH)</p>
 </section>
 <section id="step-17-obtain-scripts-and-species-definition-files-to-post-process-cmaq-isam">
-<h2>Step 17: Obtain scripts and species definition files to post process CMAQ-ISAM<a class="headerlink" href="#step-17-obtain-scripts-and-species-definition-files-to-post-process-cmaq-isam" title="Link to this heading">¶</a></h2>
+<h2>Step 17: Obtain scripts and species definition files to post process CMAQ-ISAM<a class="headerlink" href="#step-17-obtain-scripts-and-species-definition-files-to-post-process-cmaq-isam" title="Link to this heading">#</a></h2>
 <p>Note: we will be running each post processing routine twice, once for the tagged species found in the SA_ACONC, SA_DRYDEP, and SA_WETDEP output files, and again for the untagged species found in ACONC and the DRYDEP, WETDEP files. This will allow us to confirm that the sum of the tagged species is equal to the untagged species.</p>
 <p>Example species definition file and combine run script are provided to help users post-process the CMAQ-ISAM output to aggregate output from the SA_ACONC, SA_DRYDEP, and SA_WETDEP files.</p>
 <p>Download the run script and species definition files for this case from the AWS S3 Bucket.</p>
@@ -341,7 +629,7 @@ setenv ISAM_REGIONS $INPDIR/GRIDMASK_STATES_12NE3.nc
 </div>
 </section>
 <section id="step-18-build-and-run-combine">
-<h2>Step 18: Build and run combine<a class="headerlink" href="#step-18-build-and-run-combine" title="Link to this heading">¶</a></h2>
+<h2>Step 18: Build and run combine<a class="headerlink" href="#step-18-build-and-run-combine" title="Link to this heading">#</a></h2>
 <p>Build the combine executable</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">CMAQ_v5</span><span class="mf">.5</span><span class="o">/</span><span class="n">POST</span><span class="o">/</span><span class="n">combine</span><span class="o">/</span><span class="n">scripts</span>
 <span class="o">./</span><span class="n">bldit_combine</span><span class="o">.</span><span class="n">csh</span> <span class="n">gcc</span> <span class="o">|&amp;</span> <span class="n">tee</span> <span class="o">./</span><span class="n">bldit_combine</span><span class="o">.</span><span class="n">log</span>
@@ -368,7 +656,7 @@ setenv ISAM_REGIONS $INPDIR/GRIDMASK_STATES_12NE3.nc
 </div>
 </section>
 <section id="step-19-review-the-species-definition-files-for-the-isam-run">
-<h2>Step 19: Review the species definition files for the ISAM run.<a class="headerlink" href="#step-19-review-the-species-definition-files-for-the-isam-run" title="Link to this heading">¶</a></h2>
+<h2>Step 19: Review the species definition files for the ISAM run.<a class="headerlink" href="#step-19-review-the-species-definition-files-for-the-isam-run" title="Link to this heading">#</a></h2>
 <p>The species definition file calculates each of the tagged aggregate species. To see each tagged species definition for NOX, where NOX = NO + NO2, use the following grep command:.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span>  <span class="n">NOX_</span> <span class="n">SpecDef_ISAM_Conc_benchmark_cb6r5_ae7_aq</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
@@ -383,7 +671,7 @@ setenv ISAM_REGIONS $INPDIR/GRIDMASK_STATES_12NE3.nc
 </div>
 </section>
 <section id="step-20-build-and-run-calc-tmetric-to-calculate-the-average-of-all-tagged-species-and-the-average-of-all-species-for-your-isam-run">
-<h2>Step 20: Build and run calc_tmetric to calculate the average of all tagged species, and the average of all species for your ISAM run.<a class="headerlink" href="#step-20-build-and-run-calc-tmetric-to-calculate-the-average-of-all-tagged-species-and-the-average-of-all-species-for-your-isam-run" title="Link to this heading">¶</a></h2>
+<h2>Step 20: Build and run calc_tmetric to calculate the average of all tagged species, and the average of all species for your ISAM run.<a class="headerlink" href="#step-20-build-and-run-calc-tmetric-to-calculate-the-average-of-all-tagged-species-and-the-average-of-all-species-for-your-isam-run" title="Link to this heading">#</a></h2>
 <p>Build the calc_tmetric executable</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">CMAQ_v5</span><span class="mf">.5</span><span class="o">/</span><span class="n">POST</span><span class="o">/</span><span class="n">calc_tmetric</span><span class="o">/</span><span class="n">scripts</span>
 <span class="o">./</span><span class="n">bldit_calc_tmetric</span><span class="o">.</span><span class="n">csh</span> <span class="n">gcc</span> <span class="o">|&amp;</span> <span class="n">tee</span> <span class="o">./</span><span class="n">bldit_calc_tmetric</span><span class="o">.</span><span class="n">log</span>
@@ -402,7 +690,7 @@ setenv ISAM_REGIONS $INPDIR/GRIDMASK_STATES_12NE3.nc
 </div>
 </section>
 <section id="step-21-build-and-run-hr2day-to-calculate-the-daily-average-concentration-for-each-tagged-and-aggregated-species">
-<h2>Step 21: Build and run hr2day to calculate the daily average concentration for each tagged and aggregated species.<a class="headerlink" href="#step-21-build-and-run-hr2day-to-calculate-the-daily-average-concentration-for-each-tagged-and-aggregated-species" title="Link to this heading">¶</a></h2>
+<h2>Step 21: Build and run hr2day to calculate the daily average concentration for each tagged and aggregated species.<a class="headerlink" href="#step-21-build-and-run-hr2day-to-calculate-the-daily-average-concentration-for-each-tagged-and-aggregated-species" title="Link to this heading">#</a></h2>
 <p>Build the hr2day executable</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">CMAQ_v5</span><span class="mf">.5</span><span class="o">/</span><span class="n">POST</span><span class="o">/</span><span class="n">hr2day</span><span class="o">/</span><span class="n">scripts</span>
 <span class="o">./</span><span class="n">bldit_hr2day</span><span class="o">.</span><span class="n">csh</span> <span class="n">gcc</span> <span class="o">|&amp;</span> <span class="n">tee</span> <span class="o">./</span><span class="n">bldit_hr2day</span><span class="o">.</span><span class="n">log</span>
@@ -456,76 +744,121 @@ verdi -f $cwd/COMBINE_ACONC_v55_ISAM_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_m3dry_201
 </section>
 
 
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">CMAQ-ISAM Benchmark Tutorial</a><ul>
-<li><a class="reference internal" href="#step-1-download-and-run-the-cmaqv5-5-benchmark-case-without-isam-to-confirm-that-your-model-run-is-consistent-with-the-provided-benchmark-output">Step 1: Download and run the CMAQv5.5 benchmark case (without ISAM) to confirm that your model run is consistent with the provided benchmark output.</a></li>
-<li><a class="reference internal" href="#step-2-read-the-user-guide-chapter-on-integrated-source-apportionment-method">Step 2: Read the User Guide Chapter on Integrated Source Apportionment Method.</a></li>
-<li><a class="reference internal" href="#step-3-optional-choose-your-compiler-and-load-it-using-the-module-command-if-it-is-available-on-your-system">Step 3 (optional): choose your compiler, and load it using the module command if it is available on your system</a></li>
-<li><a class="reference internal" href="#step-4-optional-install-i-o-api-note-this-assumes-you-have-already-installed-netcdf-c-and-fortran-libraries">Step 4 (optional): Install I/O API (note, this assumes you have already installed netCDF C and Fortran Libraries)</a></li>
-<li><a class="reference internal" href="#step-5-install-cmaq-with-isam">Step 5: Install CMAQ with ISAM</a></li>
-<li><a class="reference internal" href="#step-6-edit-the-config-cmaq-csh-to-specify-the-paths-of-the-ioapi-and-netcdf-libraries">Step 6. Edit the config_cmaq.csh to specify the paths of the ioapi and netCDF libraries</a></li>
-<li><a class="reference internal" href="#step-7-modify-the-bldit-cctm-csh-to-activate-isam">Step 7: Modify the bldit_cctm.csh to activate ISAM</a></li>
-<li><a class="reference internal" href="#step-8-modify-the-bldit-cctm-csh-to-specify-the-cb6r5-ae7-aq-mechanism-and-the-m3dry-dry-deposition-scheme-and-update-the-bld-directory-name">Step 8: Modify the bldit_cctm.csh to specify the cb6r5_ae7_aq mechanism and the m3dry dry deposition scheme and update the BLD directory name.</a></li>
-<li><a class="reference internal" href="#step-9-run-the-bldit-cctm-isam-csh-script">Step 9: Run the bldit_cctm_isam.csh script</a></li>
-<li><a class="reference internal" href="#step-10-edit-the-emission-control-namelist-to-recognize-the-cmaq-regions-file">Step 10: Edit the Emission Control Namelist to recognize the CMAQ_REGIONS file</a></li>
-<li><a class="reference internal" href="#step-11-example-of-emissions-scaling-reduce-the-pt-egu-emissions-in-ny-by-25-optional-step-described-here-but-not-used">Step 11: Example of emissions scaling (Reduce the PT_EGU emissions in NY by 25%) (Optional step, described here, but not used)</a></li>
-<li><a class="reference internal" href="#step-12-install-the-cmaq-isam-reference-input-and-output-benchmark-data">Step 12: Install the CMAQ-ISAM reference input and output benchmark data</a></li>
-<li><a class="reference internal" href="#step-13-edit-the-cmaq-isam-runscript">Step 13: Edit the CMAQ-ISAM runscript</a></li>
-<li><a class="reference internal" href="#step-14-verify-that-the-run-was-successful">Step 14: Verify that the run was successful</a></li>
-<li><a class="reference internal" href="#step-15-compare-output-with-the-2-day-benchmark-outputs-provided-on-the-google-drive">Step 15: Compare output with the 2 day benchmark outputs provided on the google drive</a></li>
-<li><a class="reference internal" href="#step-16-compare-the-tagged-species-in-cctm-sa-aconc-output-file-to-the-species-in-cctm-aconc-output-file">Step 16: Compare the tagged species in <code class="docutils literal notranslate"><span class="pre">CCTM_SA_ACONC</span></code> output file to the species in <code class="docutils literal notranslate"><span class="pre">CCTM_ACONC</span></code> output file</a></li>
-<li><a class="reference internal" href="#step-17-obtain-scripts-and-species-definition-files-to-post-process-cmaq-isam">Step 17: Obtain scripts and species definition files to post process CMAQ-ISAM</a></li>
-<li><a class="reference internal" href="#step-18-build-and-run-combine">Step 18: Build and run combine</a></li>
-<li><a class="reference internal" href="#step-19-review-the-species-definition-files-for-the-isam-run">Step 19: Review the species definition files for the ISAM run.</a></li>
-<li><a class="reference internal" href="#step-20-build-and-run-calc-tmetric-to-calculate-the-average-of-all-tagged-species-and-the-average-of-all-species-for-your-isam-run">Step 20: Build and run calc_tmetric to calculate the average of all tagged species, and the average of all species for your ISAM run.</a></li>
-<li><a class="reference internal" href="#step-21-build-and-run-hr2day-to-calculate-the-daily-average-concentration-for-each-tagged-and-aggregated-species">Step 21: Build and run hr2day to calculate the daily average concentration for each tagged and aggregated species.</a></li>
-</ul>
-</li>
-</ul>
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../../_sources/Users_Guide/Tutorials/CMAQ_UG_tutorial_ISAM.md.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<search id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-and-run-the-cmaqv5-5-benchmark-case-without-isam-to-confirm-that-your-model-run-is-consistent-with-the-provided-benchmark-output">Step 1: Download and run the CMAQv5.5 benchmark case (without ISAM) to confirm that your model run is consistent with the provided benchmark output.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-read-the-user-guide-chapter-on-integrated-source-apportionment-method">Step 2: Read the User Guide Chapter on Integrated Source Apportionment Method.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-optional-choose-your-compiler-and-load-it-using-the-module-command-if-it-is-available-on-your-system">Step 3 (optional): choose your compiler, and load it using the module command if it is available on your system</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-optional-install-i-o-api-note-this-assumes-you-have-already-installed-netcdf-c-and-fortran-libraries">Step 4 (optional): Install I/O API (note, this assumes you have already installed netCDF C and Fortran Libraries)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-install-cmaq-with-isam">Step 5: Install CMAQ with ISAM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-edit-the-config-cmaq-csh-to-specify-the-paths-of-the-ioapi-and-netcdf-libraries">Step 6. Edit the config_cmaq.csh to specify the paths of the ioapi and netCDF libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-modify-the-bldit-cctm-csh-to-activate-isam">Step 7: Modify the bldit_cctm.csh to activate ISAM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-modify-the-bldit-cctm-csh-to-specify-the-cb6r5-ae7-aq-mechanism-and-the-m3dry-dry-deposition-scheme-and-update-the-bld-directory-name">Step 8: Modify the bldit_cctm.csh to specify the cb6r5_ae7_aq mechanism and the m3dry dry deposition scheme and update the BLD directory name.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-run-the-bldit-cctm-isam-csh-script">Step 9: Run the bldit_cctm_isam.csh script</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-edit-the-emission-control-namelist-to-recognize-the-cmaq-regions-file">Step 10: Edit the Emission Control Namelist to recognize the CMAQ_REGIONS file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-example-of-emissions-scaling-reduce-the-pt-egu-emissions-in-ny-by-25-optional-step-described-here-but-not-used">Step 11: Example of emissions scaling (Reduce the PT_EGU emissions in NY by 25%) (Optional step, described here, but not used)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-install-the-cmaq-isam-reference-input-and-output-benchmark-data">Step 12: Install the CMAQ-ISAM reference input and output benchmark data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-edit-the-cmaq-isam-runscript">Step 13: Edit the CMAQ-ISAM runscript</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-verify-that-the-run-was-successful">Step 14: Verify that the run was successful</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-compare-output-with-the-2-day-benchmark-outputs-provided-on-the-google-drive">Step 15: Compare output with the 2 day benchmark outputs provided on the google drive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-compare-the-tagged-species-in-cctm-sa-aconc-output-file-to-the-species-in-cctm-aconc-output-file">Step 16: Compare the tagged species in <code class="docutils literal notranslate"><span class="pre">CCTM_SA_ACONC</span></code> output file to the species in <code class="docutils literal notranslate"><span class="pre">CCTM_ACONC</span></code> output file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-17-obtain-scripts-and-species-definition-files-to-post-process-cmaq-isam">Step 17: Obtain scripts and species definition files to post process CMAQ-ISAM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-18-build-and-run-combine">Step 18: Build and run combine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-19-review-the-species-definition-files-for-the-isam-run">Step 19: Review the species definition files for the ISAM run.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-20-build-and-run-calc-tmetric-to-calculate-the-average-of-all-tagged-species-and-the-average-of-all-species-for-your-isam-run">Step 20: Build and run calc_tmetric to calculate the average of all tagged species, and the average of all species for your ISAM run.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-21-build-and-run-hr2day-to-calculate-the-daily-average-concentration-for-each-tagged-and-aggregated-species">Step 21: Build and run hr2day to calculate the daily average concentration for each tagged and aggregated species.</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/Users_Guide/Tutorials/CMAQ_UG_tutorial_ISAM.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
     </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, CMAQ Developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
     </div>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">CMAQ_Documentation 0.2 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">CMAQ-ISAM Benchmark Tutorial</a></li> 
-      </ul>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
     </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2024, CMAQ Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
-    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>

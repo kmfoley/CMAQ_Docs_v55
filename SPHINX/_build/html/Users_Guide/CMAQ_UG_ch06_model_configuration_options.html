@@ -1,49 +1,337 @@
+
 <!DOCTYPE html>
 
-<html lang="en" data-content_root="../">
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>6. Model Configuration Options &#8212; CMAQ_Documentation 0.2 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
     <script src="../_static/documentation_options.js?v=10f1778b"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Users_Guide/CMAQ_UG_ch06_model_configuration_options';</script>
     <link rel="canonical" href="https://jbrunto.github.io/CMAQ_Docs_v55/Users_Guide/CMAQ_UG_ch06_model_configuration_options.html" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="../index.html">CMAQ_Documentation 0.2 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">6. Model Configuration Options</a></li> 
-      </ul>
-    </div>  
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CMAQ_Documentation 0.2 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Docs_README.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="Tutorials/README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Developers_Guide/CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Docs_README.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="Tutorials/README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Developers_Guide/CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">6. Model Configuration Options</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="CMAQ_UG_ch05_running_a_simulation.html"><span class="std std-doc">&lt;&lt; Previous Chapter</span></a> - <a class="reference internal" href="README.html"><span class="std std-doc">Home</span></a> - <a class="reference internal" href="CMAQ_UG_ch07_model_outputs.html"><span class="std std-doc">Next Chapter &gt;&gt;</span></a></p>
 <!-- END COMMENT -->
 <section id="model-configuration-options">
-<h1>6. Model Configuration Options<a class="headerlink" href="#model-configuration-options" title="Link to this heading">¶</a></h1>
+<h1>6. Model Configuration Options<a class="headerlink" href="#model-configuration-options" title="Link to this heading">#</a></h1>
 <p><a id=Return_to_Top></a></p>
 <!-- BEGIN COMMENT -->
 <section id="table-of-contents">
-<h2>Table of Contents:<a class="headerlink" href="#table-of-contents" title="Link to this heading">¶</a></h2>
+<h2>Table of Contents:<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#6.1_Introduction"><span class="xref myst">6.1 Introduction</span></a></p></li>
 <li><p><a class="reference internal" href="#6.2_Numerical_Approach"><span class="xref myst">6.2 Numerical Approach</span></a></p></li>
@@ -93,7 +381,7 @@
 <p><a id=6.1_Introduction></a></p>
 </section>
 <section id="introduction">
-<h2>6.1 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<h2>6.1 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -101,7 +389,7 @@
 <p><a id=6.2_Numerical_Approach></a></p>
 </section>
 <section id="numerical-approach">
-<h2>6.2 Numerical Approach<a class="headerlink" href="#numerical-approach" title="Link to this heading">¶</a></h2>
+<h2>6.2 Numerical Approach<a class="headerlink" href="#numerical-approach" title="Link to this heading">#</a></h2>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -111,7 +399,7 @@
 <p><a id=6.3_Grid_Config></a></p>
 </section>
 <section id="grid-configuration">
-<h2>6.3 Grid Configuration<a class="headerlink" href="#grid-configuration" title="Link to this heading">¶</a></h2>
+<h2>6.3 Grid Configuration<a class="headerlink" href="#grid-configuration" title="Link to this heading">#</a></h2>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -120,7 +408,7 @@
 <p>In general, the characteristics of the CMAQ modeling domain (including the map projection, horizontal grid spacing, vertical grid type, and maximum areal coverage) are inherited from the meteorological model. Beginning with CMAQv5.3 and MCIPv5.0, the public release of CMAQ is only configured for meteorological data from the Weather Research and Forecasting (WRF) model. However, MCIP (which translates and prepares meteorological model data for CMAQ) can be expanded to process data from other meteorological models to be used within the CCTM.</p>
 <p><a id=6.3.1_Horizontal_Domains></a></p>
 <section id="horizontal-domains-and-lateral-boundaries">
-<h3>6.3.1 Horizontal Domains and Lateral Boundaries<a class="headerlink" href="#horizontal-domains-and-lateral-boundaries" title="Link to this heading">¶</a></h3>
+<h3>6.3.1 Horizontal Domains and Lateral Boundaries<a class="headerlink" href="#horizontal-domains-and-lateral-boundaries" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -130,7 +418,7 @@
 <p><a id=6.3.2_Vertical_Domains></a></p>
 </section>
 <section id="vertical-domains">
-<h3>6.3.2 Vertical Domains<a class="headerlink" href="#vertical-domains" title="Link to this heading">¶</a></h3>
+<h3>6.3.2 Vertical Domains<a class="headerlink" href="#vertical-domains" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -141,7 +429,7 @@
 </section>
 </section>
 <section id="science-configurations">
-<h2>6.4 Science Configurations<a class="headerlink" href="#science-configurations" title="Link to this heading">¶</a></h2>
+<h2>6.4 Science Configurations<a class="headerlink" href="#science-configurations" title="Link to this heading">#</a></h2>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -149,7 +437,7 @@
 <p><a id=6.5_Advection></a></p>
 </section>
 <section id="advection">
-<h2>6.5 Advection<a class="headerlink" href="#advection" title="Link to this heading">¶</a></h2>
+<h2>6.5 Advection<a class="headerlink" href="#advection" title="Link to this heading">#</a></h2>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -169,7 +457,7 @@
 <p><a id=6.6_Horizontal_Diff></a></p>
 </section>
 <section id="horizontal-diffusion">
-<h2>6.6 Horizontal Diffusion<a class="headerlink" href="#horizontal-diffusion" title="Link to this heading">¶</a></h2>
+<h2>6.6 Horizontal Diffusion<a class="headerlink" href="#horizontal-diffusion" title="Link to this heading">#</a></h2>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -177,7 +465,7 @@
 <p><a id=6.7_Vertical_Diff></a></p>
 </section>
 <section id="vertical-diffusion">
-<h2>6.7 Vertical Diffusion<a class="headerlink" href="#vertical-diffusion" title="Link to this heading">¶</a></h2>
+<h2>6.7 Vertical Diffusion<a class="headerlink" href="#vertical-diffusion" title="Link to this heading">#</a></h2>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -194,7 +482,7 @@
 <p><a id=6.8_Dry_Dep/Air></a></p>
 </section>
 <section id="dry-deposition-air-surface-exchange">
-<h2>6.8 Dry Deposition/Air-surface exchange<a class="headerlink" href="#dry-deposition-air-surface-exchange" title="Link to this heading">¶</a></h2>
+<h2>6.8 Dry Deposition/Air-surface exchange<a class="headerlink" href="#dry-deposition-air-surface-exchange" title="Link to this heading">#</a></h2>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -211,7 +499,7 @@
 <p>Deetails of each module are provided in the sections below.</p>
 <p><a id=6.8.1_Dry_Depm3dry></a></p>
 <section id="dry-deposition-m3dry">
-<h3>6.8.1 Dry Deposition - M3Dry<a class="headerlink" href="#dry-deposition-m3dry" title="Link to this heading">¶</a></h3>
+<h3>6.8.1 Dry Deposition - M3Dry<a class="headerlink" href="#dry-deposition-m3dry" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -221,7 +509,7 @@
 <p><a id=6.8.2_Dry_STAGE></a></p>
 </section>
 <section id="dry-depostion-stage">
-<h3>6.8.2 Dry Depostion - STAGE<a class="headerlink" href="#dry-depostion-stage" title="Link to this heading">¶</a></h3>
+<h3>6.8.2 Dry Depostion - STAGE<a class="headerlink" href="#dry-depostion-stage" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -258,13 +546,13 @@ The ammonia bidirectional option follows the ammonia specific parameterizations 
 <p><a id=6.8.3_Enhanced_Ozone_Deposition></a></p>
 </section>
 <section id="enhanced-ozone-deposition">
-<h3>6.8.3 Enhanced Ozone Deposition<a class="headerlink" href="#enhanced-ozone-deposition" title="Link to this heading">¶</a></h3>
+<h3>6.8.3 Enhanced Ozone Deposition<a class="headerlink" href="#enhanced-ozone-deposition" title="Link to this heading">#</a></h3>
 <p>The interaction of iodide in seawater with atmospheric ozone can enhance ozone deposition over seawater. CMAQ contains a scheme for enhanced ozone deposition over seawater (<a class="reference external" href="https://doi.org/10.1016/j.atmosenv.2016.06.072">Sarwar et al,. 2016</a>). If the CTM_OCEAN_CHEM flag is set to N, then the model will not calculate the enhanced ozone deposition over seawater.</p>
 <p><a id=6.9_Emissions></a></p>
 </section>
 </section>
 <section id="emissions">
-<h2>6.9 Emissions<a class="headerlink" href="#emissions" title="Link to this heading">¶</a></h2>
+<h2>6.9 Emissions<a class="headerlink" href="#emissions" title="Link to this heading">#</a></h2>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -279,17 +567,17 @@ If the user does not provide a Chemical Mapping Control File or the path to the 
 <p>CMAQv5.3 introduced DESID so that the process of mapping emissions species to CMAQ species would be more transparent and flexible (see <a class="reference internal" href="Appendix/CMAQ_UG_appendixB_emissions_control.html"><span class="std std-doc">Appendix B: Emission Control with DESID</span></a>). In fact, users can now toggle, modify, and augment emissions from all available streams in order to confidently customize their simulations to the science or policy questions they are asking CMAQ to help answer. For tutorials covering specific tasks, please see the <a class="reference internal" href="Tutorials/CMAQ_UG_tutorial_emissions.html"><span class="std std-doc">DESID tutorial page</span></a>.</p>
 <p><a id=6.9.1_Emission_Streams></a></p>
 <section id="emission-streams">
-<h3>6.9.1 Emission Streams<a class="headerlink" href="#emission-streams" title="Link to this heading">¶</a></h3>
+<h3>6.9.1 Emission Streams<a class="headerlink" href="#emission-streams" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
 <p>Depending on the nature of any stream and the information used to quantify its emissions, it may be treated as one of three types:</p>
 <section id="online-streams">
-<h4>Online Streams:<a class="headerlink" href="#online-streams" title="Link to this heading">¶</a></h4>
+<h4>Online Streams:<a class="headerlink" href="#online-streams" title="Link to this heading">#</a></h4>
 <p>CMAQ will calculate the emission rates from this source using information about local meteorology, land characteristics, etc. The streams that can be run online in CMAQ are: <a class="reference internal" href="#BEIS/MEGAN"><span class="xref myst">biogenics (BEIS/MEGAN)</span></a>,<a class="reference internal" href="#Wind_Blown_Dust"><span class="xref myst"> windblown dust</span></a>, <a class="reference internal" href="#Sea_Spray"><span class="xref myst">sea spray</span></a>, marine gas, and <a class="reference internal" href="#Lightning_NO"><span class="xref myst">lightning NO</span></a>.</p>
 </section>
 <section id="gridded-stream-offline">
-<h4>Gridded Stream (offline):<a class="headerlink" href="#gridded-stream-offline" title="Link to this heading">¶</a></h4>
+<h4>Gridded Stream (offline):<a class="headerlink" href="#gridded-stream-offline" title="Link to this heading">#</a></h4>
 <p>CMAQ will read emission rates from an input file, which is organized into an array that is identical in shape to the CMAQ model grid. Typically, these rates are stored at hourly time points and are then interpolated within CMAQ to each time step. These files may be 2D to represent just the surface layer emissions or they may be 3D. If 3D, the file may have the same number or fewer number of layers as the CMAQ grid. Gridded emissions may be merged into a single stream or kept as separate types. Some common examples of Gridded emissions include:</p>
 <ul class="simple">
 <li><p>Mobile sources such as passenger vehicles, trains, ships, scooters, etc.</p></li>
@@ -324,7 +612,7 @@ If the user does not provide a Chemical Mapping Control File or the path to the 
 <p>If N_EMIS_GR is set 0, then CMAQ will run with no Gridded emissions even if the values for GR_EMIS_XXX and GR_EMIS_LAB_XXX are all set.</p>
 </section>
 <section id="point-stream-offline">
-<h4>Point Stream (offline):<a class="headerlink" href="#point-stream-offline" title="Link to this heading">¶</a></h4>
+<h4>Point Stream (offline):<a class="headerlink" href="#point-stream-offline" title="Link to this heading">#</a></h4>
 <p>For these streams, emission rates and stack characteristics are provided for many individual sources on the same offline file. CMAQ uses the stack information to calculate important quantities online like the injection height which is influenced by local meteorology. A specific latitude/longitude pair is given for each source to locate it in the CMAQ grid. Sources outside the CMAQ grid domain are ignored by CMAQ; thus the same files may be used for a large domain and a nest within that domain. Some common examples of Point emissions include:</p>
 <ul class="simple">
 <li><p>Stacks (electric generation units, industrial sources, manufacturing, etc.)</p></li>
@@ -362,17 +650,17 @@ If the user does not provide a Chemical Mapping Control File or the path to the 
 </section>
 </section>
 <section id="online-emission-streams">
-<h3>6.9.2 Online Emission Streams<a class="headerlink" href="#online-emission-streams" title="Link to this heading">¶</a></h3>
+<h3>6.9.2 Online Emission Streams<a class="headerlink" href="#online-emission-streams" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
 <p><a id=BEIS/MEGAN></a></p>
 <section id="biogenics">
-<h4>Biogenics<a class="headerlink" href="#biogenics" title="Link to this heading">¶</a></h4>
+<h4>Biogenics<a class="headerlink" href="#biogenics" title="Link to this heading">#</a></h4>
 <p>To calculate online biogenic emissions, CMAQ uses the <a class="reference external" href="https://www.epa.gov/air-emissions-modeling/biogenic-emission-inventory-system-beis">Biogenic Emission Inventory System (BEIS)</a> and the <a class="reference external" href="https://bai.ess.uci.edu/megan">Model of Emissions of Gases and Aerosols from Nature (MEGAN)</a>. Before using the CMAQ online version of BEIS or MEGAN users should confirm that biogenic emissions are not already included in their emissions files from SMOKE to avoid double counting biogenic emissions.</p>
 </section>
 <section id="beis">
-<h4>BEIS<a class="headerlink" href="#beis" title="Link to this heading">¶</a></h4>
+<h4>BEIS<a class="headerlink" href="#beis" title="Link to this heading">#</a></h4>
 <p>BEIS calculates emissions resulting from biological activity from land-based vegetative species as well as nitric oxide emissions produced by microbial activity from certain soil types. This biogenic model is based on the same model that is included in SMOKE. User documentation for BEIS can be found in <a class="reference external" href="https://www.cmascenter.org/smoke/documentation/5.0/html/">Chapter 4.19 of the SMOKE manual</a>.</p>
 <p>Speciation of biogenic emissions for BEIS is controlled by gspro_biogenics.txt under CCTM/src/biog/beis.</p>
 <p>Running CMAQ with BEIS is controlled by the following RunScript flag:</p>
@@ -393,7 +681,7 @@ If the user does not provide a Chemical Mapping Control File or the path to the 
 </div>
 </section>
 <section id="megan">
-<h4>MEGAN<a class="headerlink" href="#megan" title="Link to this heading">¶</a></h4>
+<h4>MEGAN<a class="headerlink" href="#megan" title="Link to this heading">#</a></h4>
 <p>MEGAN also calculates emissions resulting from biological activity from land-based vegetative species as well as nitric oxide emissions produced by microbial activity from certain soil types.</p>
 <p>Speciation of biogenic emissions for MEGAN is controlled by mechanism specific *.EXT files under CCTM/src/biog/megan3.</p>
 <p>Running CMAQ with MEGAN is controlled by the following RunScript flag:</p>
@@ -415,7 +703,7 @@ If the user does not provide a Chemical Mapping Control File or the path to the 
 <p><a id=Wind_Blown_Dust></a></p>
 </section>
 <section id="windblown-dust">
-<h4>Windblown Dust<a class="headerlink" href="#windblown-dust" title="Link to this heading">¶</a></h4>
+<h4>Windblown Dust<a class="headerlink" href="#windblown-dust" title="Link to this heading">#</a></h4>
 <p>The amount of dust emitted from an arid surface depends on wind speed, surface roughness, moisture content of the soil, vegetation coverage, soil type and texture, and air density.  The main mechanism behind strong dust storms is called “saltation bombardment” or “sandblasting.” The physics of saltation include the movement of sand particles due to wind, the impact of these particles to the surface that removes part of the soil volume, and the release of smaller dust particles. Following the approach described in Foroutan et al. (2017) to represent these processes, CMAQ first calculates friction velocity at the surface of the Earth. Once this friction velocity exceeds a threshold value, saltation, or horizontal movement, flux is obtained. Finally, the vertical flux of the dust is calculated based on a sandblasting efficiency formulation - a vertical-to-horizontal dust flux ratio.</p>
 <p>In its windblown dust emission calculations, CMAQ uses time-varying vegetation coverage, soil moisture and wind speed from the meteorological model, WRF. The vegetation coverage is used to adjust the erodible portion of “desert land” grid cells (discussed in the next paragraph) and its representation in  WRF can vary depending on the configuration. In WRFv4.1+, the Pleim-Xiu land-surface model (PX LSM) was modified to provide CMAQ vegetation fraction (VEGF_PX in WRF renamed VEG in MCIP) from either the old fractional land use weighting table lookup method (pxlsm_modis_veg = 0), or a new option where vegetation fraction is directly read from monthly MODIS satellite-derived vegetation coverage found in the wrflowinp_d0* file(s) (pxlsm_modis_veg = 1). This was done because in recent years WRF has provided high resolution (~1 km) monthly vegetation coverage that is more accurate than tables. Updates are backward compatible with older version of MCIP or WRF as long as VEG and VEGF_PX/VEGFRA are in those files. Using the MODIS data in WRF via the new PX vegetation option provides the dust model a more accurate representation of vegetation in regions where windblown dust most occurs.</p>
 <p>CMAQ windblown dust emissions are only computed for certain land use types defined as “desert” land, i.e. erodible, arid land. During the initial development of the CMAQ windblown dust module, three such “desert” land use types were defined and information about their fractional coverage was based on the Biogenic Emissions Landuse Database (BELD) and was provided to CMAQ through a separate input file. Later developments added the option to alternatively obtain land use information directly from MCIP (which in turn reflects the land use option selected for the WRF LSM, such as NCLD40 or MODIS), internally mapping “desert” types defined for the different WRF land use options to the three different BELD “desert” categories used in the CMAQ windblown dust algorithm. This supported the calculation of windblown dust emissions for areas outside North America where BELD is not available. As of version CMAQ version 5.4, the windblown dust module no longer supports reading a separate file with BELD land use data and always uses land use information contained in the MCIP files.</p>
@@ -429,7 +717,7 @@ If the user does not provide a Chemical Mapping Control File or the path to the 
 <p>Alternatively, users can also edit the emission control file by commenting out the coarse and fine species expected for the windblown dust module. The following species are emitted by the Dust module and may be referenced in the emission control file <a class="reference internal" href="#Table6-1"><span class="xref myst">Table 6-1</span></a>:</p>
 <p><a id=Table6-1></a>
 <strong>Table 6-1. Aerosol Species Predicted by the Windblown Dust Module</strong></p>
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Dust Surrogate Name</strong></p></th>
 <th class="head"><p><strong>Default CMAQ Species</strong></p></th>
@@ -595,10 +883,11 @@ If the user does not provide a Chemical Mapping Control File or the path to the 
 </tr>
 </tbody>
 </table>
+</div>
 <p><a id=Sea_Spray></a></p>
 </section>
 <section id="sea-spray">
-<h4>Sea Spray<a class="headerlink" href="#sea-spray" title="Link to this heading">¶</a></h4>
+<h4>Sea Spray<a class="headerlink" href="#sea-spray" title="Link to this heading">#</a></h4>
 <p>Because sea spray particles are emitted during wave breaking and bubble bursting at the ocean surface, the main factor affecting the emission rate is the wind speed. The temperature of the ocean also affects bubble bursting and subsequent emission rate of sea spray particles. Wave breaking is enhanced near the surf zone just offshore, and CMAQ accounts for this by increasing sea spray particle emission rates in the surf zone.</p>
 <p>The current open ocean sea spray particle emission rate in CMAQ, as described in Gantt et al. (2015), is based on Gong (2003) with a temperature dependence derived from Jaeglé et al. (2011) and Ovadnevaite et al. (2014) and an adjustment of Θ from 30 to eight to account for higher accumulation mode emissions. The current surf zone sea spray particle emission rate in CMAQ as described in Gantt et al. (2015) is based on Kelly et al. (2010) with a reduction of the assumed surf zone width from 50 to 25 meters.
 The CMAQ sea spray emissions module is controlled by the following RunScript flag:</p>
@@ -611,7 +900,7 @@ Note that CMAQ employing Carbon Bond 6 version r5 with DMS and marine halogen ch
 <p>Alternatively, users can also edit the emission control file by commenting out the coarse and fine species expected for the sea spray module. The following species are emitted by the Sea Spray module and may be referenced in the emission control file <a class="reference internal" href="#Table6-2"><span class="xref myst">Table 6-2</span></a>:</p>
 <p><a id=Table6-2></a>
 <strong>Table 6-2. Aerosol Species Predicted by the Sea-Spray Aerosol Module</strong></p>
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Sea Spray Surrogate Name</strong></p></th>
 <th class="head"><p><strong>Default CMAQ Species</strong></p></th>
@@ -733,22 +1022,23 @@ Note that CMAQ employing Carbon Bond 6 version r5 with DMS and marine halogen ch
 </tr>
 </tbody>
 </table>
+</div>
 <p><a id=DMS_emission></a></p>
 </section>
 <section id="dimethyl-sulfide-dms-and-halocarbon-emissions">
-<h4>Dimethyl sulfide (DMS) and Halocarbon emissions<a class="headerlink" href="#dimethyl-sulfide-dms-and-halocarbon-emissions" title="Link to this heading">¶</a></h4>
+<h4>Dimethyl sulfide (DMS) and Halocarbon emissions<a class="headerlink" href="#dimethyl-sulfide-dms-and-halocarbon-emissions" title="Link to this heading">#</a></h4>
 <p>DMS and halocarbon emissions are needed for cb6r5m_ae7_aq. DMS emissions are also needed for cb6r5_ae7_aq and. DMS emissions are calculated using the monthly mean climatological DMS concentrations in seawater and halocarbon emissions are calculated using the monthly-average climatological chl-a concentrations derived from the Moderate Resolution Imaging Spectroradiometer (MODIS). Ocean file needs to include DMS and CHLO concentrations in seawater for cb6r5m_ae7_aq and DMS for cb6r5_ae7_aq. CTM_OCEAN_CHEM should be set to Y to include DMS and halocarbon emissions; otherwise CMAQ will not include any DMS or halocarbon emissions. The details of DMS emissions estimations method in CMAQ are described in Zhao et al. (2021) while the details of halocarbon emissions are described in Sarwar et al. (2015) and Sarwar et al. (2019).</p>
 <p><a id=Lightning_NO></a></p>
 </section>
 <section id="lightning-no">
-<h4>Lightning NO<a class="headerlink" href="#lightning-no" title="Link to this heading">¶</a></h4>
+<h4>Lightning NO<a class="headerlink" href="#lightning-no" title="Link to this heading">#</a></h4>
 <p>In retrospective applications over the continental U.S., National Lightning Detection Network (NLDN) lightning data or the scaled World Wide Lightning Location Network (WWLLNs) lightning data (Kang et al., 2022) can be used directly to generate NO produced by lightning in CMAQ. For real-time forecasts or other applications where lightning data are not available, lightning NO is produced based on statistical relationships with the simulated convective rainfall rate (Kang et al., 2019).</p>
 <p>There are two options for including NO from lighting.  Both options require setting the CTM_LTNG_NO flag to Y in the RunScript.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setenv</span> <span class="n">CTM_LTNG_NO</span> <span class="n">Y</span>
 </pre></div>
 </div>
 <section id="option-1-inline-no-with-nldn-or-wwllns-data-user-uses-hourly-nldn-or-wwllns-lightning-strike-netcdf-file">
-<h5>Option 1 - Inline NO with NLDN or WWLLNs Data – user uses hourly NLDN or WWLLNs lightning strike netCDF file.<a class="headerlink" href="#option-1-inline-no-with-nldn-or-wwllns-data-user-uses-hourly-nldn-or-wwllns-lightning-strike-netcdf-file" title="Link to this heading">¶</a></h5>
+<h5>Option 1 - Inline NO with NLDN or WWLLNs Data – user uses hourly NLDN or WWLLNs lightning strike netCDF file.<a class="headerlink" href="#option-1-inline-no-with-nldn-or-wwllns-data-user-uses-hourly-nldn-or-wwllns-lightning-strike-netcdf-file" title="Link to this heading">#</a></h5>
 <p>Hourly NLDN lightning strike data can be purchased, and WWLLNs data is available at (https://dataverse.unc.edu/dataset.xhtml?persistentId=doi:10.15139/S3/NK3NCM  (instructions and metadata) and https://cmas-wwlln-lightning.s3.amazonaws.com/index.html#cmas-wwlln-lightning/  (Data folders)).</p>
 <p>In addition to the hourly lightning strike netCDF file, this option requires a lightning parameters netCDF file.  This file contains  the intercloud to cloud-to-ground flash ratios, which are the scaling factors for calculating flashes using the convective precipitation rate, land-ocean masks, and the moles of NO per flash (cloud-to-ground and intercloud).  The lightning parameters file for a domain over the continental US at 12km horizontal resolution (12US1) can be downloaded from the <a class="reference external" href="https://drive.google.com/drive/folders/1R8ENVSpQiv4Bt4S0LFuUZWFzr3-jPEeY">CMAS Data Warehouse</a>.  This file can be regridded to support other domains within the continental US.</p>
 <p>For this option, set the following environment variables in the RunScript:</p>
@@ -766,7 +1056,7 @@ Note that CMAQ employing Carbon Bond 6 version r5 with DMS and marine halogen ch
 </div>
 </section>
 <section id="option-2-inline-no-without-nldn-data-lightning-no-is-calculated-within-cctm-based-on-statistical-relationships-with-the-simulated-convective-rainfall-rate">
-<h5>Option 2 - Inline NO without NLDN Data –  lightning NO is calculated within CCTM based on statistical relationships with the simulated convective rainfall rate.<a class="headerlink" href="#option-2-inline-no-without-nldn-data-lightning-no-is-calculated-within-cctm-based-on-statistical-relationships-with-the-simulated-convective-rainfall-rate" title="Link to this heading">¶</a></h5>
+<h5>Option 2 - Inline NO without NLDN Data –  lightning NO is calculated within CCTM based on statistical relationships with the simulated convective rainfall rate.<a class="headerlink" href="#option-2-inline-no-without-nldn-data-lightning-no-is-calculated-within-cctm-based-on-statistical-relationships-with-the-simulated-convective-rainfall-rate" title="Link to this heading">#</a></h5>
 <p>This option also requires a lightning parameters netCDF file which contains the linear regression parameters for generating lightning NO.  The lightning parameters file for the continental US at 12km horizontal resolution can be downloaded from the <a class="reference external" href="https://drive.google.com/drive/folders/1R8ENVSpQiv4Bt4S0LFuUZWFzr3-jPEeY">CMAS Data Warehouse</a>. This file can be regridded to support other domains within the continental US.</p>
 <p>For this option, set the following environment variables in the RunScript:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setenv</span> <span class="n">LTNGNO</span> <span class="n">INLINE</span>
@@ -783,37 +1073,37 @@ Note that CMAQ employing Carbon Bond 6 version r5 with DMS and marine halogen ch
 </section>
 </section>
 <section id="emission-compatibility-for-cmaqv5-3">
-<h3>6.9.3 Emission Compatibility for CMAQv5.3+<a class="headerlink" href="#emission-compatibility-for-cmaqv5-3" title="Link to this heading">¶</a></h3>
+<h3>6.9.3 Emission Compatibility for CMAQv5.3+<a class="headerlink" href="#emission-compatibility-for-cmaqv5-3" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
 <p><a id=PCSOA></a></p>
 <section id="potential-combustion-soa">
-<h4>Potential Combustion SOA<a class="headerlink" href="#potential-combustion-soa" title="Link to this heading">¶</a></h4>
+<h4>Potential Combustion SOA<a class="headerlink" href="#potential-combustion-soa" title="Link to this heading">#</a></h4>
 <p>Potential Combustion SOA (PCSOA) was added to CMAQv5.2 to account for missing PM2.5 from fossil-fuel combustion sources (Murphy et al., 2017).  PCSOA is not intended to be applied to non-fossil-fuel combustion sources such as residential wood combustion (RWC).  The new DESID option introduced in CMAQv5.3 introduces the ability to read multiple gridded emissions files, allowing RWC to be treated as an entirely separate emissions source from the rest of the gridded emissions.  Using DESID, PCSOA can be applied to the other gridded combustion sources, but should not be used for RWC. The CRACMM mechanism does not use PCSOA.</p>
 <p><a class="reference internal" href="Appendix/CMAQ_UG_appendixB_emissions_control.html"><span class="std std-doc">Jump to DESID Appendix</span></a> for an introduction to using the Emissions Control Namelist for customization of emissions processing.</p>
 <p><a class="reference internal" href="Tutorials/CMAQ_UG_tutorial_emissions.html"><span class="std std-doc">Jump to DESID Tutorial</span></a> for step by step instructions on performing some basic manipulation of emission streams.</p>
 <p><a id=a-pinene></a></p>
 </section>
 <section id="pinene-separated-from-other-monoterpenes">
-<h4>α-Pinene separated from other monoterpenes<a class="headerlink" href="#pinene-separated-from-other-monoterpenes" title="Link to this heading">¶</a></h4>
+<h4>α-Pinene separated from other monoterpenes<a class="headerlink" href="#pinene-separated-from-other-monoterpenes" title="Link to this heading">#</a></h4>
 <p>If using chemical mechanism CB6r3 or CB6r5 and aerosol module AERO7 (cb6r3_ae7_aq or cb6r5_ae7_aq) with offline biogenic emissions, α-pinene should be separated from all other monoterpenes. This will prevent overestimation in PM2.5 SOA as α-pinene should not make SOA through nitrate radical reaction.  Users can use biogenic emission files created for older model versions by updating the emission control file to separate α-pinene. No action is required for aerosol module AERO6 (any mechanism), in-line biogenics (any mechanism, any aerosol module), or aero7 with SAPRC mechanisms. See the <a class="reference internal" href="#../Release_Notes/CMAQv5.3_aero7_overview.md"><span class="xref myst">AERO7 overview release notes</span></a> for further details.</p>
 <p><a id=6.10_Gas_Phase_Chem></a></p>
 </section>
 </section>
 </section>
 <section id="gas-phase-chemistry">
-<h2>6.10 Gas Phase Chemistry<a class="headerlink" href="#gas-phase-chemistry" title="Link to this heading">¶</a></h2>
+<h2>6.10 Gas Phase Chemistry<a class="headerlink" href="#gas-phase-chemistry" title="Link to this heading">#</a></h2>
 <p><a id=6.10.1_Gas_Phase_Mech></a></p>
 <section id="gas-phase-chemical-mechanisms">
-<h3>6.10.1 Gas Phase Chemical Mechanisms<a class="headerlink" href="#gas-phase-chemical-mechanisms" title="Link to this heading">¶</a></h3>
+<h3>6.10.1 Gas Phase Chemical Mechanisms<a class="headerlink" href="#gas-phase-chemical-mechanisms" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
 <p>The CMAQ modeling system accounts for chemistry in three phases: a gas, particulate (solid or liquid), and aqueous-cloud phase. Refer to the release notes to find the gas‑phase chemistry mechanisms available in each version of CMAQ. Several variations of the base gas-phase mechanisms, with and without chlorine, DMS, mercury, and toxic species chemistry, are distributed with CMAQ. The modularity of CMAQ makes it possible to create or modify the gas-phase chemical mechanism.</p>
 <p>Gas-phase chemical mechanisms are defined in CMAQ based on Fortran source files. Located in subdirectories of the CCTM/src/MECHS directory (each corresponding to a mechanism name), these files define the source, reaction parameters, and atmospheric processes (e.g., diffusion, deposition, advection) of the various mechanism species. The species definitions for each mechanism are contained in namelist files that are read in during execution of the CMAQ programs. The CMAQ mechanism configuration is more similar to the science module configuration than to the horizontal grid or vertical layer configuration in that the mechanism is defined at build time, resulting in executables that are hard-wired to a specific gas-phase mechanism. To change chemical mechanisms between simulations, a new executable that includes the desired mechanism configuration must be compiled.</p>
 <section id="using-predefined-chemical-mechanisms">
-<h4>Using predefined chemical mechanisms<a class="headerlink" href="#using-predefined-chemical-mechanisms" title="Link to this heading">¶</a></h4>
+<h4>Using predefined chemical mechanisms<a class="headerlink" href="#using-predefined-chemical-mechanisms" title="Link to this heading">#</a></h4>
 <p>To select a predefined mechanism configuration in CMAQ, set the <em>Mechanism</em> variable in the BuildScript to one of the mechanism names listed in <a class="reference internal" href="#Table6-3"><span class="xref myst">Table 6-3</span></a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="nb">set</span> <span class="n">Mechanism</span> <span class="o">=</span> <span class="n">MECHANISM_NAME</span>
 </pre></div>
@@ -822,7 +1112,7 @@ Note that CMAQ employing Carbon Bond 6 version r5 with DMS and marine halogen ch
 <p>Chemical mechanisms available with CMAQv5.5 can be found in <a class="reference internal" href="#Table6-3"><span class="xref myst">Table 6-3</span></a>. Atmospheric chemistry mechanisms of varying complexity are available to support diverse applications across scales and explore extensions for emerging problems and contaminants.</p>
 <p><a id=Table6-3></a>
 <strong>Table 6-3. Chemical Mechanisms Available with CMAQv5.5</strong></p>
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Mechanism Name</strong></p></th>
 <th class="head"><p><strong>Comment</strong></p></th>
@@ -870,11 +1160,12 @@ Note that CMAQ employing Carbon Bond 6 version r5 with DMS and marine halogen ch
 </tr>
 </tbody>
 </table>
+</div>
 <p><a id=6.10.2_Solver></a></p>
 </section>
 </section>
 <section id="solvers">
-<h3>6.10.2 Solvers<a class="headerlink" href="#solvers" title="Link to this heading">¶</a></h3>
+<h3>6.10.2 Solvers<a class="headerlink" href="#solvers" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -893,7 +1184,7 @@ Note that CMAQ employing Carbon Bond 6 version r5 with DMS and marine halogen ch
 <p><a id=6.10.3_Photolysis></a></p>
 </section>
 <section id="photolysis">
-<h3>6.10.3 Photolysis<a class="headerlink" href="#photolysis" title="Link to this heading">¶</a></h3>
+<h3>6.10.3 Photolysis<a class="headerlink" href="#photolysis" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -906,7 +1197,7 @@ Note that CMAQ employing Carbon Bond 6 version r5 with DMS and marine halogen ch
 </pre></div>
 </div>
 <p>The in-line method (Binkowski et al., 2007) is the preferred option because it includes feedbacks from meteorology in addition to predicted ozone and aerosol concentrations. Starting CMAQv5.5, the in-line methods includes options for calculating the aerosol optical properties used to calculated photolysis frequencies. The model RunScript toggles between the options using the environmental variable “AEROSOL_OPTICS”. The table below summarizes these options:</p>
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p><strong>AEROSOL_OPTICS value</strong></p></th>
 <th class="head text-center"><p><strong>In-line Photolysis Method</strong></p></th>
@@ -940,6 +1231,7 @@ Note that CMAQ employing Carbon Bond 6 version r5 with DMS and marine halogen ch
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Selecting the value of AEROSOL_OPTICS is based on several factors</strong>. <em>How important is light extinction by aerosols in determining photolysis frequencies</em> and <em>how should the model represent the internal structure of aerosols for computing optical properties of aerosol?</em> Aerosol concentrations may have large effects on photolysis where they are expected to be high such as fire episodes or polluted urban areas with large emissions of elemental carbon. To compute aerosol optical properties, the model may use an internal aerosol structure assuming a sphere with carbon core surrounded by a uniformly mixed shell. AEROSOL_OPTICS then has a value set to 4 through 6 where Core-shell (Bohren at al., 1998) is used. If such scenarios lack high emissions of elemental carbon, AEROSOL_OPTICS can equal 1 or 2 for more accurately calculating light absorption and scattering by aerosols. Tabular Mie and MieCalc options assume a uniformly mixed sphere to calculate aerosol optical properties. <em>How accurate do the computed properties need to be?</em> If predicted optical properties are going to be compared to observations with large variability or small values such as aerosol scattering coefficient, asymmetry parameter, and absorption aerosol optical depth, the AEROSOL_OPTICS value should equal 2 or 4 that use exact solutions to Mie Scattering Theory. <em>What is the acceptable run-time of daily simulations?</em> Exact solutions of Mie Scattering Theory increase model run-time. Option 2, MieCalc, can increase run-time between 50% to 100% while Core-shell options, 4 through 6, can increase run-time between 100% to 400%. The increase is measured against the oldest and default option, the Fast Optics. Tests indicate that the newest option, Tabular Mie, has similar run-times to Fast Optics but produces results closer to MieCal.</p>
 <p>Three other ASCII files support the in-line method. <strong>PHOT_OPTICS</strong> describes the optical properties of clouds, aerosols, and the earth’s surface. The <strong>OMI</strong> file is used to determine how much light is absorbed by ozone above the model domain. Both files are included in the released version of CMAQ. Calculating photolysis rates uses one more file, the
 <strong>CSQY_DATA_${Mechanism}</strong>
@@ -948,7 +1240,7 @@ file, that depends on the mechanism used. It contains the cross sections and qua
 <p><a id=6.10.4_HONO></a></p>
 </section>
 <section id="nitrous-acid-hono">
-<h3>6.10.4 Nitrous Acid (HONO)<a class="headerlink" href="#nitrous-acid-hono" title="Link to this heading">¶</a></h3>
+<h3>6.10.4 Nitrous Acid (HONO)<a class="headerlink" href="#nitrous-acid-hono" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -961,7 +1253,7 @@ file, that depends on the mechanism used. It contains the cross sections and qua
 <p><a id=6.10.5_CRACMM></a></p>
 </section>
 <section id="cracmm-version-1-0-2-0">
-<h3>6.10.5 CRACMM Version 1.0-2.0<a class="headerlink" href="#cracmm-version-1-0-2-0" title="Link to this heading">¶</a></h3>
+<h3>6.10.5 CRACMM Version 1.0-2.0<a class="headerlink" href="#cracmm-version-1-0-2-0" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -970,7 +1262,7 @@ file, that depends on the mechanism used. It contains the cross sections and qua
 <p>When selected as the gas-phase mechanism, use of CRACMM fully specifies CMAQ’s aerosol treatment. CRACMM was designed as a multiphase mechanism and thus includes pathways to SOA and precursors to inorganic aerosol. The aero versioned by number no longer applies, and potential combustion SOA (pcSOA) is deprecated in CRACMM. Methane reaction with OH is considered and background methane is set to a fixed concentration of 1.85 ppm by default, roughly mathching global conditions in the later part of the 2010s. Year or location specific <a class="reference external" href="https://gml.noaa.gov/ccgg/trends_ch4/">methane concentrations</a> could be used (see the end of the mechanism definition file to make the update). Emissions of methane on top of background levels can also be considered in CRACMMv2.</p>
 <p>One feature of CRACMM is the specification of representative structures for all species in the mechanism. This information is available as metadata describing all gas, particulate, and nonreactive species. Metadata exists in (csv-separated) columns appended to the species namelist files and in a new species description file. The information is not used at runtime by the CMAQ simulation, but should be updated if CRACMM species are updated to facilitate communication of how mechanism species are conceptualized. The metadata is leveraged to determine conservation of mass across chemical reactions (see the CHEMMECH README in the UTIL directory), determination of species properties such as solubility, and to communicate how species are conceptualized. Supplemental code automatically processes the metadata into markdown files for the CMAQ code repository.</p>
 <section id="cracmm-species-description-file">
-<h4>CRACMM Species Description File<a class="headerlink" href="#cracmm-species-description-file" title="Link to this heading">¶</a></h4>
+<h4>CRACMM Species Description File<a class="headerlink" href="#cracmm-species-description-file" title="Link to this heading">#</a></h4>
 <p>CRACMM mechanisms have a species description file (located in MECHS/cracmm1_aq/cracmm1_speciesdescription.csv and MECHS/cracmm2/cracmm2_speciesdescription.csv) where the species in the mechanism are described. This file is a simple csv file with two values per line:</p>
 <ul class="simple">
 <li><p>Species name (string): All the GC.nml, AE.nml, and NR.nml species excluding phase (V,A) and particle size mode (I,J,K) identifiers</p></li>
@@ -992,7 +1284,7 @@ file, that depends on the mechanism used. It contains the cross sections and qua
 <p>See information below about the python code to create markdown files and what characters will be recognized and autoformatted. In general, species that exist in two phases with the gas phase species identified as ‘VROCname’ and the particle as ‘AROCname’ will be automatically matched. Exceptions (currently AHOM-HOM, AELHOM-ELHOM, AOP3-OP3) can be manually added in the python code.</p>
 </section>
 <section id="cracmm-metadata-in-species-nml">
-<h4>CRACMM Metadata in Species nml<a class="headerlink" href="#cracmm-metadata-in-species-nml" title="Link to this heading">¶</a></h4>
+<h4>CRACMM Metadata in Species nml<a class="headerlink" href="#cracmm-metadata-in-species-nml" title="Link to this heading">#</a></h4>
 <p>All mechanisms in CMAQ use namelists to specify the gas-phase (GC.nml), particle phase (AE.nml), and nonreactive (NR.nml) species. In cracmm mechanisms, the namelists are appended with the following information:</p>
 <ul class="simple">
 <li><p>RepCmp (string):  Representative compound following IUPAC or other common nomenclature.</p></li>
@@ -1008,10 +1300,10 @@ file, that depends on the mechanism used. It contains the cross sections and qua
 <p>For species that exist in multiple phases, the metadata should only be specified in the GC.nml.</p>
 </section>
 <section id="cracmm-supporting-code-archive">
-<h4>CRACMM supporting code archive<a class="headerlink" href="#cracmm-supporting-code-archive" title="Link to this heading">¶</a></h4>
+<h4>CRACMM supporting code archive<a class="headerlink" href="#cracmm-supporting-code-archive" title="Link to this heading">#</a></h4>
 <p>A supporting code archive is distributed at <a class="reference external" href="https://github.com/USEPA/CRACMM">USEPA/CRACMM</a> to provide information that can be used by other models to implement CRACMM. This information includes documentation on how individual species map to the mechanism (available schematically and in python code), inputs to models such as Speciation Tool and SMOKE, and mapping of the SPECIATE database to CRACMM.</p>
 <p>One of the python routines available in the archive combines the CRACMM species information from the CMAQ namelists and species description file to create the species markdown files in (MECHS/mechanism_information). The processor will automatically format the following strings in markdown if used in the species description file:</p>
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Species Description File String</p></th>
 <th class="head"><p>Converted String in Github Markdown Rendering</p></th>
@@ -1074,6 +1366,7 @@ file, that depends on the mechanism used. It contains the cross sections and qua
 </tr>
 </tbody>
 </table>
+</div>
 <p>The python code creates the mechanism specific species markdown file based on the intersection of what exists in the namelists and species description file which is why the two CRACMM flavors share the same species description file.</p>
 <p>In cases where a species exists in the gas and particle phase (e.g., AOP3J and OP3) the python code also checks that the molecular weights match across the phases and will print a warning (“&gt;&gt;gas and particle molecular weights have an inconsistency&lt;&lt;”) if they are not an exact match and will print “&gt;&gt;gas and particle molecular weights match&lt;&lt;” if they do match.</p>
 <p><a id=6.11_Aerosol_Dynamics></a></p>
@@ -1081,7 +1374,7 @@ file, that depends on the mechanism used. It contains the cross sections and qua
 </section>
 </section>
 <section id="aerosol-dynamics-and-chemistry">
-<h2>6.11 Aerosol Dynamics and Chemistry<a class="headerlink" href="#aerosol-dynamics-and-chemistry" title="Link to this heading">¶</a></h2>
+<h2>6.11 Aerosol Dynamics and Chemistry<a class="headerlink" href="#aerosol-dynamics-and-chemistry" title="Link to this heading">#</a></h2>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -1098,7 +1391,7 @@ file, that depends on the mechanism used. It contains the cross sections and qua
 <p>Further discussion on the scientific improvements to the CMAQ PM treatment is available in the release notes.</p>
 <p><a id=6.11.1_Aero_BC></a></p>
 <section id="aerosol-boundary-and-initial-conditions">
-<h3>6.11.1 Aerosol Boundary and Initial Conditions<a class="headerlink" href="#aerosol-boundary-and-initial-conditions" title="Link to this heading">¶</a></h3>
+<h3>6.11.1 Aerosol Boundary and Initial Conditions<a class="headerlink" href="#aerosol-boundary-and-initial-conditions" title="Link to this heading">#</a></h3>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -1126,7 +1419,7 @@ Deviation in total coarse particle mass concentration in $\mu g \ m^{-3}$.</p>
 </section>
 </section>
 <section id="aqueous-chemistry-scavenging-and-wet-deposition">
-<h2>6.12 Aqueous Chemistry, Scavenging and Wet Deposition<a class="headerlink" href="#aqueous-chemistry-scavenging-and-wet-deposition" title="Link to this heading">¶</a></h2>
+<h2>6.12 Aqueous Chemistry, Scavenging and Wet Deposition<a class="headerlink" href="#aqueous-chemistry-scavenging-and-wet-deposition" title="Link to this heading">#</a></h2>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -1157,7 +1450,7 @@ Deviation in total coarse particle mass concentration in $\mu g \ m^{-3}$.</p>
 <p><a id=6.13_Potential_Vort></a></p>
 </section>
 <section id="potential-vorticity-scaling">
-<h2>6.13 Potential Vorticity Scaling<a class="headerlink" href="#potential-vorticity-scaling" title="Link to this heading">¶</a></h2>
+<h2>6.13 Potential Vorticity Scaling<a class="headerlink" href="#potential-vorticity-scaling" title="Link to this heading">#</a></h2>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#Return_to_Top"><span class="xref myst">Return to Top</span></a></p>
 <!-- END COMMENT -->
@@ -1170,7 +1463,7 @@ Deviation in total coarse particle mass concentration in $\mu g \ m^{-3}$.</p>
 <p><a id=6.14_References></a></p>
 </section>
 <section id="references">
-<h2>6.14 References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h2>
+<h2>6.14 References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <p>Bash, J.O. (2010). Description and initial simulation of a dynamic bidirectional air-surface exchange model for mercury in Community Multiscale Air Quality model. J. Geophys. Res., 115, D06305, <a class="reference external" href="https://doi.org/10.1029/2009JD012834">doi:10.1029/2009JD012834</a>.</p>
 <p>Binkowski, F.S., Arunachalam, S., Adelman, Z., &amp; Pinto, J. (2007). Examining photolysis rates with a prototype on-line photolysis module in CMAQ. J. Appl. Meteor. and Clim., 46, 1252-1256. <a class="reference external" href="https://doi.org/10.1175/JAM2531.1">doi:10.1175/JAM2531.1</a>.</p>
 <p>Binkowski, F.S., &amp; Roselle, S.J. (2003). Models-3 Community Multiscale Air Quality (CMAQ) model aerosol component. 1. Model description. J. Geophys. Res., 108, 4183, <a class="reference external" href="https://doi.org/10.1029/2001JD001409">doi:10.1029/2001JD001409</a>.</p>
@@ -1244,124 +1537,169 @@ CMAQv5.5 User’s Guide <br></p>
 </section>
 
 
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">6. Model Configuration Options</a><ul>
-<li><a class="reference internal" href="#table-of-contents">Table of Contents:</a></li>
-<li><a class="reference internal" href="#introduction">6.1 Introduction</a></li>
-<li><a class="reference internal" href="#numerical-approach">6.2 Numerical Approach</a></li>
-<li><a class="reference internal" href="#grid-configuration">6.3 Grid Configuration</a><ul>
-<li><a class="reference internal" href="#horizontal-domains-and-lateral-boundaries">6.3.1 Horizontal Domains and Lateral Boundaries</a></li>
-<li><a class="reference internal" href="#vertical-domains">6.3.2 Vertical Domains</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#science-configurations">6.4 Science Configurations</a></li>
-<li><a class="reference internal" href="#advection">6.5 Advection</a></li>
-<li><a class="reference internal" href="#horizontal-diffusion">6.6 Horizontal Diffusion</a></li>
-<li><a class="reference internal" href="#vertical-diffusion">6.7 Vertical Diffusion</a></li>
-<li><a class="reference internal" href="#dry-deposition-air-surface-exchange">6.8 Dry Deposition/Air-surface exchange</a><ul>
-<li><a class="reference internal" href="#dry-deposition-m3dry">6.8.1 Dry Deposition - M3Dry</a></li>
-<li><a class="reference internal" href="#dry-depostion-stage">6.8.2 Dry Depostion - STAGE</a></li>
-<li><a class="reference internal" href="#enhanced-ozone-deposition">6.8.3 Enhanced Ozone Deposition</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#emissions">6.9 Emissions</a><ul>
-<li><a class="reference internal" href="#emission-streams">6.9.1 Emission Streams</a><ul>
-<li><a class="reference internal" href="#online-streams">Online Streams:</a></li>
-<li><a class="reference internal" href="#gridded-stream-offline">Gridded Stream (offline):</a></li>
-<li><a class="reference internal" href="#point-stream-offline">Point Stream (offline):</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#online-emission-streams">6.9.2 Online Emission Streams</a><ul>
-<li><a class="reference internal" href="#biogenics">Biogenics</a></li>
-<li><a class="reference internal" href="#beis">BEIS</a></li>
-<li><a class="reference internal" href="#megan">MEGAN</a></li>
-<li><a class="reference internal" href="#windblown-dust">Windblown Dust</a></li>
-<li><a class="reference internal" href="#sea-spray">Sea Spray</a></li>
-<li><a class="reference internal" href="#dimethyl-sulfide-dms-and-halocarbon-emissions">Dimethyl sulfide (DMS) and Halocarbon emissions</a></li>
-<li><a class="reference internal" href="#lightning-no">Lightning NO</a><ul>
-<li><a class="reference internal" href="#option-1-inline-no-with-nldn-or-wwllns-data-user-uses-hourly-nldn-or-wwllns-lightning-strike-netcdf-file">Option 1 - Inline NO with NLDN or WWLLNs Data – user uses hourly NLDN or WWLLNs lightning strike netCDF file.</a></li>
-<li><a class="reference internal" href="#option-2-inline-no-without-nldn-data-lightning-no-is-calculated-within-cctm-based-on-statistical-relationships-with-the-simulated-convective-rainfall-rate">Option 2 - Inline NO without NLDN Data –  lightning NO is calculated within CCTM based on statistical relationships with the simulated convective rainfall rate.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#emission-compatibility-for-cmaqv5-3">6.9.3 Emission Compatibility for CMAQv5.3+</a><ul>
-<li><a class="reference internal" href="#potential-combustion-soa">Potential Combustion SOA</a></li>
-<li><a class="reference internal" href="#pinene-separated-from-other-monoterpenes">α-Pinene separated from other monoterpenes</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#gas-phase-chemistry">6.10 Gas Phase Chemistry</a><ul>
-<li><a class="reference internal" href="#gas-phase-chemical-mechanisms">6.10.1 Gas Phase Chemical Mechanisms</a><ul>
-<li><a class="reference internal" href="#using-predefined-chemical-mechanisms">Using predefined chemical mechanisms</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#solvers">6.10.2 Solvers</a></li>
-<li><a class="reference internal" href="#photolysis">6.10.3 Photolysis</a></li>
-<li><a class="reference internal" href="#nitrous-acid-hono">6.10.4 Nitrous Acid (HONO)</a></li>
-<li><a class="reference internal" href="#cracmm-version-1-0-2-0">6.10.5 CRACMM Version 1.0-2.0</a><ul>
-<li><a class="reference internal" href="#cracmm-species-description-file">CRACMM Species Description File</a></li>
-<li><a class="reference internal" href="#cracmm-metadata-in-species-nml">CRACMM Metadata in Species nml</a></li>
-<li><a class="reference internal" href="#cracmm-supporting-code-archive">CRACMM supporting code archive</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#aerosol-dynamics-and-chemistry">6.11 Aerosol Dynamics and Chemistry</a><ul>
-<li><a class="reference internal" href="#aerosol-boundary-and-initial-conditions">6.11.1 Aerosol Boundary and Initial Conditions</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#aqueous-chemistry-scavenging-and-wet-deposition">6.12 Aqueous Chemistry, Scavenging and Wet Deposition</a></li>
-<li><a class="reference internal" href="#potential-vorticity-scaling">6.13 Potential Vorticity Scaling</a></li>
-<li><a class="reference internal" href="#references">6.14 References</a></li>
-</ul>
-</li>
-</ul>
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Users_Guide/CMAQ_UG_ch06_model_configuration_options.md.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<search id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">6.1 Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-approach">6.2 Numerical Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-configuration">6.3 Grid Configuration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-domains-and-lateral-boundaries">6.3.1 Horizontal Domains and Lateral Boundaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vertical-domains">6.3.2 Vertical Domains</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#science-configurations">6.4 Science Configurations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advection">6.5 Advection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-diffusion">6.6 Horizontal Diffusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vertical-diffusion">6.7 Vertical Diffusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dry-deposition-air-surface-exchange">6.8 Dry Deposition/Air-surface exchange</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dry-deposition-m3dry">6.8.1 Dry Deposition - M3Dry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dry-depostion-stage">6.8.2 Dry Depostion - STAGE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enhanced-ozone-deposition">6.8.3 Enhanced Ozone Deposition</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emissions">6.9 Emissions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emission-streams">6.9.1 Emission Streams</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#online-streams">Online Streams:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gridded-stream-offline">Gridded Stream (offline):</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#point-stream-offline">Point Stream (offline):</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#online-emission-streams">6.9.2 Online Emission Streams</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biogenics">Biogenics</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#beis">BEIS</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#megan">MEGAN</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#windblown-dust">Windblown Dust</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-spray">Sea Spray</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dimethyl-sulfide-dms-and-halocarbon-emissions">Dimethyl sulfide (DMS) and Halocarbon emissions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lightning-no">Lightning NO</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-inline-no-with-nldn-or-wwllns-data-user-uses-hourly-nldn-or-wwllns-lightning-strike-netcdf-file">Option 1 - Inline NO with NLDN or WWLLNs Data – user uses hourly NLDN or WWLLNs lightning strike netCDF file.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-inline-no-without-nldn-data-lightning-no-is-calculated-within-cctm-based-on-statistical-relationships-with-the-simulated-convective-rainfall-rate">Option 2 - Inline NO without NLDN Data –  lightning NO is calculated within CCTM based on statistical relationships with the simulated convective rainfall rate.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emission-compatibility-for-cmaqv5-3">6.9.3 Emission Compatibility for CMAQv5.3+</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-combustion-soa">Potential Combustion SOA</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pinene-separated-from-other-monoterpenes">α-Pinene separated from other monoterpenes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-phase-chemistry">6.10 Gas Phase Chemistry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-phase-chemical-mechanisms">6.10.1 Gas Phase Chemical Mechanisms</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-predefined-chemical-mechanisms">Using predefined chemical mechanisms</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solvers">6.10.2 Solvers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#photolysis">6.10.3 Photolysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nitrous-acid-hono">6.10.4 Nitrous Acid (HONO)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-version-1-0-2-0">6.10.5 CRACMM Version 1.0-2.0</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-species-description-file">CRACMM Species Description File</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-metadata-in-species-nml">CRACMM Metadata in Species nml</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-supporting-code-archive">CRACMM supporting code archive</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aerosol-dynamics-and-chemistry">6.11 Aerosol Dynamics and Chemistry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aerosol-boundary-and-initial-conditions">6.11.1 Aerosol Boundary and Initial Conditions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aqueous-chemistry-scavenging-and-wet-deposition">6.12 Aqueous Chemistry, Scavenging and Wet Deposition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-vorticity-scaling">6.13 Potential Vorticity Scaling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">6.14 References</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/Users_Guide/CMAQ_UG_ch06_model_configuration_options.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
     </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, CMAQ Developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
     </div>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="nav-item nav-item-0"><a href="../index.html">CMAQ_Documentation 0.2 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">6. Model Configuration Options</a></li> 
-      </ul>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
     </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2024, CMAQ Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
-    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>

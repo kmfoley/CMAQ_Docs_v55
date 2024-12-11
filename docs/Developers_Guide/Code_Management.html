@@ -1,47 +1,335 @@
+
 <!DOCTYPE html>
 
-<html lang="en" data-content_root="../">
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Code Management and Development &#8212; CMAQ_Documentation 0.2 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
     <script src="../_static/documentation_options.js?v=10f1778b"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Developers_Guide/Code_Management';</script>
     <link rel="canonical" href="https://jbrunto.github.io/CMAQ_Docs_v55/Developers_Guide/Code_Management.html" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="../index.html">CMAQ_Documentation 0.2 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Code Management and Development</a></li> 
-      </ul>
-    </div>  
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CMAQ_Documentation 0.2 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Docs_README.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Users_Guide/README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Users_Guide/Tutorials/README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Docs_README.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Users_Guide/README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Users_Guide/Tutorials/README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Code Management and Development</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="code-management-and-development">
-<h1>Code Management and Development<a class="headerlink" href="#code-management-and-development" title="Link to this heading">¶</a></h1>
+<h1>Code Management and Development<a class="headerlink" href="#code-management-and-development" title="Link to this heading">#</a></h1>
 <p>As a public domain model, CMAQ is the product of contributions from many developers, whose numbers are only expected to increase with the number of users worldwide. Some degree of standardization is necessary for management and archiving of these development versions, as well as to compile and execute the code once it is ready for use, and to submit it to the CMAS Center for archiving and benchmark testing. This chapter provides guidance on source code manage­ment, coding guidelines for new code development, the compilation of new source code using the build scripts, and guidelines for writing shell scripts usable by CMAQ. Much of this informa­tion is derived from Chapter 18 (Young, 1999) in Byun and Ching (1999), with updates where appropriate, particularly for new versions of the model code and for the Fortran 90 standard. The chapter also includes the procedure that is in place for distributing code versions other than the operational CMAQ that are submitted to the development code archives.</p>
 <section id="source-code-management">
-<h2>Source Code Management<a class="headerlink" href="#source-code-management" title="Link to this heading">¶</a></h2>
+<h2>Source Code Management<a class="headerlink" href="#source-code-management" title="Link to this heading">#</a></h2>
 <section id="the-need-for-a-configuration-management-tool">
-<h3>The need for a configuration-management tool<a class="headerlink" href="#the-need-for-a-configuration-management-tool" title="Link to this heading">¶</a></h3>
+<h3>The need for a configuration-management tool<a class="headerlink" href="#the-need-for-a-configuration-management-tool" title="Link to this heading">#</a></h3>
 <p>Faced with a large and growing community that uses and develops a wide variety of programs, modules, and codes, it is imperative to systematically manage the cross-community access to this software. Typically, successful management of software involves the following:</p>
 <ul class="simple">
 <li><p>A repository – a place where all of the public code resides.</p></li>
@@ -59,11 +347,11 @@
 </ul>
 </section>
 <section id="choice-of-a-configuration-management-tool">
-<h3>Choice of a configuration-management tool<a class="headerlink" href="#choice-of-a-configuration-management-tool" title="Link to this heading">¶</a></h3>
+<h3>Choice of a configuration-management tool<a class="headerlink" href="#choice-of-a-configuration-management-tool" title="Link to this heading">#</a></h3>
 <p>Prior to CMAQ version 5.0.2, CMAQ developers used <a class="reference external" href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a> for versioning, and distributed tarballs included CVS artifacts (e.g., files with names ending with ‘,v’). Starting with version 5.0.2, CMAQ developers switched to <a class="reference external" href="https://en.wikipedia.org/wiki/Git_%28software%29">git</a>.</p>
 </section>
 <section id="git-explained">
-<h3>git Explained<a class="headerlink" href="#git-explained" title="Link to this heading">¶</a></h3>
+<h3>git Explained<a class="headerlink" href="#git-explained" title="Link to this heading">#</a></h3>
 <p>git is a version control system that supports distributed workflows.  Every Git directory is a full repository with complete history and version tracking.</p>
 <ul>
 <li><p>It works on virtually all UNIX and Linux platforms and on many PCs.</p></li>
@@ -119,13 +407,13 @@ Use the following command to get the changes that have been made to the remote g
 </section>
 </section>
 <section id="guidelines-for-developing-new-cmaq-source-code">
-<h2>Guidelines for Developing New CMAQ Source Code<a class="headerlink" href="#guidelines-for-developing-new-cmaq-source-code" title="Link to this heading">¶</a></h2>
+<h2>Guidelines for Developing New CMAQ Source Code<a class="headerlink" href="#guidelines-for-developing-new-cmaq-source-code" title="Link to this heading">#</a></h2>
 <section id="object-oriented-concepts">
-<h3>Object-oriented concepts<a class="headerlink" href="#object-oriented-concepts" title="Link to this heading">¶</a></h3>
+<h3>Object-oriented concepts<a class="headerlink" href="#object-oriented-concepts" title="Link to this heading">#</a></h3>
 <p>To make the CMAQ system robust and flexible, object-oriented concepts were incorporated into the design of the system. The incorporation of these ideas helps developers avoid introducing errors when code modifications are needed. Additionally, the system can easily and efficiently be modified, allowing the user to quickly create models for different applications. The implemen­tation language for CMAQ is Fortran 90, which imposes limits on how far one can go in terms of object-oriented design. In particular, because Fortran is a static language, objects cannot be instantiated dynamically; they must be declared explicitly in the source code to be created at compile time. However, to encourage a user community that will be contributing code for future enhancements, every attempt has been made to adhere to the Fortran 90 standard.</p>
 </section>
 <section id="global-name-data-table">
-<h3>Global name data table<a class="headerlink" href="#global-name-data-table" title="Link to this heading">¶</a></h3>
+<h3>Global name data table<a class="headerlink" href="#global-name-data-table" title="Link to this heading">#</a></h3>
 <p>To implement modularity and data independence, we have employed design ideas that draw heavily from the object-oriented concept of ‘’inheritance ‘’and code re-use. The data structures in the codes that deal with the chemical mechanism, I/O API, logical file names, general constants, and pointers are determined by Fortran declarations in data and parameter statements in the CMAQ system. These data structures pertain to a particular application and are meant to apply globally—not just to one particular CCTM through all its subroutines, but also to all the models that supply data to CCTM for that application. These data structures are contained in Fortran INCLUDE files, which are essentially header files, included in the declaration sections near the top of the Fortran code source files. The inclusion of these source files is made automatic by using a generic string that represents the INCLUDE file and that is parsed and expanded to the actual INCLUDE file during a preprocessing stage in the compilation. The Fortran global INCLUDE files contain name tables that define:</p>
 <ol class="arabic simple">
 <li><p>The chemical mechanism;</p></li>
@@ -136,7 +424,7 @@ Use the following command to get the changes that have been made to the remote g
 <p>To effect the implementation of the INCLUDE files into the code, a special compiling system, Bldmake, was developed (Fine et al., 1998), which reads a configuration file that, based on the application, completely determines the model executable to be built. The ASCII configuration file can be generated either by the CMAQ system or by the users following a few, simple syntactical rules. In addition to the global INCLUDE files, the configuration file contains module commands that tell Bldmake to extract the codes for that module from the model code repository for compilation.</p>
 </section>
 <section id="thin-interface">
-<h3>Thin Interface<a class="headerlink" href="#thin-interface" title="Link to this heading">¶</a></h3>
+<h3>Thin Interface<a class="headerlink" href="#thin-interface" title="Link to this heading">#</a></h3>
 <p>As mentioned in <a class="reference internal" href="#CMAQ_OGD_ch04_science.md#modular-flexibility"><span class="xref myst">Chapter 4</span></a>, CMAQ is designed to be robust and flexible with respect to the interchange of modules and the elimination of cross-module data dependencies. Consequently, the concept of a “thin interface” has been employed in the design, which applies principally to the class-drivers (i.e. the top level call to a science module). At a minimum, the thin interface implementation implies the following requirements:</p>
 <ul class="simple">
 <li><p>Eliminate global memory references (across modules). This implies no common blocks across modules, no hidden data paths, and no “back doors.”</p></li>
@@ -146,7 +434,7 @@ Use the following command to get the changes that have been made to the remote g
 <p>The encapsulation design makes the CMAQ system safer and enables the transaction processing, plug-and-play capability. This design also makes it easier for a user to trace data and usage within a module, particularly at the class-driver level.</p>
 </section>
 <section id="coding-guidelines">
-<h3>Coding guidelines<a class="headerlink" href="#coding-guidelines" title="Link to this heading">¶</a></h3>
+<h3>Coding guidelines<a class="headerlink" href="#coding-guidelines" title="Link to this heading">#</a></h3>
 <p>To maintain the object-oriented concepts implemented in the CMAQ system design, we have established a small set of coding guidelines that apply to those who develop CMAQ science modules and affect the low-level design of the models. We have developed standards to control data dependencies at the class-driver level, but we have not propagated these coding standards to the submodule level.</p>
 <ol class="arabic simple">
 <li><p>The models are generally coded in Fortran (both Fortran 90 and Fortran 77 conventions are used by various developers). It is possible to link in subroutines written in the C language, although this has not been done within the current CMAQ implementation. While the Fortran 90 compiler will compile Fortran 77 code, the reverse is not true. Thus the Makefiles are set up to invoke the Fortran 90 compiler.</p></li>
@@ -165,7 +453,7 @@ Use the following command to get the changes that have been made to the remote g
 </ul>
 </section>
 <section id="documentation-guidelines">
-<h3>Documentation guidelines<a class="headerlink" href="#documentation-guidelines" title="Link to this heading">¶</a></h3>
+<h3>Documentation guidelines<a class="headerlink" href="#documentation-guidelines" title="Link to this heading">#</a></h3>
 <p>Appropriate documentation is critical to the ease of use and maintainability of code developed for CMAQ. The official released version of CMAQ contains extensive in-line documentation and references to pertinent technical information whenever possible. Given the increasing number of new developers and code modules, the following guidelines are provided for new code developed for CMAQ:</p>
 <ul class="simple">
 <li><p>The code revision history should be initiated or updated as appropriate for new and modified code, indicating the author, date, and nature of the revision. The revision history appears at the top of the subroutine.</p></li>
@@ -174,7 +462,7 @@ Use the following command to get the changes that have been made to the remote g
 </ul>
 </section>
 <section id="science-process-code-template">
-<h3>Science process code template<a class="headerlink" href="#science-process-code-template" title="Link to this heading">¶</a></h3>
+<h3>Science process code template<a class="headerlink" href="#science-process-code-template" title="Link to this heading">#</a></h3>
 <p>The following example from CMAQ v4.7 illustrates a science process class-driver Fortran 90 subroutine. Code developers should follow this template, where appropriate, to maximize the benefit from the design concepts implemented in CMAQ. This template is generic and demonstrates many of the available features. Some class drivers and most other subprograms within a module may not have, nor require, most or any of these features. (The numbers at the left-hand margin refer to footnotes and are not part of the code, and the text within “&lt; &gt;” indicates code removed from the example for brevity in this section)</p>
 <p><strong>Example of Science Process Class-Driver</strong></p>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="kd">::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</span><span class="p">:</span>
@@ -827,7 +1115,7 @@ Use the following command to get the changes that have been made to the remote g
 </section>
 </section>
 <section id="compiling-cmaq-with-new-source-code">
-<h2>Compiling CMAQ with New Source Code<a class="headerlink" href="#compiling-cmaq-with-new-source-code" title="Link to this heading">¶</a></h2>
+<h2>Compiling CMAQ with New Source Code<a class="headerlink" href="#compiling-cmaq-with-new-source-code" title="Link to this heading">#</a></h2>
 <p>The following steps are recommended for compiling CMAQ when a new module has been developed. The procedure creates a Makefile, which can then be modified to add the new module in the appropriate class, but the same steps can be used to obtain a configuration file that can be similarly modified to add the new module.</p>
 <ul class="simple">
 <li><p>On the computational platform of choice, install CMAQ using Git.</p></li>
@@ -838,7 +1126,7 @@ Use the following command to get the changes that have been made to the remote g
 </ul>
 </section>
 <section id="guidelines-to-writing-shell-scripts-for-cmaq">
-<h2>Guidelines to Writing Shell Scripts for CMAQ<a class="headerlink" href="#guidelines-to-writing-shell-scripts-for-cmaq" title="Link to this heading">¶</a></h2>
+<h2>Guidelines to Writing Shell Scripts for CMAQ<a class="headerlink" href="#guidelines-to-writing-shell-scripts-for-cmaq" title="Link to this heading">#</a></h2>
 <p>To run a model executable, various UNIX environment variables must be set in the shell that invokes the execute command. Generally, these variables involve the modeling scenario start date and time, the run duration, the output time step interval, various internal code flags that differ among the models, and all the input and output logical (symbolic) file names. There are various ways that external file names can be referenced in the source code, and UNIX platforms can link them by using environment variables. There are I/O API utility functions that allow users to easily access these variables in the code in a generic and portable manner. An additional feature that is provided through the I/O API is the ability to declare a file “volatile” by appending a -v flag in the shell’s declaration for the environment variable. By doing this, the I/O API will cause the netCDF file to update (sync) its disk copy after every write and thereby update the netCDF header. Otherwise, netCDF (I/O API) file headers are not updated until the files are closed. This feature is useful, for example, for allowing a user to analyze an open netCDF file using visualization tools while the model is executing. It is also useful in case of a system crash. A CCTM model can be restarted at the scenario time step after the last successful write using the aborted output file as the input initial data.</p>
 <p>The following is a sample run script that can be downloaded from the CMAS web site. The build and run scripts are part of the downloaded tar file from this site.</p>
 <div class="highlight-Tcsh notranslate"><div class="highlight"><pre><span></span><span class="c">#!/bin/csh -f</span>
@@ -1344,7 +1632,7 @@ Use the following command to get the changes that have been made to the remote g
 </div>
 </section>
 <section id="testing-and-distribution-of-development-source-code">
-<h2>Testing and Distribution of Development Source Code<a class="headerlink" href="#testing-and-distribution-of-development-source-code" title="Link to this heading">¶</a></h2>
+<h2>Testing and Distribution of Development Source Code<a class="headerlink" href="#testing-and-distribution-of-development-source-code" title="Link to this heading">#</a></h2>
 <p>The CMAS Center collects, tests, and distributes various operational and development versions of CMAQ through the web site <a class="reference external" href="http://www.cmaq-model.org/"><a class="reference external" href="http://www.cmaq-model.org">http://www.cmaq-model.org</a></a>. An archive of official releases (both current and past) and development versions of CMAQ is available to the user community. The CMAQ-MADRID and CMAQ-AMSTERDAM developed by AER, Inc. under funding from the Electric Power Research Institute can be downloaded from this archive. As a benefit to the CMAQ community, CMAS periodically updates its documentation on testing such development code versions to include additional feedback as it becomes available, based on users’ experiences with these versions. Questions or comments about development versions of CMAQ such as CMAQ-MADRID should be directed to the developers at AER. Questions or comments about downloading the source code and associated documentation, and on the software development guidelines, may be directed to <a class="reference external" href="http://www.cmascenter.org/"><a class="reference external" href="http://www.cmascenter.org">http://www.cmascenter.org</a></a>.</p>
 <p>Based on the insights gained from the testing and archiving of a development version of the model such as CMAQ-MADRID, CMAS recom­mends the following steps as the minimum level of coding and testing practices to be adopted by developers wishing to contribute code to the public CMAQ archive:</p>
 <ol class="arabic simple">
@@ -1361,7 +1649,7 @@ Use the following command to get the changes that have been made to the remote g
 <p>Model developers are also recommended to check the CMAS website to see if there are any additional guidelines that have been recommended since the first set listed above.</p>
 </section>
 <section id="references-for-chapter-11-code-management">
-<h2>References for Chapter 11: Code Management<a class="headerlink" href="#references-for-chapter-11-code-management" title="Link to this heading">¶</a></h2>
+<h2>References for Chapter 11: Code Management<a class="headerlink" href="#references-for-chapter-11-code-management" title="Link to this heading">#</a></h2>
 <p>Fine, S. S., W. T. Smith, D. Hwang, T. L. Turner, 1998: Improving model development with configuration management, IEEE Computational Science and Engineering, 5(1, Ja-Mr), 56-65.</p>
 <p>J. Rumbaugh, M. Blaha, W. Premerlani, F. Eddy, and W. Lorensen, 1991: Object-Oriented Modeling and Design, Prentice Hall</p>
 <p>Young, J. O.,’’ ‘’Integration of Science Code into Models-3, 1999. In <em>Science Algorithms of the EPA Models-3 Community Multiscale Air Quality (CMAQ) Modeling System</em>, D. W. Byun and J. K. S. Ching (ed.), EPA/600/R-99/030, U. S. EPA, Research Triangle Park, NC.</p>
@@ -1369,74 +1657,119 @@ Use the following command to get the changes that have been made to the remote g
 </section>
 
 
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Code Management and Development</a><ul>
-<li><a class="reference internal" href="#source-code-management">Source Code Management</a><ul>
-<li><a class="reference internal" href="#the-need-for-a-configuration-management-tool">The need for a configuration-management tool</a></li>
-<li><a class="reference internal" href="#choice-of-a-configuration-management-tool">Choice of a configuration-management tool</a></li>
-<li><a class="reference internal" href="#git-explained">git Explained</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#guidelines-for-developing-new-cmaq-source-code">Guidelines for Developing New CMAQ Source Code</a><ul>
-<li><a class="reference internal" href="#object-oriented-concepts">Object-oriented concepts</a></li>
-<li><a class="reference internal" href="#global-name-data-table">Global name data table</a></li>
-<li><a class="reference internal" href="#thin-interface">Thin Interface</a></li>
-<li><a class="reference internal" href="#coding-guidelines">Coding guidelines</a></li>
-<li><a class="reference internal" href="#documentation-guidelines">Documentation guidelines</a></li>
-<li><a class="reference internal" href="#science-process-code-template">Science process code template</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#compiling-cmaq-with-new-source-code">Compiling CMAQ with New Source Code</a></li>
-<li><a class="reference internal" href="#guidelines-to-writing-shell-scripts-for-cmaq">Guidelines to Writing Shell Scripts for CMAQ</a></li>
-<li><a class="reference internal" href="#testing-and-distribution-of-development-source-code">Testing and Distribution of Development Source Code</a></li>
-<li><a class="reference internal" href="#references-for-chapter-11-code-management">References for Chapter 11: Code Management</a></li>
-</ul>
-</li>
-</ul>
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Developers_Guide/Code_Management.md.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<search id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code-management">Source Code Management</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-need-for-a-configuration-management-tool">The need for a configuration-management tool</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choice-of-a-configuration-management-tool">Choice of a configuration-management tool</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-explained">git Explained</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guidelines-for-developing-new-cmaq-source-code">Guidelines for Developing New CMAQ Source Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-oriented-concepts">Object-oriented concepts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-name-data-table">Global name data table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thin-interface">Thin Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-guidelines">Coding guidelines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-guidelines">Documentation guidelines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#science-process-code-template">Science process code template</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compiling-cmaq-with-new-source-code">Compiling CMAQ with New Source Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guidelines-to-writing-shell-scripts-for-cmaq">Guidelines to Writing Shell Scripts for CMAQ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-and-distribution-of-development-source-code">Testing and Distribution of Development Source Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-for-chapter-11-code-management">References for Chapter 11: Code Management</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/Developers_Guide/Code_Management.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
     </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, CMAQ Developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
     </div>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="nav-item nav-item-0"><a href="../index.html">CMAQ_Documentation 0.2 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Code Management and Development</a></li> 
-      </ul>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
     </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2024, CMAQ Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
-    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>
