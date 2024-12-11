@@ -15,7 +15,9 @@ release = '0.2'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 import sys, os
 extensions = ['myst_parser',
-        'sphinx.ext.githubpages']
+        'sphinx.ext.githubpages',
+        'sphinx_design']
+myst_enable_extensions = ['colon_fence']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -31,6 +33,7 @@ source_suffix = {
 import pydata_sphinx_theme
 html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
+html_baseurl = 'https://jbrunto.github.io/CMAQ_Docs_v55/'
 
 html_sidebars = {}
 
