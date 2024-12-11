@@ -1,0 +1,639 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3. Preparing Compute Environment for CMAQ Simulations &#8212; CMAQ_Documentation 0.2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=10f1778b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Users_Guide/CMAQ_UG_ch03_preparing_compute_environment';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CMAQ_Documentation 0.2 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="Tutorials/README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Developers_Guide/CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="Tutorials/README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Developers_Guide/CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">3. Preparing Compute Environment for CMAQ Simulations</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!-- BEGIN COMMENT -->
+<p><a class="reference internal" href="CMAQ_UG_ch02_program_structure.html"><span class="std std-doc">&lt;&lt; Previous Chapter</span></a>- <a class="reference internal" href="README.html"><span class="std std-doc">Home</span></a> - <a class="reference internal" href="CMAQ_UG_ch04_model_inputs.html"><span class="std std-doc">Next Chapter &gt;&gt;</span></a></p>
+<!-- END COMMENT -->
+<section id="preparing-compute-environment-for-cmaq-simulations">
+<h1>3. Preparing Compute Environment for CMAQ Simulations<a class="headerlink" href="#preparing-compute-environment-for-cmaq-simulations" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>3.1 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>In this chapter the user will learn basic hardware and software requirements to run CMAQ. In addition, if the user does not have the required software, this chapter provides links to download the required software.</p>
+</section>
+<section id="hardware-requirements">
+<h2>3.2 Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading">#</a></h2>
+<p>The suggested hardware requirements for running the CMAQ Northeast Benchmark case on a Linux workstation are:</p>
+<ul class="simple">
+<li><p>8 processors</p></li>
+<li><p>4 GB RAM</p></li>
+<li><p>400 GB hard drive storage</p></li>
+</ul>
+<p>However, to use CMAQ in a production environment where multiple iterations of the model will be executed for different spatial domains and/or emissions control strategies, either a cluster of multiprocessor PCs on a high-end network or an expandable rack-mounted Linux server is recommended.</p>
+<p>For example, the CMAQ team at the EPA uses a Dell cluster. The cluster consists 128 nodes and each node contain two Intel Xeon E5-2697A v4 16-core processors (with a total of 4096 processors), 256 GB memory (8 GB/core), EDR InfiniBand interconnect and runs on Red Hat Enterprise Linux 8 operating system.</p>
+<p>Table 3-1 provides a general snapshot of three different CMAQ setups for a day of simulation conducted at the EPA. The output only included: the concentration file (CONC), the average concentration file (ACONC), 3-D average concentration file (CGRID), hourly dry deposition file (DRYDEP), and wet deposition from the clouds file (WETDEP1). The run time and domain size are dictated by the system hardware. Furthermore, the run time may vary due to compiler choice and system load.</p>
+<p><a id=Table3-1></a></p>
+<p><strong>Table 3‑1. Example of job scenarios at EPA for a single day simulation</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p><strong>Domain</strong></p></th>
+<th class="head text-center"><p><strong>Domain size</strong></p></th>
+<th class="head text-center"><p><strong>Species Tracked</strong></p></th>
+<th class="head text-center"><p><strong>Input files size</strong></p></th>
+<th class="head text-center"><p><strong>Output files size</strong></p></th>
+<th class="head text-center"><p><strong>Run time (# cores)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>2016 Southeast US</p></td>
+<td class="text-center"><p>100 X 80 X 35</p></td>
+<td class="text-center"><p>218</p></td>
+<td class="text-center"><p>6.7GB</p></td>
+<td class="text-center"><p>6.3GB</p></td>
+<td class="text-center"><p>8 min/day (32); 47 min/day (4)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2016 CONUS</p></td>
+<td class="text-center"><p>459 X 299 X 35</p></td>
+<td class="text-center"><p>219</p></td>
+<td class="text-center"><p>18GB</p></td>
+<td class="text-center"><p>107GB</p></td>
+<td class="text-center"><p>50 min/day (128); 90 min/day (32)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>2016 N. Hemisphere</p></td>
+<td class="text-center"><p>187 X 187 X 44</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>15GB</p></td>
+<td class="text-center"><p>40GB</p></td>
+<td class="text-center"><p>25 min/day (128)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2018 North East US</p></td>
+<td class="text-center"><p>100 X 105 X 35</p></td>
+<td class="text-center"><p>225</p></td>
+<td class="text-center"><p>26GB</p></td>
+<td class="text-center"><p>2GB</p></td>
+<td class="text-center"><p>15 min/day (32)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="software-requirements">
+<h2>3.3 Software Requirements<a class="headerlink" href="#software-requirements" title="Link to this heading">#</a></h2>
+<p>To build the CMAQ program suite, users must install these libraries in the order listed: MPI, netCDF and IOAPI. As always, we recommend using the latest release available at the time of your CMAQ installation. A table of the software versions CMAQ has been developed and tested with is shown below:</p>
+<p><a id=Table3-2></a></p>
+<p><strong>Table 3‑2. CMAQ Development and Testing software versions</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p><strong>Software</strong></p></th>
+<th class="head text-center"><p><strong>Versions</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>Intel Compiler</p></td>
+<td class="text-center"><p>18.0, 21.4</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>GNU Compiler</p></td>
+<td class="text-center"><p>6.1.0, 9.1, 12.2</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>PGI Compiler</p></td>
+<td class="text-center"><p>17.4, 21.9, 22.11</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>NOTE: The CMAQ team recommends using a single compiler suite when building these libraries. Mixing compiler suites when building these libraries can cause unexpected behavior (e.g., mixing intel 18.0 to build netCDF C libraries and gcc 6.1.0 to build netCDF fortran libraries may lead to compile time errors).</strong></p>
+<section id="message-passing-interface-mpi-library">
+<h3>3.3.1 Message Passing Interface (MPI) library<a class="headerlink" href="#message-passing-interface-mpi-library" title="Link to this heading">#</a></h3>
+<p>CMAQ is primarily a MPI based programming system that runs on parallel programming platforms. Many programs within the CMAQ system require a flavor of MPI installed on your machine. CMAQ has been tested with the <a class="reference external" href="https://www.open-mpi.org">OpenMPI</a>, <a class="reference external" href="https://www.mpich.org/downloads">MPICH</a>, <a class="reference external" href="http://mvapich.cse.ohio-state.edu">MVAPICH2</a>, and the <a class="reference external" href="https://software.intel.com/en-us/intel-mpi-library">Intel MPI</a> libraries. The choice of MPI library may affect model run time. For example, if you have the Intel compiler suite available on your system, you may want to choose Intel MPI or if your system is using InfiniBand (IB) interconnects, choose MVAPICH2 which is tailored for IB.</p>
+<p>Users can download the MPI library source code from one of these sites and follow provided procedures for proper installation. <strong>Versions Tested: IntelMPI 2017.0, 21.4 | MPICH 3.3.1 | MVAPICH2 2.3.1 | OpenMPI 2.1.0, 4.1.4</strong></p>
+</section>
+<section id="netcdf-library">
+<h3>3.3.2 netCDF library<a class="headerlink" href="#netcdf-library" title="Link to this heading">#</a></h3>
+<p>Most of the CMAQ input files and all output files are in netCDF format (the rest are in ASCII format). Hence the netCDF library is an essential component of the CMAQ model. The netCDF library is available for download at http://www.unidata.ucar.edu/software/netcdf/; users should follow the instructions for proper installation of <strong>both</strong> netCDF-C and netCDF-Fortran libraries. After successful installation, check the environment PATH &amp; LD_LIBRARY_PATH to ensure that the paths have been updated to include the path of the netCDF C and Fortran libraries and bin. Note you may have to set these paths manually if not set, and these paths must be loaded every time you start a new shell. For additional installation resources plesae see the <a class="reference internal" href="#./Tutorials"><span class="xref myst">CMAQ Tutorial Page</span></a>. <strong>Versions Tested: NetCDF-C 4.2, 4.8.1 | NetCDF-Fortran 4.4.2, 4.5.3</strong></p>
+</section>
+<section id="i-o-api-library">
+<h3>3.3.3 I/O API library<a class="headerlink" href="#i-o-api-library" title="Link to this heading">#</a></h3>
+<p>The I/O API library provides an interface between the netCDF libraries and CMAQ, as well as WRF-CMAQ, to handle input and output (I/O) calls throughout the CMAQ code. The version of the I/O API library supported with CMAQv5.3.2+ (version 3.2 tagged 20200828) is available for download at https://github.com/cjcoats/ioapi-3.2/releases/tag/20200828. Users should note that the I/O API library requires netCDF files to be adhere to a strict formatting guidelines that can be found in the I/O API documentation. For simplicity, files following the IOAPI-netCDF formatting guidelines will be called “IOAPI FILES” from now on. <strong>Versions Tested: IOAPI 3.2 tagged 20200828</strong></p>
+<p>The general steps for installation of I/O API libraries on a Linux system (with C-shell and GNU compilers) are below. These instructions are an example.</p>
+<p>The following is a procedure to install “basic” I/O API libraries (this is based on gfortran compiler, for other compilers, look for corresponding Linux2_x86_64*):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir ioapi_3.2
+cd ioapi_3.2
+
+## Download IOAPI Libraries and untar downloaded source code in this directory
+wget http://github.com/cjcoats/ioapi-3.2/archive/20200828.tar.gz
+tar -xzvf 20200828.tar.gz
+cd ioapi-3.2-20200828
+
+### Set up your Linux system environment
+setenv BIN Linux2_x86_64gfort
+setenv BASEDIR $cwd
+setenv CPLMODE nocpl
+cp Makefile.template Makefile
+touch ioapi/Makefile
+touch m3tools/Makefile
+</pre></div>
+</div>
+<p>Edit the top level Makefile with the following steps:</p>
+<ol class="arabic simple">
+<li><p>comment out the line with NCFLIBS=</p></li>
+<li><p>Add explicit netCDF C and Fortran library paths in front of -lnetcdf -lnetcdff, respectively, the following is an example:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NCFLIBS</span> <span class="o">=</span> <span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">netcdf</span><span class="o">-</span><span class="n">c</span><span class="o">-</span><span class="mf">4.7.0</span><span class="o">/</span><span class="n">gcc</span><span class="o">-</span><span class="mf">9.1.0</span><span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">lnetcdf</span> <span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">netcdf</span><span class="o">-</span><span class="n">fortran</span><span class="o">-</span><span class="mf">4.4.5</span><span class="o">/</span><span class="n">gcc</span><span class="o">-</span><span class="mf">9.1.0</span><span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">lnetcdff</span>
+</pre></div>
+</div>
+<p>Edit the file in the ioapi folder called Makeinclude.Linux2_x86_64gfort to comment out all openMP options as CMAQ does not support openMP. Note: If users are using the ifort compiler you also need to remove -Bstatic flag within the ioapi/Makeinclude.Linux2_x86_64ifort file as well.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OMPFLAGS</span> <span class="o">=</span> <span class="c1"># -fopenmp </span>
+<span class="n">OMPLIBS</span> <span class="o">=</span> <span class="c1"># -fopenmp</span>
+</pre></div>
+</div>
+<p>In the top level IOAPI_3.2 directory run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">configure</span>
+<span class="n">make</span>
+</pre></div>
+</div>
+<p>Other I/O API library configuration options are available, and users can see a list of these options within the I/O API documentation. For example, I/O API can be configured in a manner that allows the CMAQ model to be run with the parallel I/O (PIO) feature turned on called the “mpi” I/O API libraries (Wong et al. 2015). More information about how to enable PIO within CMAQ can be found in <a class="reference internal" href="Appendix/CMAQ_UG_appendixD_parallel_implementation.html#d3-parallel-io"><span class="std std-ref">Appendix D.3</span></a>.</p>
+<p>There is also an I/O API version 3.2 “large” that is designed for applications with a large number of model output files (e.g. utilizing all of CMAQv5.3+ optional diagnostic output files) and/or a large number of model variables (e.g. CMAQ-HDDM or CMAQ-ISAM applications). I/O API v3.2-large increases the MXFILE3 variable from 256 to 512 and increases the MXVARS3 variable from 2048 to 16384, both found in PARAMS3.EXT, as noted in the <a class="reference external" href="https://www.cmascenter.org/ioapi/documentation/all_versions/html/AVAIL.html#build">I/O API documentation</a>. Users can <a class="reference external" href="https://www.cmascenter.org/ioapi/documentation/all_versions/html/AVAIL.html#build">build</a> a copy of the large version by using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="n">ioapi</span><span class="o">-</span><span class="mf">3.2</span><span class="o">-</span><span class="mi">20200828</span> <span class="n">ioapi</span><span class="o">-</span><span class="mf">3.2</span><span class="o">-</span><span class="mi">20200828</span><span class="n">_large</span>
+<span class="n">cd</span> <span class="n">ioapi</span><span class="o">-</span><span class="mf">3.2</span><span class="o">-</span><span class="mi">20200828</span><span class="n">_large</span><span class="o">/</span><span class="n">ioapi</span><span class="o">/</span><span class="n">fixed_src</span>
+<span class="n">cp</span> <span class="o">../</span><span class="n">PARMS3</span><span class="o">-</span><span class="n">LARGE</span><span class="o">.</span><span class="n">EXT</span> <span class="o">./</span><span class="n">PARMS3</span><span class="o">.</span><span class="n">EXT</span>
+<span class="n">mv</span> <span class="o">../</span><span class="n">PARMS3</span><span class="o">-</span><span class="n">LARGE</span><span class="o">.</span><span class="n">EXT</span> <span class="o">../</span><span class="n">PARMS3</span><span class="o">.</span><span class="n">EXT</span>
+</pre></div>
+</div>
+<p>This version is also available as a zip file from the following address:</p>
+<p>https://www.cmascenter.org/ioapi/download/ioapi-3.2-large-20200828.tar.gz</p>
+<p>Installation instructions for I/O API v3.2-large are provided in README.txt in the .tar.gz file.</p>
+<p><strong>Note: Users using the I/O API v3.2-large will require additional computional resources during compile and runtime to account for the increase in memory footprint. Additionally, users may encounter upward and backwards compatability issues using different versions of I/O API, if the files are produced with this version of I/O API.</strong></p>
+</section>
+</section>
+<section id="optional-software">
+<h2>3.4 Optional Software<a class="headerlink" href="#optional-software" title="Link to this heading">#</a></h2>
+<p><a id=Table3-3></a></p>
+<p><strong>Table 3‑3. Optional support software for CMAQ</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Software</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+<th class="head"><p><strong>Source</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em><strong>Evaluation and visualization tools</strong></em></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>VERDI</p></td>
+<td><p>Visualization Environment for Rich Data Interpretation for graphical analysis of netCDF gridded data</p></td>
+<td><p><a class="reference external" href="http://www.verdi-tool.org/"><a class="reference external" href="http://www.verdi-tool.org">http://www.verdi-tool.org</a></a></p></td>
+</tr>
+<tr class="row-even"><td><p>PAVE</p></td>
+<td><p>Package for Analysis and Visualization of Environmental data for graphical analysis of netCDF gridded data</p></td>
+<td><p><a class="reference external" href="http://www.cmascenter.org/"><a class="reference external" href="http://www.cmascenter.org">http://www.cmascenter.org</a></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>IDV</p></td>
+<td><p>Integrated Data Viewer for 3-D graphical analysis of netCDF gridded data</p></td>
+<td><p><a class="reference external" href="http://www.unidata.ucar.edu/software/idv/"><a class="reference external" href="http://www.unidata.ucar.edu/software/idv/">http://www.unidata.ucar.edu/software/idv/</a></a></p></td>
+</tr>
+<tr class="row-even"><td><p>I/O API Tools</p></td>
+<td><p>Postprocessing tools for manipulating data in the I/O API/netCDF format</p></td>
+<td><p><a class="reference external" href="https://www.cmascenter.org/ioapi/"><a class="reference external" href="https://www.cmascenter.org/ioapi/">https://www.cmascenter.org/ioapi/</a></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>netCDF Tools</p></td>
+<td><p>Postprocessing tools for manipulating data in the netCDF format</p></td>
+<td><p><a class="reference external" href="http://my.unidata.ucar.edu/content/software/netcdf/index.html"><a class="reference external" href="http://my.unidata.ucar.edu/content/software/netcdf/index.html">http://my.unidata.ucar.edu/content/software/netcdf/index.html</a></a></p></td>
+</tr>
+<tr class="row-even"><td><p><em><strong>Source code diagnostics</strong></em></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>GDB</p></td>
+<td><p>Gnu Fortran debugger</p></td>
+<td><p><a class="reference external" href="https://www.sourceware.org/gdb/"><a class="reference external" href="https://www.sourceware.org/gdb/">https://www.sourceware.org/gdb/</a></a></p></td>
+</tr>
+<tr class="row-even"><td><p>PGDBG</p></td>
+<td><p>Portland Group Fortran debugger</p></td>
+<td><p><a class="reference external" href="http://www.pgroup.com/"><a class="reference external" href="http://www.pgroup.com/">http://www.pgroup.com/</a></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>PGPROF</p></td>
+<td><p>Portland Group Fortran code profiler</p></td>
+<td><p><a class="reference external" href="http://www.pgroup.com/"><a class="reference external" href="http://www.pgroup.com/">http://www.pgroup.com/</a></a></p></td>
+</tr>
+<tr class="row-even"><td><p>IDB</p></td>
+<td><p>Intel Fortran debugger</p></td>
+<td><p><a class="reference external" href="https://software.intel.com/en-us/articles/idb-linux"><a class="reference external" href="https://software.intel.com/en-us/articles/idb-linux">https://software.intel.com/en-us/articles/idb-linux</a></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="references">
+<h2>3.5 References:<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<p>Wong, D. C., Yang, C. E., Fu, J. S., Wong, K., and Gao, Y., “An approach to enhance pnetCDF performance in environmental modeling applications”, Geosci. Model Dev., 8, 1033-1046, 2015.</p>
+<!-- BEGIN COMMENT -->
+<p><a class="reference internal" href="CMAQ_UG_ch02_program_structure.html"><span class="std std-doc">&lt;&lt; Previous Chapter</span></a>- <a class="reference internal" href="README.html"><span class="std std-doc">Home</span></a> - <a class="reference internal" href="CMAQ_UG_ch04_model_inputs.html"><span class="std std-doc">Next Chapter &gt;&gt;</span></a><br>
+CMAQv5.5 User’s Guide <br></p>
+<!-- END COMMENT -->
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">3.1 Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">3.2 Hardware Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">3.3 Software Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#message-passing-interface-mpi-library">3.3.1 Message Passing Interface (MPI) library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#netcdf-library">3.3.2 netCDF library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-o-api-library">3.3.3 I/O API library</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-software">3.4 Optional Software</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">3.5 References:</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/Users_Guide/CMAQ_UG_ch03_preparing_compute_environment.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, CMAQ Developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

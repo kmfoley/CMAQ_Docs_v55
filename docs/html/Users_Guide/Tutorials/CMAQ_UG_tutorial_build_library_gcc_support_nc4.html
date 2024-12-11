@@ -1,0 +1,1018 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Building with netCDF-4 and the Remote Data Client &#8212; CMAQ_Documentation 0.2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../_static/documentation_options.js?v=10f1778b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Users_Guide/Tutorials/CMAQ_UG_tutorial_build_library_gcc_support_nc4';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CMAQ_Documentation 0.2 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../README.html">
+         User's Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+         Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html">
+         Developer's Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Building with netCDF-4 and the Remote Data Client</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="building-with-netcdf-4-and-the-remote-data-client">
+<h1>Building with netCDF-4 and the Remote Data Client<a class="headerlink" href="#building-with-netcdf-4-and-the-remote-data-client" title="Link to this heading">#</a></h1>
+<p>This tutorial is based on these instructions: https://www.unidata.ucar.edu/software/netcdf/documentation/NUG/getting_and_building_netcdf.html</p>
+<ul class="simple">
+<li><p>netCDF requires the HDF5, zlib, and curl libraries.</p></li>
+<li><p>This Tutorial is for the gcc 9.1.0 compiler.</p></li>
+<li><p>For gcc 10 and above, use the  -fallow-argument-mismatch argument</p>
+<ul>
+<li><p>As of Aug. 28, 2020, there are now new <em>BIN=Linux*gfort10*</em> types and corresponding <em>Makeinclude.Linux*gfort10*</em> that incorporate this flag for the I/O API and M3Tools.</p></li>
+<li><p>Source: I/O API documentation, https://www.cmascenter.org/ioapi/documentation/all_versions/html/AVAIL.html</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="versions-required-are-at-least-hdf5-1-8-9-zlib-1-2-5-and-curl-7-18-0-or-later">
+<h1>Versions required are at least HDF5 1.8.9, zlib 1.2.5, and curl 7.18.0 or later.<a class="headerlink" href="#versions-required-are-at-least-hdf5-1-8-9-zlib-1-2-5-and-curl-7-18-0-or-later" title="Link to this heading">#</a></h1>
+<p>set install directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>set INSTALL_DIR = $cwd/CMAQv5.5/LIBRARIES 
+mkdir -p $cwd/CMAQv5.5/LIBRARIES
+</pre></div>
+</div>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+</section>
+<section id="unset-environment-variables-that-would-conflict-with-this-installation">
+<h2>unset environment variables that would conflict with this installation<a class="headerlink" href="#unset-environment-variables-that-would-conflict-with-this-installation" title="Link to this heading">#</a></h2>
+</section>
+<section id="id2">
+<h2><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">unsetenv</span> <span class="n">LDFLAGS</span>
+   <span class="n">unsetenv</span> <span class="n">CPPFLAGS</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>If your compute server uses modules use the following command to see what packages are available</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">avail</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Load module environment for a compiler (Intel|GCC|PGI) and mpi package corresponding to that compiler (e.g. openmpi).</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">gcc9</span><span class="mf">.1.0</span>
+<span class="n">module</span> <span class="n">load</span> <span class="n">openmpi_4</span><span class="mf">.0.1</span><span class="o">/</span><span class="n">gcc_9</span><span class="mf">.1.0</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="install-zlib">
+<h1>Install zlib<a class="headerlink" href="#install-zlib" title="Link to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> cd $INSTALL_DIR
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span>  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">sourceforge</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">libpng</span><span class="o">/</span><span class="n">files</span><span class="o">/</span><span class="n">zlib</span><span class="o">/</span><span class="mf">1.2.11</span><span class="o">/</span><span class="n">zlib</span><span class="o">-</span><span class="mf">1.2.11</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">tar</span> <span class="o">-</span><span class="n">xzvf</span> <span class="n">zlib</span><span class="o">-</span><span class="mf">1.2.11</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">zlib</span><span class="o">-</span><span class="mf">1.2.11</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">configure</span> <span class="p">;</span> <span class="n">make</span> <span class="n">test</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir ${INSTALL_DIR}/zlib-1.2.11_gcc9.1.0
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>make install prefix=${INSTALL_DIR}/zlib-1.2.11_gcc9.1.0
+</pre></div>
+</div>
+</section>
+<section id="install-curl-check-first-to-determine-if-it-is-already-installed">
+<h1>Install curl (check first to determine if it is already installed)<a class="headerlink" href="#install-curl-check-first-to-determine-if-it-is-already-installed" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>check to see if which is installed using</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>###IF it is not installed use the following steps to install it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ${INSTALL_DIR}
+wget https://curl.se/download/curl-7.79.0.tar.gz
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">xzvf</span> <span class="n">curl</span><span class="o">-</span><span class="mf">7.79.0</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>./configure --without-ssl --prefix=${INSTALL_DIR}/curl-7.79.0-gcc9.1.0
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span>
+<span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+</section>
+<section id="install-hdf5">
+<h1>Install HDF5<a class="headerlink" href="#install-hdf5" title="Link to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $INSTALL_DIR
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">support</span><span class="o">.</span><span class="n">hdfgroup</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">ftp</span><span class="o">/</span><span class="n">HDF5</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10</span><span class="o">/</span><span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.7</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.7</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">xzvf</span> <span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.7</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir ${INSTALL_DIR}/hdf5-1.10-7-gcc9.1.0
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.7</span>
+</pre></div>
+</div>
+<p>Set flags</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">setenv</span> <span class="n">CFLAGS</span> <span class="s2">&quot;-O3&quot;</span>
+   <span class="n">setenv</span> <span class="n">FFLAGS</span> <span class="s2">&quot;-O3&quot;</span>
+   <span class="n">setenv</span> <span class="n">CXXFLAGS</span> <span class="s2">&quot;-O3&quot;</span>
+   <span class="n">setenv</span> <span class="n">FCFLAGS</span> <span class="s2">&quot;-O3&quot;</span>
+</pre></div>
+</div>
+<p>Configure (note, you may need to add a path if you installed the curl library using –with-curl=${INSTALL_DIR}/curl-7.79.0-gcc9.1.0)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>./configure --prefix=${INSTALL_DIR} --with-zlib=${INSTALL_DIR}/zlib-1.2.11_gcc9.1.0/include,${INSTALL_DIR}/zlib-1.2.11_gcc9.1.0/lib --enable-hl
+</pre></div>
+</div>
+<p>Build</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span>
+<span class="n">make</span> <span class="n">check</span>   <span class="c1"># run test suite</span>
+<span class="n">make</span> <span class="n">install</span> <span class="c1"># install</span>
+<span class="n">make</span> <span class="n">check</span><span class="o">-</span><span class="n">install</span> <span class="c1"># verify installation</span>
+</pre></div>
+</div>
+</section>
+<section id="install-netcdf-c">
+<h1>Install netCDF-C<a class="headerlink" href="#install-netcdf-c" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>cd ${INSTALL_DIR}</p></li>
+<li><p>Download netCDF-C from the following website https://www.unidata.ucar.edu/downloads/netcdf/index.jsp</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">unidata</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">netcdf</span><span class="o">/</span><span class="n">netcdf</span><span class="o">-</span><span class="n">c</span><span class="o">-</span><span class="mf">4.8.0</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Untar the netCDF-C tar.gz file</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">xzvf</span> <span class="n">netcdf</span><span class="o">-</span><span class="n">c</span><span class="o">-</span><span class="mf">4.8.0</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Change directories into the extracted directory</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">netcdf</span><span class="o">-</span><span class="n">c</span><span class="o">-</span><span class="mf">4.8.0</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Review the installation instructions for netcdf-c-4.8.0 for building netCDF to support nc4 compression</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">more</span> <span class="n">INSTALL</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Run the configure –help command to see what settings can be used for the build.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Set the Compiler environment variables</p></li>
+</ol>
+<p>Make sure these compilers can be found.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">which</span> <span class="n">gfortran</span>
+<span class="n">which</span> <span class="n">gcc</span>
+<span class="n">which</span> <span class="n">g</span><span class="o">++</span>
+</pre></div>
+</div>
+<p>If they are found, proceed to set the environment variables.
+The paths will be dependent on your compute environment
+If they are not found, reload your module (see above), or ask your system administrator for the paths to a compiler</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setenv</span> <span class="n">FC</span> <span class="n">gfortran</span>
+<span class="n">setenv</span> <span class="n">CC</span> <span class="n">gcc</span>
+<span class="n">setenv</span> <span class="n">CXX</span> <span class="n">g</span><span class="o">++</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Run the configure command</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>./configure --with-pic --enable-netcdf-4 --enable-shared --prefix=${INSTALL_DIR}
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>Check that the configure command worked correctly, then run the install command</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="o">|&amp;</span> <span class="n">tee</span>  <span class="n">make</span><span class="o">.</span><span class="n">gcc9</span><span class="o">.</span><span class="n">log</span>
+<span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>Verify that the following message is obtained</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>| Congratulations! You have successfully installed netCDF!    |
+</pre></div>
+</div>
+</section>
+<section id="install-netcdf-fortran">
+<h1>Install netCDF-Fortran<a class="headerlink" href="#install-netcdf-fortran" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Change directories</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $INSTALL_DIR
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Download netCDF-Fortran from the following website https://www.unidata.ucar.edu/downloads/netcdf/index.jsp</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">unidata</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">netcdf</span><span class="o">/</span><span class="n">netcdf</span><span class="o">-</span><span class="n">fortran</span><span class="o">-</span><span class="mf">4.5.3</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> 
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Untar the tar.gz file</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">xzvf</span> <span class="n">netcdf</span><span class="o">-</span><span class="n">fortran</span><span class="o">-</span><span class="mf">4.5.3</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Change directories to netcdf-fortran-4.5.3</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">netcdf</span><span class="o">-</span><span class="n">fortran</span><span class="o">-</span><span class="mf">4.5.3</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Review the installation document http://www.unidata.ucar.edu/software/netcdf/docs/building_netcdf_fortran.html</p></li>
+<li><p>Set the CC environment variable to use the gcc and gfortran compilers</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">which</span> <span class="n">gfortran</span>
+<span class="n">which</span> <span class="n">gcc</span>
+<span class="n">which</span> <span class="n">g</span><span class="o">++</span>
+
+<span class="n">setenv</span> <span class="n">FC</span> <span class="n">gfortran</span>
+<span class="n">setenv</span> <span class="n">CC</span> <span class="n">gcc</span>
+<span class="n">setenv</span> <span class="n">CXX</span> <span class="n">g</span><span class="o">++</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Set your LD_LIBRARY_PATH to include the netcdf-C library path for netCDF build</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>setenv NCDIR ${INSTALL_DIR}
+setenv LIBS &quot;-lnetcdf&quot;
+setenv CPPFLAGS -I${NCDIR}/include
+setenv LDFLAGS -L${NCDIR}/lib
+
+setenv LD_LIBRARY_PATH ${NCDIR}/lib:${LD_LIBRARY_PATH}
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Check your LD_LIBRARY_PATH</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>echo $LD_LIBRARY_PATH
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>Set the install directory for netCDF fortran</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>setenv NFDIR  ${INSTALL_DIR} 
+setenv CPPFLAGS -I${NCDIR}/include
+setenv LDFLAGS -L${NCDIR}/lib
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>Run the configure command</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>./configure --with-pic --enable-shared --prefix=${NFDIR}
+</pre></div>
+</div>
+<ol class="arabic simple" start="11">
+<li><p>Run the make check command</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">check</span>
+</pre></div>
+</div>
+<p>Output if successful:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Testsuite</span> <span class="n">summary</span> <span class="k">for</span> <span class="n">netCDF</span><span class="o">-</span><span class="n">Fortran</span> <span class="mf">4.4.5</span>
+<span class="o">==========================================</span>
+<span class="c1"># TOTAL: 6</span>
+<span class="c1"># PASS:  6</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="12">
+<li><p>Run the make install command</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>Output successful if you see Libraries have been installed in the install directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ls ${INSTALL_DIR}/lib
+</pre></div>
+</div>
+<p>If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the ‘-LLIBDIR’
+flag during linking and do at least one of the following:</p>
+<ul class="simple">
+<li><p>add LIBDIR to the ‘LD_LIBRARY_PATH’ environment variable
+during execution</p></li>
+<li><p>add LIBDIR to the ‘LD_RUN_PATH’ environment variable
+during linking</p></li>
+<li><p>use the ‘-Wl,-rpath -Wl,LIBDIR’ linker flag</p></li>
+<li><p>have your system administrator add LIBDIR to ‘/etc/ld.so.conf’</p></li>
+</ul>
+<ol class="arabic simple" start="14">
+<li><p>set your LD_LIBRARY_PATH to include the netcdf-Fortran library path for netCDF build</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>setenv NFDIR ${INSTALL_DIR}
+setenv LD_LIBRARY_PATH ${NFDIR}/lib:${LD_LIBRARY_PATH}
+</pre></div>
+</div>
+<p>(may need to add the NCDIR and NFDIR to .cshrc)</p>
+</section>
+<section id="install-i-o-api">
+<h1>Install I/O API<a class="headerlink" href="#install-i-o-api" title="Link to this heading">#</a></h1>
+<p>Note
+The complete I/O API installation guide can be found at either of the following:</p>
+<p>https://www.cmascenter.org/ioapi/documentation/all_versions/html/AVAIL.html</p>
+<p>or</p>
+<p>https://cjcoats.github.io/ioapi/AVAIL.html</p>
+<ol class="arabic simple">
+<li><p>Change directories to one level up from your current location</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Download I/O API</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cjcoats</span><span class="o">/</span><span class="n">ioapi</span><span class="o">-</span><span class="mf">3.2</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>change directories to the ioapi-3.2 directory</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">ioapi</span><span class="o">-</span><span class="mf">3.2</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Change branches to 20200828 for a tagged stable version</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="mi">20200828</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Change directories to the ioapi directory</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">ioapi</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>copy the Makefile.nocpl file to create a Makefile</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">Makefile</span><span class="o">.</span><span class="n">nocpl</span> <span class="n">Makefile</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Set the BIN environment variable to include the module that will be used to compile CMAQ
+This will help future users identify what compiler version is compatible with this library.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setenv</span> <span class="n">BIN</span> <span class="n">Linux2_x86_64gfort_openmpi_4</span><span class="mf">.0.1</span><span class="n">_gcc_9</span><span class="mf">.1.0</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Copy an existing Makeinclude file to have this BIN name at the end</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">Makeinclude</span><span class="o">.</span><span class="n">Linux2_x86_64gfort</span> <span class="n">Makeinclude</span><span class="o">.</span><span class="n">Linux2_x86_64gfort_openmpi_4</span><span class="mf">.0.1</span><span class="n">_gcc_9</span><span class="mf">.1.0</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>Edit the Makeinclude.Linux2_x86_64gfort_openmpi_4.0.1_gcc_9.1.0 to comment out OMPFLAG and OMPLIBS
+settings.  This will remove the need to link the shared memory OPENMP libraries when compiling CMAQ and WRF-CMAQ.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#OMPFLAGS  = -fopenmp</span>
+<span class="c1">#OMPLIBS   =  -fopenmp</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>Create a BIN directory where the library and m3tools executables will be installed</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir ../$BIN
+</pre></div>
+</div>
+<ol class="arabic simple" start="11">
+<li><p>Link the BIN directory to a the gfort BIN directory - this step is needed for WRF-CMAQ.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span>
+<span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="n">Linux2_x86_64gfort_openmpi_4</span><span class="mf">.0.1</span><span class="n">_gcc_9</span><span class="mf">.1.0</span> <span class="n">Linux2_x86_64gfort</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="12">
+<li><p>Set the HOME environment variable to be your LIBRARY install directory and run the make command to compile and link the ioapi library</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">ioapi</span>
+<span class="n">make</span> <span class="s1">&#39;HOME=[your_install_path]/LIBRARIES&#39;</span> <span class="o">|&amp;</span> <span class="n">tee</span> <span class="n">make</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="13">
+<li><p>Change directories to the $BIN dir and verify that both the libioapi.a library was successfully built</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ../$BIN
+ls -lrt libioapi.a
+</pre></div>
+</div>
+<ol class="arabic simple" start="14">
+<li><p>If you need to do a make clean, to rebuild the I/O API Library, specify the HOME directory at the command line as follows</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">ioapi</span>
+<span class="n">make</span> <span class="s1">&#39;HOME=[your_install_path]/LIBRARIES&#39;</span> <span class="n">clean</span> 
+</pre></div>
+</div>
+<ol class="arabic simple" start="15">
+<li><p>Change directories to the m3tools directory</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">m3tools</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="16">
+<li><p>Copy the Makefile.nocpl to create a Makefile</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">Makefile</span><span class="o">.</span><span class="n">nocpl</span> <span class="n">Makefile</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="17">
+<li><p>Edit line 65 of the Makefile to use the NCDIR and NFDIR environment variables that you have set in the above steps to locate the netcdf C and netcdf Fortran libraries</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> LIBS = -L${OBJDIR} -lioapi -L${NFDIR}/lib -lnetcdff -L${NCDIR}/lib -lnetcdf $(OMPLIBS) $(ARCHLIB) $(ARCHLIBS)
+</pre></div>
+</div>
+<ol class="arabic simple" start="18">
+<li><p>Run make to compile the m3tools</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="o">|&amp;</span> <span class="n">tee</span> <span class="n">make</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="19">
+<li><p>Check to see that the m3tools have been installed successfully</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ../$BIN
+ls -rlt m3xtract
+</pre></div>
+</div>
+<ol class="arabic simple" start="20">
+<li><p>Use test script to verify that the executables are working</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">test</span>
+</pre></div>
+</div>
+</section>
+<section id="install-cmaqv55">
+<h1>Install CMAQv55<a class="headerlink" href="#install-cmaqv55" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Download the CMAQv55 code using the following</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="mi">55</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">lizadams</span><span class="o">/</span><span class="n">cmaq</span><span class="o">.</span><span class="n">git</span> <span class="n">CMAQ_REPO</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Build and run in a user-specified directory outside of the repository
+In the top level of CMAQ_REPO, the bldit_project.csh script will automatically replicate the CMAQ folder structure and copy every build and run script out of the repository so that you may modify them freely without version control.</p></li>
+</ol>
+<p>In bldit_project.csh, modify the variable $CMAQ_HOME to identify the folder that you would like to install the CMAQ package under. For example:</p>
+<p>set CMAQ_HOME = [your_work_location]/CMAQv55
+Now execute the script.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">bldit_project</span><span class="o">.</span><span class="n">csh</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Edit the config_cmaq.csh to specify the netCDF C, netCDF Fortran, and I/O API Library locations</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">[</span><span class="n">your_work_location</span><span class="p">]</span><span class="o">/</span><span class="n">CMAQv55</span>
+<span class="n">vi</span> <span class="n">config_cmaq</span><span class="o">.</span><span class="n">csh</span>
+</pre></div>
+</div>
+<p>Edit the case gcc section
+note, the paths need to be edited to match the location for your installation</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#&gt;  gfortran compiler............................................................
+    case gcc:
+
+        #&gt; I/O API and netCDF for WRF-CMAQ 
+        setenv NCDIR /your_local_path/LIBRARIES/                  # C netCDF install path
+        setenv NFDIR /your_local_path/LIBRARIES/           # Fortran netCDF install path for CMAQ
+        setenv NETCDF /your_local_path/LIBRARIES/          # Note only for  WRF-CMAQ as it requires combining the netcdf C and netcdf F into a single directory. CMAQ users - don&#39;t change this setting
+        setenv IOAPI  /your_local_path/LIBRARIES/ioapi-3.2/   # I/O API 
+        setenv WRF_ARCH 34                              # [1-75] Optional, ONLY for WRF-CMAQ  
+
+        #&gt; I/O API, netCDF, and MPI library locations
+        setenv IOAPI_INCL_DIR   ${IOAPI}/ioapi/fixed_src    #&gt; I/O API include header files
+        setenv IOAPI_LIB_DIR    ${IOAPI}/Linux2_x86_64gfort    #&gt; I/O API libraries
+        if ( $NETCDF == &quot;netcdf_combined_directory_path&quot; ) then
+            setenv NETCDF_LIB_DIR   ${NCDIR}/lib                       #&gt; netCDF C directory path
+            setenv NETCDF_INCL_DIR  ${NCDIR}/include                   #&gt; netCDF C directory path
+            setenv NETCDFF_LIB_DIR  ${NFDIR}/lib                       #&gt; netCDF Fortran directory path
+            setenv NETCDFF_INCL_DIR ${NFDIR}/include                   #&gt; netCDF Fortran directory path
+        endif
+
+        setenv MPI_INCL_DIR      /nas/longleaf/apps-dogwood/mpi/gcc_9.1.0/openmpi_4.0.1/include #&gt; MPI Include directory path
+        setenv MPI_LIB_DIR      /nas/longleaf/apps-dogwood/mpi/gcc_9.1.0/openmpi_4.0.1/lib               #&gt; MPI Lib directory path
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Source the config_cmaq.csh to create the lib directory</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">config_cmaq</span><span class="o">.</span><span class="n">csh</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Copy the buildit script</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">bldit_cctm</span><span class="o">.</span><span class="n">csh</span> <span class="n">bldit_cctmv55_cb6r5_m3dry</span><span class="o">/</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Build CMAQv55 to support the cb6r5 and m3dry dry deposition option</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">bldit_cctmv55_cb6r5_m3dry</span><span class="o">.</span><span class="n">csh</span> <span class="n">gcc</span> <span class="o">|</span> <span class="o">&amp;</span> <span class="n">tee</span> <span class="o">./</span><span class="n">bldit_cctmv55_cb6r5_m3dry</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Build the POST processing routines</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">POST</span><span class="o">/</span><span class="n">combine</span><span class="o">/</span>
+<span class="o">./</span><span class="n">bldit_combine</span><span class="o">.</span><span class="n">csh</span> <span class="n">gcc</span> <span class="o">|&amp;</span> <span class="n">tee</span> <span class="o">./</span><span class="n">bldit_combine</span><span class="o">.</span><span class="n">gcc</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">POST</span><span class="o">/</span><span class="n">calc_tmetric</span><span class="o">/</span><span class="n">scripts</span>
+<span class="o">./</span><span class="n">bldit_calc_tmetric</span><span class="o">.</span><span class="n">csh</span> <span class="n">gcc</span> <span class="o">|&amp;</span> <span class="n">tee</span> <span class="o">./</span><span class="n">bldit_calc_tmetric</span><span class="o">.</span><span class="n">gcc</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">POST</span><span class="o">/</span><span class="n">hr2day</span><span class="o">/</span><span class="n">scripts</span>
+<span class="o">./</span><span class="n">bldit_hr2day</span><span class="o">.</span><span class="n">csh</span> <span class="n">gcc</span> <span class="o">|&amp;</span> <span class="n">tee</span> <span class="o">./</span><span class="n">bldit_hr2day</span><span class="o">.</span><span class="n">gcc</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">POST</span><span class="o">/</span><span class="n">bldoverlay</span><span class="o">/</span><span class="n">scripts</span>
+<span class="o">./</span><span class="n">bldit_bldoverlay</span><span class="o">.</span><span class="n">csh</span> <span class="n">gcc</span> <span class="o">|&amp;</span> <span class="n">tee</span> <span class="o">./</span><span class="n">bldit_bldoverlay</span><span class="o">.</span><span class="n">gcc</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Edit the SBATCH section of the Benchmark run script to use the SLURM resources on your machine
+and modify the CMAQ_HOME directory to specify your local path</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="n">run_cctm_Bench_2018_12NE3</span><span class="o">.</span><span class="n">csh</span>
+</pre></div>
+</div>
+</section>
+<section id="download-benchmark-input-data">
+<h1>Download Benchmark Input Data<a class="headerlink" href="#download-benchmark-input-data" title="Link to this heading">#</a></h1>
+</section>
+<section id="update-equates-benchmark-run-script-to-specify-path-to-downloaded-input-data">
+<h1>Update EQUATES Benchmark Run Script to specify path to downloaded input data<a class="headerlink" href="#update-equates-benchmark-run-script-to-specify-path-to-downloaded-input-data" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Specify the 2018_12US1 as the input data directory in the CMAQv55 CCTM run script</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="n">run_cctm_Bench_2018_12NE3</span><span class="o">.</span><span class="n">csh</span>  
+</pre></div>
+</div>
+<p>verify the location of the 12NE3 benchmark input files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> setenv INPDIR  ${CMAQ_DATA}/2018_12NE3
+</pre></div>
+</div>
+</section>
+<section id="modify-benchmark-post-processing-scripts-for-your-installation">
+<h1>Modify Benchmark Post-processing Scripts for your installation<a class="headerlink" href="#modify-benchmark-post-processing-scripts-for-your-installation" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>The POST/combine directory is available under the CMAQv55 directory.
+These scripts will need to be edited</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">run_combine</span><span class="o">.</span><span class="n">csh</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Edit the scripts under to specify the APPL for this benchmark</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="nb">set</span> <span class="n">APPL</span>      <span class="o">=</span> <span class="n">Bench_2018_12NE3</span>        <span class="c1">#&gt; Application Name (e.g. Gridname)</span>
+
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Edit the start and end date.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="nb">set</span> <span class="n">START_DATE</span> <span class="o">=</span> <span class="s2">&quot;2016-07-01&quot;</span>     <span class="c1">#&gt; beginning date (July 1, 2016)</span>
+ <span class="nb">set</span> <span class="n">END_DATE</span>   <span class="o">=</span> <span class="s2">&quot;2016-07-14&quot;</span>     <span class="c1">#&gt; ending date    (July 14, 2016)</span>
+</pre></div>
+</div>
+</section>
+<section id="run-the-combine-run-script">
+<h1>Run the combine run script<a class="headerlink" href="#run-the-combine-run-script" title="Link to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sbatch</span> <span class="n">run_combine</span><span class="o">.</span><span class="n">csh</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Building with netCDF-4 and the Remote Data Client</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#versions-required-are-at-least-hdf5-1-8-9-zlib-1-2-5-and-curl-7-18-0-or-later">Versions required are at least HDF5 1.8.9, zlib 1.2.5, and curl 7.18.0 or later.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unset-environment-variables-that-would-conflict-with-this-installation">unset environment variables that would conflict with this installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-zlib">Install zlib</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-curl-check-first-to-determine-if-it-is-already-installed">Install curl (check first to determine if it is already installed)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-hdf5">Install HDF5</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-netcdf-c">Install netCDF-C</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-netcdf-fortran">Install netCDF-Fortran</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-i-o-api">Install I/O API</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-cmaqv55">Install CMAQv55</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-benchmark-input-data">Download Benchmark Input Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#update-equates-benchmark-run-script-to-specify-path-to-downloaded-input-data">Update EQUATES Benchmark Run Script to specify path to downloaded input data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-benchmark-post-processing-scripts-for-your-installation">Modify Benchmark Post-processing Scripts for your installation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-combine-run-script">Run the combine run script</a></li>
+</ul>
+
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/Users_Guide/Tutorials/CMAQ_UG_tutorial_build_library_gcc_support_nc4.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, CMAQ Developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
