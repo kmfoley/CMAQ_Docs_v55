@@ -1,338 +1,48 @@
-
 <!DOCTYPE html>
 
-
-<html lang="en" data-content_root="../../" >
-
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Appendix B: Emissions Input and Control &#8212; CMAQ_Documentation 0.2 documentation</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
-  </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-  
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
-
     <script src="../../_static/documentation_options.js?v=10f1778b"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Users_Guide/Appendix/CMAQ_UG_appendixB_emissions_control';</script>
     <link rel="canonical" href="https://jbrunto.github.io/CMAQ_Docs_v55/Users_Guide/Appendix/CMAQ_UG_appendixB_emissions_control.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
-  </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
-  
-  <dialog id="pst-search-dialog">
-    
-<form class="bd-search d-flex align-items-center"
-      action="../../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
-  
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
-  
-  
-  <div class="col-lg-3 navbar-header-items__start">
-    
-      <div class="navbar-item">
-
-  
-    
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
 
-<a class="navbar-brand logo" href="../../index.html">
   
   
-  
-  
-  
-  
-    <p class="title logo__title">CMAQ_Documentation 0.2 documentation</p>
-  
-</a></div>
-    
-  </div>
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../Docs_README.html">
-    Home
-  </a>
-</li>
 
+  </head><body>
+  
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../README.html">
-         User's Guide
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../Tutorials/README.html">
-         Tutorials
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html">
-         Developer's Guide
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-      
-    </div>
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
           
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-        </div>
-      
-      
-        <div class="navbar-item">
-
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-    </div>
-  
-
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
-</div>
-
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
-        
-      
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-      <div class="sidebar-header-items__center">
-        
-          
-          
-            <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../Docs_README.html">
-    Home
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../README.html">
-         User's Guide
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../Tutorials/README.html">
-         Tutorials
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html">
-         Developer's Guide
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-          
-        
-      </div>
-    
-    
-    
-      <div class="sidebar-header-items__end">
-        
-          <div class="navbar-item">
-
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
-        
-      </div>
-    
-  </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main" role="main">
-        
-        
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article d-print-none">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item">
-
-<nav aria-label="Breadcrumb" class="d-print-none">
-  <ul class="bd-breadcrumbs">
-    
-    <li class="breadcrumb-item breadcrumb-home">
-      <a href="../../index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
-      </a>
-    </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Appendix B: Emissions Input and Control</span></li>
-  </ul>
-</nav>
-</div>
-      
-    </div>
-  
-  
-</div>
-</div>
-              
-              
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article">
-                  
+          <div class="body" role="main">
+            
   <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="CMAQ_UG_appendixA_model_options.html"><span class="std std-doc">&lt;&lt; Previous Appendix</span></a> - <a class="reference internal" href="../README.html"><span class="std std-doc">Home</span></a> - <a class="reference internal" href="CMAQ_UG_appendixC_spatial_data.html"><span class="std std-doc">Next Appendix &gt;&gt;</span></a></p>
 <!-- END COMMENT -->
 <hr class="docutils" />
 <section id="appendix-b-emissions-input-and-control">
-<h1>Appendix B: Emissions Input and Control<a class="headerlink" href="#appendix-b-emissions-input-and-control" title="Link to this heading">#</a></h1>
+<h1>Appendix B: Emissions Input and Control<a class="headerlink" href="#appendix-b-emissions-input-and-control" title="Link to this heading">¶</a></h1>
 <p><a class="reference internal" href="../Tutorials/CMAQ_UG_tutorial_emissions.html"><span class="std std-doc">Jump to DESID Tutorial</span></a> for step by step instructions on performing some basic manipulation of emission streams.</p>
 <p><a class="reference internal" href="../CMAQ_UG_ch06_model_configuration_options.html"><span class="std std-doc">Jump to Emissions overview</span></a> in Chapter 6 of this User’s Guide.</p>
 <section id="b-1-emissions-control-with-the-detailed-emissions-scaling-isolation-and-diagnostics-module-desid">
-<h2>B.1 Emissions Control with the Detailed Emissions Scaling, Isolation and Diagnostics Module (DESID)<a class="headerlink" href="#b-1-emissions-control-with-the-detailed-emissions-scaling-isolation-and-diagnostics-module-desid" title="Link to this heading">#</a></h2>
+<h2>B.1 Emissions Control with the Detailed Emissions Scaling, Isolation and Diagnostics Module (DESID)<a class="headerlink" href="#b-1-emissions-control-with-the-detailed-emissions-scaling-isolation-and-diagnostics-module-desid" title="Link to this heading">¶</a></h2>
 <p>The Detailed Emissions Scaling, Isolation and Diagnostics (DESID) module included with CMAQv5.3+ provides comprehensive customization and transparency of emissions manipulation to the user. The customization of emissions is accomplished via a series of Control Namelists, which contain variables that modify the behavior of the emissions module. These include <em><strong>Emission Scaling Rules</strong></em>, <em><strong>Size Distributions</strong></em>, <em><strong>Regions Registry</strong></em>, <em><strong>Chemical Families</strong></em>, <em><strong>Region Families</strong></em>, and <em><strong>Area Adjustments</strong></em>.</p>
 <p>To determine its configuration, DESID makes use of input primarily from four files: the CMAQ runscript, the CMAQ Miscellaneous Control File (<a class="reference internal" href="#../../../CCTM/src/util/util/CMAQ_Control_Misc.nml"><span class="xref myst">CMAQ_Control_Misc.nml</span></a>), the DESID Control file (<a class="reference internal" href="#../../../CCTM/src/emis/emis/CMAQ_Control_DESID.nml"><span class="xref myst">CMAQ_Control_DESID.nml</span></a>), and the DESID Chemical Mapping File (e.g. <a class="reference internal" href="#../../../CCTM/src/MECHS/cb6r5_ae7_aq/CMAQ_Control_DESID_cb6r5_ae7_aq.nml"><span class="xref myst">CMAQ_Control_DESID_cb6r5_ae7_aq.nml</span></a>).
 A separate version of the chemical mapping control file exists for every mechanism because these namelists are preloaded with likely rules linking emissions of important CMAQ primary species to their typical emission species names as output by SMOKE.
@@ -344,7 +54,7 @@ setenv DESID_CHEM_CTRL_NML ${BLD}/CMAQ_Control_DESID_${MECH}.nml
 <p>If the user does not provide a DESID Control Files or the path to the files in the RunScript are incorrect, then the model will abort and indicate the error. If the user would like all emissions set to 0, it is recommended that they use the syntax outlined here and in the DESID tutorial to do so.</p>
 </section>
 <section id="b-2-chemical-mapping-control">
-<h2>B.2 Chemical Mapping Control<a class="headerlink" href="#b-2-chemical-mapping-control" title="Link to this heading">#</a></h2>
+<h2>B.2 Chemical Mapping Control<a class="headerlink" href="#b-2-chemical-mapping-control" title="Link to this heading">¶</a></h2>
 <p>The chemical mapping file contains emission scaling rules that allow the user to exert sophisticated, precise control over the emissions from specific streams, in specific geographic areas, and/or for specific compounds.
 The set of rules used by CMAQ to interpret emissions shall be provided in one array called DESID_Rules_nml. It is necessary that every field (i.e. column) be populated for every rule. The fields are given and defined here:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! Region      | Stream Label  |Emission | CMAQ-        |Phase/|Scale |Basis |Op  
@@ -406,7 +116,7 @@ For gases, usually this name is the same as the CMAQ species. For aerosols, it i
 </li>
 </ul>
 <section id="b-2-1-default-rules">
-<h3>B.2.1 Default Rules<a class="headerlink" href="#b-2-1-default-rules" title="Link to this heading">#</a></h3>
+<h3>B.2.1 Default Rules<a class="headerlink" href="#b-2-1-default-rules" title="Link to this heading">¶</a></h3>
 <p>The Chemical Mapping Control Namelists provided with the CMAQ repo have default rules included that correspond to each chemical mechanism. Here is an example default rule that links NO in CMAQ to NO from every emission stream in every model grid cell with a scale factor of 1.0.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! Region      | Stream Label  |Emission | CMAQ-        |Phase/|Scale |Basis |Op  
 !  Label      |               |Species  | Species      |Mode  |Factor|      |
@@ -416,10 +126,10 @@ For gases, usually this name is the same as the CMAQ species. For aerosols, it i
 <p>Many rules are needed in order to properly link every emitted pollutant to a CMAQ species. Rules are needed for gas- and aerosol-phase species. Additional rules also exist for online aerosol modules like wind-blown dust and sea spray because the names of aerosol emission species from these modules are different than those typically used for SMOKE output. For example, fine-mode aerosol sulfate is commonly called PSO4 in SMOKE, but is PMFINE_SO4 from dust and sea spray.</p>
 </section>
 <section id="b-2-2-modifying-default-rules">
-<h3>B.2.2 Modifying Default rules<a class="headerlink" href="#b-2-2-modifying-default-rules" title="Link to this heading">#</a></h3>
+<h3>B.2.2 Modifying Default rules<a class="headerlink" href="#b-2-2-modifying-default-rules" title="Link to this heading">¶</a></h3>
 <p>The user can modify any default rule to change the scale factor applied, the spatial area to be considered, or the streams to be applied to. Alternatively, the user can add new rules after the default rules to customize the emissions. Typical modifications may include multiplying the emissions of a particular species from a particular stream by a factor of 2, zeroing out emissions of all species from a particular stream, etc. Please see the tutorial on <a class="reference internal" href="#../Tutorials/CMAQ_UG_appendixB_emissions_control.md"><span class="xref myst">Prescribing Emissions with DESID</span></a> for specific examples of modifications and the syntax used to invoke them.</p>
 <section id="b-2-2-1-supporting-the-volatility-basis-set">
-<h4>B.2.2.1 Supporting the Volatility Basis Set<a class="headerlink" href="#b-2-2-1-supporting-the-volatility-basis-set" title="Link to this heading">#</a></h4>
+<h4>B.2.2.1 Supporting the Volatility Basis Set<a class="headerlink" href="#b-2-2-1-supporting-the-volatility-basis-set" title="Link to this heading">¶</a></h4>
 <p>The <em>Volatility Basis Set</em> for treating the semivolatile partitioning of primary organic emissions is an example of a model feature that is well-supported by DESID. The approach involves distributing the emissions of total primary organic aerosol (carbon and noncarbon mass, or POC and PNCOM) among a series of aerosol and gas species of varying volatility.</p>
 <p>If the user would like to invoke the nonvolatile partitioning assumption, it can be accomplished by directing all POC and PNCOM emissions to the POC and PNCOM species in CMAQ.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  ! --&gt; Nonvolatile POA
@@ -456,7 +166,7 @@ Alternatively, emitted species may be added on the offline file that correspond 
 <p>To avoid large swings in repartitioning after emission, it is a good idea to split mass between gas and particle phases, with all mass going to the particle in the C* = 0.1-1 range and all gas for C* = 100-1000. Species with C*=10 can generally have mass split between gas and particle or be put in all gas if conditions are very clean. If too much mass evaporates or condenses upon emission, the aerosol size distribution will be affected.</p>
 </section>
 <section id="b-2-2-2-supporting-potential-combustion-soa">
-<h4>B.2.2.2 Supporting Potential Combustion SOA<a class="headerlink" href="#b-2-2-2-supporting-potential-combustion-soa" title="Link to this heading">#</a></h4>
+<h4>B.2.2.2 Supporting Potential Combustion SOA<a class="headerlink" href="#b-2-2-2-supporting-potential-combustion-soa" title="Link to this heading">¶</a></h4>
 <p>Potential Combustion SOA (pcSOA) is a CMAQ species introduced to account for missing pathways for SOA formation from combustion sources. It includes IVOC oxidation as well as other phenomena (Murphy et al., ACP, 2017). It was parameterized primarily in LA, where vehicle exhaust continues to dominate. The following emission rulese add the gas-phase precursor to pcSOA to the model scaled to POA.
 ‘EVERYWHERE’, ‘ALL’          ,’POC’   ,’PCVOC’      ,’GAS’ ,6.579,’MASS’,’a’,<br />
 ‘EVERYWHERE’, ‘ALL’          ,’PNCOM’ ,’PCVOC’      ,’GAS’ ,6.579,’MASS’,’a’,</p>
@@ -472,10 +182,10 @@ Alternatively, emitted species may be added on the offline file that correspond 
 </section>
 </section>
 <section id="b-3-desid-control">
-<h2>B.3 DESID Control<a class="headerlink" href="#b-3-desid-control" title="Link to this heading">#</a></h2>
+<h2>B.3 DESID Control<a class="headerlink" href="#b-3-desid-control" title="Link to this heading">¶</a></h2>
 <p>The DESID control file (CMAQ_Control_DESID.nml) provides chemical mechanism-independent user inputs to DESID. Important variable sections are the General Options, Area Normalization, Size Distribution Parameters, Region Definitions, and Diagnostic Output Configuration.</p>
 <section id="b-3-1-general-options">
-<h3>B.3.1 General Options<a class="headerlink" href="#b-3-1-general-options" title="Link to this heading">#</a></h3>
+<h3>B.3.1 General Options<a class="headerlink" href="#b-3-1-general-options" title="Link to this heading">¶</a></h3>
 <p>The maximum number of DEISD layers can be set with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">Desid_Options</span>
  <span class="n">Desid_MaxLays</span> <span class="o">=</span> <span class="mi">0</span>  
@@ -485,7 +195,7 @@ Alternatively, emitted species may be added on the offline file that correspond 
 <p>This variable can limit the impact of vertical mixing (plume-rise) algorithms in CMAQ. If Desid_MaxLays = 0, then all model layers are available for emissions.</p>
 </section>
 <section id="b-3-2-area-normalization-and-projection-adjustment">
-<h3>B.3.2 Area Normalization and Projection Adjustment<a class="headerlink" href="#b-3-2-area-normalization-and-projection-adjustment" title="Link to this heading">#</a></h3>
+<h3>B.3.2 Area Normalization and Projection Adjustment<a class="headerlink" href="#b-3-2-area-normalization-and-projection-adjustment" title="Link to this heading">¶</a></h3>
 <p>Specify area-normalized emission fluxes from input streams. If emission inputs are provided to CMAQ in area-normalized fluxes for any stream, this component may be used to convert them correctly to emission rates appropriate for the model simulation grid projection.
 For example, if biogenic emissions are provided in units of moles/m2/s, then that  stream may be identified here and DESID can be instructed to adjust each flux to moles/s and adjust the rates using the map scale factor that converts emissions in real geographic space into projected grid space.</p>
 <p>Definition of Fields:<br />
@@ -507,7 +217,7 @@ For example, if biogenic emissions are provided in units of moles/m2/s, then tha
 This feature was developed primarily for applications where an offline emission model produces area-normalized emission fluxes, not emission rates.</p>
 </section>
 <section id="b-3-3-aerosol-size-distributions">
-<h3>B.3.3 Aerosol Size Distributions<a class="headerlink" href="#b-3-3-aerosol-size-distributions" title="Link to this heading">#</a></h3>
+<h3>B.3.3 Aerosol Size Distributions<a class="headerlink" href="#b-3-3-aerosol-size-distributions" title="Link to this heading">¶</a></h3>
 <p>The treatment of aerosol size distributions in CMAQv5.3 has been updated to be more consistent with the way particle sizes and modes are treated by the National Emission Inventory and in emissions processing tools like SMOKE, MOVES, SPECIATE, and Speciation Tool. Specifically, in these tools, aerosol emissions are typically parameterized into two main modes, Fine and Coarse. Although the size distribution parameters (i.e. total number, diameter, standard deviation, etc.) for these modes will vary among emission sources, previous versions of CMAQ assumed that all primary fine particles had the same size distribution upon emission. Coarse-mode particles were assumed to exhibit a larger diameter but were also uniform across all sources (excluding wind-blown dust and sea spray).</p>
 <p>In CMAQv5.3 and beyond, users link particle emission species to CMAQ particle species via the DESID_Scaling section of the Chemical Mapping Control Namelist. Examples of default mapping rules can be found in any of the Chemical Mapping Control Namelists in the CMAQ repository. The three lines below assign emissions for all streams for particulate-phase sulfate, ammonium, and nitrate.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! Region      | Stream Label  |Emission | CMAQ-        |Phase/|Scale |Basis |Op  
@@ -573,9 +283,9 @@ With the linking step provided in the DESID_SizeDist section, parameters for sev
 </div>
 </section>
 <section id="b-3-4-defining-and-using-regions-and-region-families">
-<h3>B.3.4 Defining and Using Regions and Region Families<a class="headerlink" href="#b-3-4-defining-and-using-regions-and-region-families" title="Link to this heading">#</a></h3>
+<h3>B.3.4 Defining and Using Regions and Region Families<a class="headerlink" href="#b-3-4-defining-and-using-regions-and-region-families" title="Link to this heading">¶</a></h3>
 <section id="b-3-4-1-using-defined-regions">
-<h4>B.3.4.1 Using Defined Regions<a class="headerlink" href="#b-3-4-1-using-defined-regions" title="Link to this heading">#</a></h4>
+<h4>B.3.4.1 Using Defined Regions<a class="headerlink" href="#b-3-4-1-using-defined-regions" title="Link to this heading">¶</a></h4>
 <p>Gridded masks are used to apply rules to specific areas of the domain. For example, the following rule:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! Region      | Stream Label  |Emission | CMAQ-        |Phase/|Scale |Basis |Op  
 !  Label      |               |Species  | Species      |Mode  |Factor|      |
@@ -585,7 +295,7 @@ With the linking step provided in the DESID_SizeDist section, parameters for sev
 <p>will scale emissions of all species from all streams by +50% but only in grid cells in the state of Kentucky. One or more I/O API formatted input files containing geographic region definitions are required to take advantage of this option.  Such files should contain a separate variable for each spatial region of interest.  Each variable is a gridded field of real numbers from 0.0 to 1.0, with 0.0 outside of the region of interest and 1.0 completely inside the region. Region border grid cells should have the geographic fraction attributed to the region (for example, a grid cell that 35% in Kentucky and 65% in Tennessee would have have the number 0.35 for the variable representing the Kentucky mask.</p>
 </section>
 <section id="b-3-4-2-defining-regions">
-<h4>B.3.4.2 Defining Regions<a class="headerlink" href="#b-3-4-2-defining-regions" title="Link to this heading">#</a></h4>
+<h4>B.3.4.2 Defining Regions<a class="headerlink" href="#b-3-4-2-defining-regions" title="Link to this heading">¶</a></h4>
 <p>The Desid_RegionDef section of the DESID Control Namelist maps each “Region Label” to specific variables on specific files. Here is the Desid_RegionDef section in the default namelist:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&amp;Desid_RegionDef
  Desid_Reg_nml  =   
@@ -634,7 +344,7 @@ The variable Desid_Max_Reg in the Desid_RegionDefVars section must be greater th
 <p>Custom mask files may also be made using the <a class="reference internal" href="#../../../PREP/shp2cmaq/README.md"><span class="xref myst">shp2cmaq</span></a> tool, which provides instructions for obtaining geospatial data via shape files and converting them to CMAQ gridded input files. One may also populate a CMAQ gridded input file with arbitrary geometric shapes (e.g. squares, diamonds, or other polygons) using the IOAPI library of tools and any common coding language (e.g. Fortran, R, or Python).</p>
 </section>
 <section id="b-3-4-3-region-families">
-<h4>B.3.4.3 Region Families<a class="headerlink" href="#b-3-4-3-region-families" title="Link to this heading">#</a></h4>
+<h4>B.3.4.3 Region Families<a class="headerlink" href="#b-3-4-3-region-families" title="Link to this heading">¶</a></h4>
 <p>Users can define families of regions to reduce the number emission rules needed to operate on a group of regions.
 For example, a user could group regions defined in the RegionsRegistry together. For example, if there are already regions that represent North Carolina (let’s call it NC) and South Carolina (let’s call it SC), then the user could group NC and SC together and call them “CAROLINAS”. Then when “CAROLINAS” is used as the region in a scaling rule, the rule will be distributed and applied to grid cells in both NC and SC.
 The Desid_RegionFam section contains variables for this purpose.</p>
@@ -653,7 +363,7 @@ The variable Desid_Max_Reg_Fam_Members must be greater than the number of region
 </section>
 </section>
 <section id="b-3-5-stream-families">
-<h3>B.3.5 Stream Families<a class="headerlink" href="#b-3-5-stream-families" title="Link to this heading">#</a></h3>
+<h3>B.3.5 Stream Families<a class="headerlink" href="#b-3-5-stream-families" title="Link to this heading">¶</a></h3>
 <p>The DESID Control File provides an interface for defining stream families that can be used to dramatically simplify the rules a user wishes to apply to their emissions inputs.
 This could be especially useful when defining, for example, a group emission streams relevant for electric power generation or mobile sources.<br />
 Example 1 (set Desid_N_Steam_Fams=1 in Desid_StreamFamVars):</p>
@@ -684,16 +394,16 @@ Example 1 (set Desid_N_Steam_Fams=1 in Desid_StreamFamVars):</p>
 <p>The variable Desid_Max_Stream_Fam_Members should be set higher than the maximum number of stream members for any stream family.</p>
 </section>
 <section id="b-3-6-chemical-families">
-<h3>B.3.6 Chemical Families<a class="headerlink" href="#b-3-6-chemical-families" title="Link to this heading">#</a></h3>
+<h3>B.3.6 Chemical Families<a class="headerlink" href="#b-3-6-chemical-families" title="Link to this heading">¶</a></h3>
 <p>Chemical families are defined analogously to stream and region families but in the CMAQ Miscellaneous Control file. This is because they are useful to modules beyond DESID, including <a class="reference internal" href="#CMAQ_UG_appendixG_elmo_output.md"><span class="xref myst">ELMO</span></a> and the <a class="reference internal" href="../CMAQ_UG_ch09_process_analysis.html"><span class="std std-doc">Budget Tool</span></a>.
 See the <a class="reference internal" href="../CMAQ_UG_ch04_model_inputs.html#miscctrl"><span class="std std-ref">Miscellaneous Control File Description</span></a> in Chapter 4 for details.</p>
 <p>One additional note: if a chemical familiy is defined for use in an emission scaling rule, the user should be careful about confirming that the members of that family are present on the emission input file or the CMAQ model species list, depending on which the user is trying to modify. Since the names on the input files are often different than those on the CMAQ model species list, care is advised. DESID will print warnings to the CMAQ log file when it cannot find species that it is looking for from a chemical family on an input file or in the list of CMAQ model species. Please confirm that the model is operating as you expect.</p>
 </section>
 </section>
 <section id="b-3-7-emissions-diagnostics">
-<h2>B.3.7 Emissions Diagnostics<a class="headerlink" href="#b-3-7-emissions-diagnostics" title="Link to this heading">#</a></h2>
+<h2>B.3.7 Emissions Diagnostics<a class="headerlink" href="#b-3-7-emissions-diagnostics" title="Link to this heading">¶</a></h2>
 <section id="b-3-7-1-summary-output-to-processor-specific-logfiles">
-<h3>B.3.7.1 Summary Output to Processor-Specific Logfiles<a class="headerlink" href="#b-3-7-1-summary-output-to-processor-specific-logfiles" title="Link to this heading">#</a></h3>
+<h3>B.3.7.1 Summary Output to Processor-Specific Logfiles<a class="headerlink" href="#b-3-7-1-summary-output-to-processor-specific-logfiles" title="Link to this heading">¶</a></h3>
 <p>Diagnostic output is an important feature of the new emissions module, DESID. Because the impact of emissions is so critical for CMAQ predictions and because the features available for scaling emissions are now quite complex, a comprehensive text-based output has been added to the CMAQ logfiles to enhance transparency.</p>
 <p>The logfiles now provide several lists of information to support users from unexpected behaviors or conflicts like inconsistent naming between emissions and CMAQ speciation. First, CMAQ reports for each stream the number and names of all the emission species that were not used. Second, it prints the names of emission species that the user told it to look for but that it could not find on any of the emission streams. If the environment variable:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setenv</span> <span class="n">CTM_EMISCHK</span> <span class="n">Y</span>         <span class="c1">#&gt; Abort CMAQ if missing emission species from emissions Input files</span>
@@ -703,7 +413,7 @@ See the <a class="reference internal" href="../CMAQ_UG_ch04_model_inputs.html#mi
 <p>Finally, CMAQ loops through streams and outputs the size distribution modes available for each stream and the full list of every emission instructions applied to each stream. These are ordered by CMAQ species (with ‘i’, ‘j’, and ‘k’ modes listed separately) and emission species name so that a full understanding of the scaling rules applied to each CMAQ species’’ emissions can be grasped quickly. Columns are printed for the applicable region(s) of the grid, the phase/mode applied, the input scale factor, the scaling basis, the operation, and the final scale factor applied taking into account any molecular weight conversions, if needed, and size distribution fractions.</p>
 </section>
 <section id="b-3-7-2-diagnostic-gridded-output-files">
-<h3>B.3.7.2 Diagnostic Gridded Output Files<a class="headerlink" href="#b-3-7-2-diagnostic-gridded-output-files" title="Link to this heading">#</a></h3>
+<h3>B.3.7.2 Diagnostic Gridded Output Files<a class="headerlink" href="#b-3-7-2-diagnostic-gridded-output-files" title="Link to this heading">¶</a></h3>
 <p>This component allows users to specify individual species for output on emissions diagnostic output files. In this way, users are able to probe emissions magnitudes and scaling changes for species of interest while not sacrificing the hard disk space needed to save the emission rates of all species for every emission stream.
 It is also possible to combine components of chemical families or stream families as the user’’s interest dictates.</p>
 <p>The Desid_Diag section of the DESID Control File contains variables for configuring this diagnostic output.
@@ -750,129 +460,79 @@ CMAQv5.5 User’s Guide <br></p>
 </section>
 
 
-                </article>
-              
-              
-              
-              
-              
-                <footer class="prev-next-footer d-print-none">
-                  
-<div class="prev-next-area">
-</div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-1-emissions-control-with-the-detailed-emissions-scaling-isolation-and-diagnostics-module-desid">B.1 Emissions Control with the Detailed Emissions Scaling, Isolation and Diagnostics Module (DESID)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-chemical-mapping-control">B.2 Chemical Mapping Control</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-1-default-rules">B.2.1 Default Rules</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-2-modifying-default-rules">B.2.2 Modifying Default rules</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-2-1-supporting-the-volatility-basis-set">B.2.2.1 Supporting the Volatility Basis Set</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-2-2-supporting-potential-combustion-soa">B.2.2.2 Supporting Potential Combustion SOA</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-desid-control">B.3 DESID Control</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-1-general-options">B.3.1 General Options</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-2-area-normalization-and-projection-adjustment">B.3.2 Area Normalization and Projection Adjustment</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-3-aerosol-size-distributions">B.3.3 Aerosol Size Distributions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-4-defining-and-using-regions-and-region-families">B.3.4 Defining and Using Regions and Region Families</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-4-1-using-defined-regions">B.3.4.1 Using Defined Regions</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-4-2-defining-regions">B.3.4.2 Defining Regions</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-4-3-region-families">B.3.4.3 Region Families</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-5-stream-families">B.3.5 Stream Families</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-6-chemical-families">B.3.6 Chemical Families</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-7-emissions-diagnostics">B.3.7 Emissions Diagnostics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-7-1-summary-output-to-processor-specific-logfiles">B.3.7.1 Summary Output to Processor-Specific Logfiles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-7-2-diagnostic-gridded-output-files">B.3.7.2 Diagnostic Gridded Output Files</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/Users_Guide/Appendix/CMAQ_UG_appendixB_emissions_control.md.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-
-</div></div>
-              
-            
           </div>
-          <footer class="bd-footer-content">
-            
-          </footer>
-        
-      </main>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">CMAQ_Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_README.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">CMAQ User’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials/README.html">     Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html"><strong>Developers’ Guide for the Community Multiscale Air Quality (CMAQ) Modeling System</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html#motivation">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html#summary-of-developer-workflow">Summary of Developer Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html#development-life-cycle">Development Life-cycle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html#making-contributions">Making Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html#copyright-information">Copyright Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers_Guide/CMAQ_Dev_Guide.html#appendix">Appendix</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-  </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
 
-  <footer class="bd-footer">
-<div class="bd-footer__inner bd-page-width">
-  
-    <div class="footer-items__start">
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, CMAQ Developers.
       
-        <div class="footer-item">
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/Users_Guide/Appendix/CMAQ_UG_appendixB_emissions_control.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-  <p class="copyright">
     
-      © Copyright 2024, CMAQ Developers.
-      <br/>
+
     
-  </p>
-</div>
-      
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
-    <br/>
-  </p>
-</div>
-      
-    </div>
-  
-  
-  
-    <div class="footer-items__end">
-      
-        <div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
-</p></div>
-      
-    </div>
-  
-</div>
-
-  </footer>
   </body>
 </html>

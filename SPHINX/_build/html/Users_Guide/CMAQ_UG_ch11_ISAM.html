@@ -1,335 +1,45 @@
-
 <!DOCTYPE html>
 
-
-<html lang="en" data-content_root="../" >
-
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>11. Integrated Source Apportionment Method (CMAQ-ISAM) &#8212; CMAQ_Documentation 0.2 documentation</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
-  </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=12dfc556" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-  
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
-
     <script src="../_static/documentation_options.js?v=10f1778b"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Users_Guide/CMAQ_UG_ch11_ISAM';</script>
     <link rel="canonical" href="https://jbrunto.github.io/CMAQ_Docs_v55/Users_Guide/CMAQ_UG_ch11_ISAM.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
-  </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
-  
-  <dialog id="pst-search-dialog">
-    
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
-  
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
-  
-  
-  <div class="col-lg-3 navbar-header-items__start">
-    
-      <div class="navbar-item">
-
-  
-    
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
 
-<a class="navbar-brand logo" href="../index.html">
   
   
-  
-  
-  
-  
-    <p class="title logo__title">CMAQ_Documentation 0.2 documentation</p>
-  
-</a></div>
-    
-  </div>
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../Docs_README.html">
-    Home
-  </a>
-</li>
 
+  </head><body>
+  
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="README.html">
-         User's Guide
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="Tutorials/README.html">
-         Tutorials
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../Developers_Guide/CMAQ_Dev_Guide.html">
-         Developer's Guide
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-      
-    </div>
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
           
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-        </div>
-      
-      
-        <div class="navbar-item">
-
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-    </div>
-  
-
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
-</div>
-
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
-        
-      
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-      <div class="sidebar-header-items__center">
-        
-          
-          
-            <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../Docs_README.html">
-    Home
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="README.html">
-         User's Guide
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="Tutorials/README.html">
-         Tutorials
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../Developers_Guide/CMAQ_Dev_Guide.html">
-         Developer's Guide
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-          
-        
-      </div>
-    
-    
-    
-      <div class="sidebar-header-items__end">
-        
-          <div class="navbar-item">
-
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
-        
-      </div>
-    
-  </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main" role="main">
-        
-        
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article d-print-none">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item">
-
-<nav aria-label="Breadcrumb" class="d-print-none">
-  <ul class="bd-breadcrumbs">
-    
-    <li class="breadcrumb-item breadcrumb-home">
-      <a href="../index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
-      </a>
-    </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">11. Integrated Source Apportionment Method (CMAQ-ISAM)</span></li>
-  </ul>
-</nav>
-</div>
-      
-    </div>
-  
-  
-</div>
-</div>
-              
-              
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article">
-                  
+          <div class="body" role="main">
+            
   <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="CMAQ_UG_ch10_HDDM-3D.html"><span class="std std-doc">&lt;&lt; Previous Chapter</span></a> - <a class="reference internal" href="README.html"><span class="std std-doc">Home</span></a> - <a class="reference internal" href="CMAQ_UG_ch12_sulfur_tracking.html"><span class="std std-doc">Next Chapter &gt;&gt;</span></a></p>
 <!-- END COMMENT -->
 <section id="integrated-source-apportionment-method-cmaq-isam">
-<h1>11. Integrated Source Apportionment Method (CMAQ-ISAM)<a class="headerlink" href="#integrated-source-apportionment-method-cmaq-isam" title="Link to this heading">#</a></h1>
+<h1>11. Integrated Source Apportionment Method (CMAQ-ISAM)<a class="headerlink" href="#integrated-source-apportionment-method-cmaq-isam" title="Link to this heading">¶</a></h1>
 <section id="introduction">
-<h2>11.1 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<h2>11.1 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>The Integrated Source Apportionment Method (ISAM) calculates source attribution information for user specified ozone and particulate matter precursors within the CMAQ model.  CMAQ-ISAM has been substantially updated starting with the CMAQv5.3 release, and now differs significantly from previous releases. The major changes to the ISAM chemistry solver are detailed in the <a class="reference download internal" download="" href="../_downloads/539324bd62ccf68bb795b7a62361daa8/CMAQ_ISAM_Chemistry_Supplemental_Equations.pdf"><span class="xref download myst">ISAM Chemistry Supplement</span></a>. In addition, signifcant updates and multiple minor fixes were included in the  subsequent releases including substantial updates to the gas-phase chemistry apportionment algorithms that improve both physical and numerical aspects of the method. Users of CMAQ-ISAM are strongly encouraged to update to the latest available release of the model.</p>
 <p>The base CMAQ model provides users the concentration and deposition fields of many pollutant species. These species are usually combinations of different types of primary emissions and secondary formation that have been physically and chemically transformed in the model. However, sometimes it is desirable to know specific source attribution information for the model outputs. For example, how much of the ozone in an urban area was formed due to nitrogen oxides emitted from motor vehicles in a neighboring state?</p>
 <p>Answering this type of question often requires running an air quality model twice, once with the standard emissions scenario and once with the source of interest completely removed. The difference between the two runs is then assumed to be attributed to the removed source.  While this approach is reasonably straightforward to implement, it has some drawbacks.  For example, removing a large source from the system in a highly nonlinear chemical mixture can lead to some errors. Also, calculating source attribution of many sources can be logistically and computationally prohibitive.</p>
@@ -360,7 +70,7 @@
 </div>
 </section>
 <section id="build-instructions">
-<h2>11.2 Build Instructions<a class="headerlink" href="#build-instructions" title="Link to this heading">#</a></h2>
+<h2>11.2 Build Instructions<a class="headerlink" href="#build-instructions" title="Link to this heading">¶</a></h2>
 <p>Starting with CMAQv5.3 model release, ISAM is provided directly with the source code of the base model. To use ISAM, follow the normal build process for CMAQ described in <a class="reference internal" href="CMAQ_UG_ch05_running_a_simulation.html"><span class="std std-doc">Chapter 5</span></a>, but make sure to uncomment the following line in bldit_cctm.csh:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">ISAM_CCTM</span>
 </pre></div>
@@ -375,11 +85,11 @@ This version is available as a zip file from the following address:</p>
 <p>ISAM is currently only implemented for the EBI solver. For some CMAQ applications, the Rosenbrock solver is desirable and is set as the default in the sample runscripts. For example, this is the case when using the CB6R5M chemical mechanism for hemispheric simulations. In such cases, the bldit script needs to be modified to not select the Rosenbrock solver. While this may incur a performance penalty in terms of CPU time and increase the likelyhood of convergence warnings, it will allow the ISAM simulation to proceed in most cases.</p>
 </section>
 <section id="run-instructions">
-<h2>11.3 Run Instructions<a class="headerlink" href="#run-instructions" title="Link to this heading">#</a></h2>
+<h2>11.3 Run Instructions<a class="headerlink" href="#run-instructions" title="Link to this heading">¶</a></h2>
 <p>To begin a CMAQ simulation with source apportionment enabled, the ISAM section of the runscript must be configured.  The additional necessary environment variables are listed in Table 11-1.</p>
 <p><a id=Table11-1></a></p>
 <p><strong>Table 11-1. ISAM run script variables</strong></p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
 <th class="head"><p><strong>Settings</strong></p></th>
@@ -449,10 +159,9 @@ This version is available as a zip file from the following address:</p>
 </tr>
 </tbody>
 </table>
-</div>
 <p>Additionally, ISAM can track emissions confined to geographic regions.  This functionality can be enabled through CMAQ’s <code class="docutils literal notranslate"><span class="pre">RegionsRegistry</span></code> set in the <code class="docutils literal notranslate"><span class="pre">CMAQ_Control_DESID</span></code> namelist (Appendix B.4) and is discussed further below.</p>
 <section id="isam-and-bidirectional-nh3-exchange">
-<h3>ISAM and bidirectional NH<sub>3</sub> exchange<a class="headerlink" href="#isam-and-bidirectional-nh3-exchange" title="Link to this heading">#</a></h3>
+<h3>ISAM and bidirectional NH<sub>3</sub> exchange<a class="headerlink" href="#isam-and-bidirectional-nh3-exchange" title="Link to this heading">¶</a></h3>
 <p>ISAM in CMAQ v5.3 supports bidirectional NH<sub>3</sub> exchange using both M3Dry and STAGE deposition options. To run with this option the AMMONIUM species class must be set in the ISAM control file</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TAG</span> <span class="n">CLASSES</span>     <span class="o">|</span><span class="n">AMMONIUM</span>
 </pre></div>
@@ -465,10 +174,10 @@ This version is available as a zip file from the following address:</p>
 <p>Setting these options will automatically set the BID tag for model output. Modeled species output with the BID tag represent the influence of NH<sub>3</sub> emissions from fertilizer and biogenic NH<sub>3</sub> emission sources. Biogenic NH<sub>3</sub> emissions include the evasion of NH<sub>3</sub> from non-agricultural vegetation and soil NH<sub>4</sub> pools as parameterized in the STAGE or M3Dry models.</p>
 </section>
 <section id="isam-run-time-options-for-gas-chemistry-and-ozone-production">
-<h3>ISAM run-time options for gas chemistry and ozone production<a class="headerlink" href="#isam-run-time-options-for-gas-chemistry-and-ozone-production" title="Link to this heading">#</a></h3>
+<h3>ISAM run-time options for gas chemistry and ozone production<a class="headerlink" href="#isam-run-time-options-for-gas-chemistry-and-ozone-production" title="Link to this heading">¶</a></h3>
 <p>In the runtime table, the last four rows deal with ISAM’s method for apportioning source contributions from gas chemistry. They weight specific species that are chemical reactants so a reaction’s product are totally apportioned to the weighted reactant. If both reactants are weighted, products are equally apportioned between reactants. Note that the unmodified method always equally apportions products. The changes seek to isolate sources that emit or secondary produce the weighted reactants because their sources are controllable or deemed responsible for deteriorating air quality.</p>
 <p>The weighting schemes focus on apportioning NOx and ozone concentrations so weighted species include several reactive nitrogen compounds, oxygenated VOCs, organic peroxy radicals and operators. A new runtime option, ISAM_O3_WEIGHTS, determines what species are weighted. The below two tables define what different values set for ISAM_O3_WEIGHTS. The first define option values 1 thru 4. Option 1 reproduces results from the unmodified code. The second table describes option 5 that toggles between two weight settings listed in the first table.</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p><strong>Species</strong></p></th>
 <th class="head text-center"><p><strong>Option 1</strong></p></th>
@@ -558,8 +267,7 @@ This version is available as a zip file from the following address:</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p><strong>Option 5 Algorithm</strong></p></th>
 </tr>
@@ -569,7 +277,6 @@ This version is available as a zip file from the following address:</p>
 </tr>
 </tbody>
 </table>
-</div>
 <p>The runtime options, ISAM_NOX_CASE and ISAM_VOC_CASE, determine the two settings. Toggling is determined by whether the cell grid’s ozone production has NOx or VOC limiting conditions. Option 5 uses H2O2 production over HNO3 production (see appendix A in Sillman (1995)) whether former or latter condition exists. Sillman (1995) states that VOC limiting exist when the ratio is less than 0.35 but the ratio’s transition value is uncertain (Tonnesen and Dennis, 2000a and 2000b) so a final runtime option sets the transition value,  VOC_NOX_TRANS. Note that all the repositories run-scripts include the below commands setting the new ISAM options using their default values.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>   #&gt; Options used to favor tracked species in reaction for Ozone-NOx chemistry
    setenv ISAM_O3_WEIGHTS 5   # weights for tracked species Default is 5
@@ -589,7 +296,7 @@ This version is available as a zip file from the following address:</p>
 </div>
 </section>
 <section id="isam-control-file-sa-iolist">
-<h3>11.3.1 ISAM control file (SA_IOLIST)<a class="headerlink" href="#isam-control-file-sa-iolist" title="Link to this heading">#</a></h3>
+<h3>11.3.1 ISAM control file (SA_IOLIST)<a class="headerlink" href="#isam-control-file-sa-iolist" title="Link to this heading">¶</a></h3>
 <p>The ISAM <code class="docutils literal notranslate"><span class="pre">SA_IOLIST</span></code> is a text file used to configure which tag classes, emissions streams, and source regions the model will track.  An example of this file, <code class="docutils literal notranslate"><span class="pre">isam_control.txt</span></code>, is provided in $CMAQ_HOME/CCTM/scripts.  The order and formating of this file must be kept intact, but it does allow for insertion of comment lines.</p>
 <p>Each ISAM simulation requires the specification of the <code class="docutils literal notranslate"><span class="pre">TAG</span> <span class="pre">CLASSES</span></code> that the user desires to apportion.  The full list of available tag classes (e.g. <code class="docutils literal notranslate"><span class="pre">SULFATE</span></code>, <code class="docutils literal notranslate"><span class="pre">NITRATE</span></code>, <code class="docutils literal notranslate"><span class="pre">AMMONIUM</span></code>, <code class="docutils literal notranslate"><span class="pre">EC</span></code>, <code class="docutils literal notranslate"><span class="pre">OC</span></code>, <code class="docutils literal notranslate"><span class="pre">VOC</span></code>, <code class="docutils literal notranslate"><span class="pre">PM25_IONS</span></code>, <code class="docutils literal notranslate"><span class="pre">OZONE</span></code>, <code class="docutils literal notranslate"><span class="pre">OA_TOT</span></code>, or <code class="docutils literal notranslate"><span class="pre">PM_TOT</span></code>) and the species associated with each of these are provided in section 11.1.  One or more of these tag classes must be specified in <code class="docutils literal notranslate"><span class="pre">SA_IOLIST</span></code>.  Multiple tag classes are comma delimited. Incorrectly specified choices for this field will cause a model crash.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TAG</span> <span class="n">CLASSES</span>     <span class="o">|</span><span class="n">OZONE</span><span class="p">,</span> <span class="n">SULFATE</span>
@@ -625,9 +332,9 @@ This version is available as a zip file from the following address:</p>
 </div>
 <p>Please, note that, currently, ISAM results for the same user defined tag may differ depending on the overall configuration and content of the ISAM control file.  This weakness of the method is detailed in the last section of the <a class="reference download internal" download="" href="../_downloads/539324bd62ccf68bb795b7a62361daa8/CMAQ_ISAM_Chemistry_Supplemental_Equations.pdf"><span class="xref download myst">ISAM Chemistry Supplement</span></a>.  Generally, tracking a larger number of tags produces more consistent apportionment results.</p>
 <section id="defining-isam-tags-for-in-line-sources">
-<h4>Defining ISAM Tags for In-line Sources.<a class="headerlink" href="#defining-isam-tags-for-in-line-sources" title="Link to this heading">#</a></h4>
+<h4>Defining ISAM Tags for In-line Sources.<a class="headerlink" href="#defining-isam-tags-for-in-line-sources" title="Link to this heading">¶</a></h4>
 <p>The CMAQ model allows several types of emissions that are calculated in-line or during a model simulation instead of provided by the user as inputs. A simulation can use all of these inline emissions and ISAM can calculate apportionment from these sources. The former is done by setting appropriate emissions options in the CMAQ runscript. For ISAM to calculate apportionment for an in-line source, the isam control file needs to define a tagname using the correct stream name.  The below table lists currently supported inline emissions streams in CMAQ:</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Emission Stream Name</strong></p></th>
 <th class="head"><p><strong>Inline Emissions Source</strong></p></th>
@@ -657,11 +364,10 @@ This version is available as a zip file from the following address:</p>
 </tr>
 </tbody>
 </table>
-</div>
 <p>*Although it is not an emission stream, it is possible to tag the ozone incursions at the top of the simulated volume if the potential vorticity option <code class="docutils literal notranslate"><span class="pre">CTM_PVO3</span></code> is activated in the run script.</p>
 </section>
 <section id="interpretation-of-oth-tag">
-<h4>Interpretation of ‘OTH’ tag<a class="headerlink" href="#interpretation-of-oth-tag" title="Link to this heading">#</a></h4>
+<h4>Interpretation of ‘OTH’ tag<a class="headerlink" href="#interpretation-of-oth-tag" title="Link to this heading">¶</a></h4>
 <p>The OTH tag (e.g.“O3_OTH” in the ISAM benchmark) represents concentrations for that species attributed to 1) all other emissions streams, 2) precursor species not included in the specified tag class(es), and 3) other processes in the model.</p>
 <p>For item 1), this includes internally calculated emissions that a user decides to exclude from the control file (perhaps to reduce computational cost of running with tags that are not of interest to a particular application). These are things like online biogenics, online lightning, dust, etc.</p>
 <p>For item 2), these are some secondarily produced intermediate species that have minor impact on ozone production.</p>
@@ -671,11 +377,11 @@ This version is available as a zip file from the following address:</p>
 </section>
 </section>
 <section id="isam-benchmark">
-<h2>11.4 ISAM Benchmark<a class="headerlink" href="#isam-benchmark" title="Link to this heading">#</a></h2>
+<h2>11.4 ISAM Benchmark<a class="headerlink" href="#isam-benchmark" title="Link to this heading">¶</a></h2>
 <p>See the <a class="reference internal" href="Tutorials/CMAQ_UG_tutorial_ISAM.html"><span class="std std-doc">CMAQ-ISAM Benchmark Tutorial</span></a> for step-by-step instructions for running the 2 day benchmark case.  The input files for the CMAQv5.5 ISAM benchmark case are the same as the benchmark inputs for the base model. Output source apportionment files associated with the sample <code class="docutils literal notranslate"><span class="pre">isam_control.txt</span></code> provided in this release package are included in the benchmark outputs for the base model. The tutorial also provides example instructions for post-processing ISAM output for individual species contained in the SA_ACONC_1 output file into aggregate species like NOx or PM2.5 using the <a class="reference internal" href="#../../POST/combine/README.md"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">combine</span></code></span></a> utility and customized <code class="docutils literal notranslate"><span class="pre">SPECIES_DEF</span></code> species definition files. Note that the <a class="reference internal" href="Appendix/CMAQ_UG_appendixF_elmo_output.html"><span class="std std-doc">Explicit and Lumped Model Output (ELMO) module</span></a> available for aggregating base model concentrations does not currently support the aggregation of ISAM species within CMAQ, necessitating a customized post-processing workflow.</p>
 </section>
 <section id="references">
-<h2>11.5 References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<h2>11.5 References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h2>
 <p>Kwok, R.H.F, Napelenok, S.L., &amp; Baker, K.R. (2013). Implementation and evaluation of PM2.5 source contribution analysis in a photochemical model. Atmospheric Environment, 80, 398–407 <a class="reference external" href="https://doi.org/10.1016/j.atmosenv.2013.08.017">doi:10.1016/j.atmosenv.2013.08.017</a>.</p>
 <p>Kwok, R.H.F, Baker, K.R., Napelenok, S.L., &amp; Tonnesen, G.S. (2015). Photochemical grid model implementation of VOC, NOx, and O3 source apportionment. Geosci. Model Dev., 8, 99-114. <a class="reference external" href="https://doi.org/10.5194/gmd-8-99-2015">doi:10.5194/gmd-8-99-2015</a>.</p>
 <p>Sillman, Sanford. (1995). The use of NOy, H2O2, and HNO3 as indicators for ozone-NOx-hydrocarbon sensitivity in urban locations. Journal of Geophysical Research. 1001. 14175-14188.</p>
@@ -691,114 +397,79 @@ CMAQv5.5 User’s Guide <br></p>
 </section>
 
 
-                </article>
-              
-              
-              
-              
-              
-                <footer class="prev-next-footer d-print-none">
-                  
-<div class="prev-next-area">
-</div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">11.1 Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-instructions">11.2 Build Instructions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-instructions">11.3 Run Instructions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isam-and-bidirectional-nh3-exchange">ISAM and bidirectional NH<sub>3</sub> exchange</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isam-run-time-options-for-gas-chemistry-and-ozone-production">ISAM run-time options for gas chemistry and ozone production</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isam-control-file-sa-iolist">11.3.1 ISAM control file (SA_IOLIST)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-isam-tags-for-in-line-sources">Defining ISAM Tags for In-line Sources.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-oth-tag">Interpretation of ‘OTH’ tag</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isam-benchmark">11.4 ISAM Benchmark</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">11.5 References</a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/Users_Guide/CMAQ_UG_ch11_ISAM.md.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-
-</div></div>
-              
-            
           </div>
-          <footer class="bd-footer-content">
-            
-          </footer>
-        
-      </main>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">CMAQ_Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_README.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">CMAQ User’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials/README.html">     Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html"><strong>Developers’ Guide for the Community Multiscale Air Quality (CMAQ) Modeling System</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html#motivation">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html#summary-of-developer-workflow">Summary of Developer Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html#development-life-cycle">Development Life-cycle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html#making-contributions">Making Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html#copyright-information">Copyright Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html#appendix">Appendix</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-  </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
 
-  <footer class="bd-footer">
-<div class="bd-footer__inner bd-page-width">
-  
-    <div class="footer-items__start">
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, CMAQ Developers.
       
-        <div class="footer-item">
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../_sources/Users_Guide/CMAQ_UG_ch11_ISAM.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-  <p class="copyright">
     
-      © Copyright 2024, CMAQ Developers.
-      <br/>
+
     
-  </p>
-</div>
-      
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
-    <br/>
-  </p>
-</div>
-      
-    </div>
-  
-  
-  
-    <div class="footer-items__end">
-      
-        <div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
-</p></div>
-      
-    </div>
-  
-</div>
-
-  </footer>
   </body>
 </html>

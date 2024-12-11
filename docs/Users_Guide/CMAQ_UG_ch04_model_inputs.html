@@ -1,339 +1,49 @@
-
 <!DOCTYPE html>
 
-
-<html lang="en" data-content_root="../" >
-
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>4. Model Input Files &#8212; CMAQ_Documentation 0.2 documentation</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
-  </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=12dfc556" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-  
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
-
     <script src="../_static/documentation_options.js?v=10f1778b"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Users_Guide/CMAQ_UG_ch04_model_inputs';</script>
     <link rel="canonical" href="https://jbrunto.github.io/CMAQ_Docs_v55/Users_Guide/CMAQ_UG_ch04_model_inputs.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
-  </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
-  
-  <dialog id="pst-search-dialog">
-    
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
-  
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
-  
-  
-  <div class="col-lg-3 navbar-header-items__start">
-    
-      <div class="navbar-item">
-
-  
-    
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
 
-<a class="navbar-brand logo" href="../index.html">
   
   
-  
-  
-  
-  
-    <p class="title logo__title">CMAQ_Documentation 0.2 documentation</p>
-  
-</a></div>
-    
-  </div>
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../Docs_README.html">
-    Home
-  </a>
-</li>
 
+  </head><body>
+  
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="README.html">
-         User's Guide
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="Tutorials/README.html">
-         Tutorials
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../Developers_Guide/CMAQ_Dev_Guide.html">
-         Developer's Guide
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-      
-    </div>
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
           
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-        </div>
-      
-      
-        <div class="navbar-item">
-
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-    </div>
-  
-
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
-</div>
-
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
-        
-      
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-      <div class="sidebar-header-items__center">
-        
-          
-          
-            <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../Docs_README.html">
-    Home
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="README.html">
-         User's Guide
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="Tutorials/README.html">
-         Tutorials
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../Developers_Guide/CMAQ_Dev_Guide.html">
-         Developer's Guide
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-          
-        
-      </div>
-    
-    
-    
-      <div class="sidebar-header-items__end">
-        
-          <div class="navbar-item">
-
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
-        
-      </div>
-    
-  </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main" role="main">
-        
-        
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article d-print-none">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item">
-
-<nav aria-label="Breadcrumb" class="d-print-none">
-  <ul class="bd-breadcrumbs">
-    
-    <li class="breadcrumb-item breadcrumb-home">
-      <a href="../index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
-      </a>
-    </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">4. Model Input Files</span></li>
-  </ul>
-</nav>
-</div>
-      
-    </div>
-  
-  
-</div>
-</div>
-              
-              
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article">
-                  
+          <div class="body" role="main">
+            
   <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="CMAQ_UG_ch03_preparing_compute_environment.html"><span class="std std-doc">&lt;&lt; Previous Chapter</span></a> - <a class="reference internal" href="README.html"><span class="std std-doc">Home</span></a> - <a class="reference internal" href="CMAQ_UG_ch05_running_a_simulation.html"><span class="std std-doc">Next Chapter &gt;&gt;</span></a></p>
 <!-- END COMMENT -->
 <section id="model-input-files">
-<h1>4. Model Input Files<a class="headerlink" href="#model-input-files" title="Link to this heading">#</a></h1>
+<h1>4. Model Input Files<a class="headerlink" href="#model-input-files" title="Link to this heading">¶</a></h1>
 <section id="introduction">
-<h2>4.1 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<h2>4.1 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>This chapter provides basic information on the format and content of CMAQ input files.  It also provides information on using the pre-processing tools provided in the repository for preparing initial and boundary conditions and meteorology inputs.  Links are provided for  the emissions processing tools that are released through their own repository or website.  A list of CMAQ input files can be found in <a class="reference internal" href="#Input_Table"><span class="xref myst">Table 4-1</span></a>. Some CMAQ input files are in ASCII format while the majority of them are in the <a class="reference external" href="http://www.unidata.ucar.edu/software/netcdf">Network Common Data Form (netCDF) format</a>. CMAQ input and output files are self-describing netCDF-format files in which the file headers have all the dimensioning and descriptive information needed to define the resident data. Users should download the latest code for the NetCDF from the <a class="reference external" href="http://www.unidata.ucar.edu/software/netcdf">NetCDF website</a>. Compilation and configuration information for the NetCDF is available through the Unidata website.</p>
 <p>All CMAQ input and output files are conformed to I/O API netCDF file format. Please refer to the <a class="reference external" href="https://www.cmascenter.org/ioapi/documentation/all_versions/html">I/O API User’s Manual</a> for details.</p>
 <p>Full input datasets for 2016 over two domains are publically available to download from the CMAS Data Warehouse.  The input files are stored on Google Drive with metadata organized through Dataverse.</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p><strong>Domain</strong></p></th>
 <th class="head text-center"><p><strong>Simulation Dates</strong></p></th>
@@ -351,25 +61,24 @@
 </tr>
 </tbody>
 </table>
-</div>
 </section>
 <section id="cmaq-pre-processors">
-<h2>4.2 CMAQ Pre-processors<a class="headerlink" href="#cmaq-pre-processors" title="Link to this heading">#</a></h2>
+<h2>4.2 CMAQ Pre-processors<a class="headerlink" href="#cmaq-pre-processors" title="Link to this heading">¶</a></h2>
 <p><a class="reference download internal" download="" href="../_downloads/e95250c2157a0166fed6d1acd02db841/Figure2-1.jpg"><span class="xref download myst">Figure 2-1</span></a> shows the relationship between CMAQ pre-processors and the main CMAQ program, the CMAQ Chemistry Transport Model (CCTM).  MCIP, ICON and BCON are included in the CMAQ repository and are used to create meteorological, initial conditions and boundary conditions inputs.  SMOKE, FEST-C and Spatial Allocator Tools are external software packages used for creating emissions inputs for CMAQ.  The following subsections provide more information on these tools and point the user to additional sources of documentation.</p>
 <section id="meteorology-chemistry-interface-processor-mcip">
-<h3>4.2.1 Meteorology-Chemistry Interface Processor (MCIP)<a class="headerlink" href="#meteorology-chemistry-interface-processor-mcip" title="Link to this heading">#</a></h3>
+<h3>4.2.1 Meteorology-Chemistry Interface Processor (MCIP)<a class="headerlink" href="#meteorology-chemistry-interface-processor-mcip" title="Link to this heading">¶</a></h3>
 <p>MCIP processes meteorological fields output by the WRF model into files that are compatible with the CCTM and SMOKE (an emissions processor that computes emissions inputs for CMAQ). The output files generated by MCIP are used by ICON and BCON and various other programs in CMAQ, so MCIP must be the first program run after installing the CMAQ source codes and initializing CMAQ environment variables. Configuration options for MCIP include the time periods over which to extract data from the meteorological model output files, horizontal grid definitions for output, and control for optional 3D output variables. MCIP can either process the full horizontal domain from WRF or a user-defined subset of that domain (that is, a “window”). Most of the fields that are simulated by WRF are not modified by MCIP for the CCTM or emissions model and are simply “passed through” to the output. Where needed, MCIP transforms data from the WRF projection and coordinate system to be consistent with that being used for CMAQ simulations.</p>
 <p>Unlike many of the tools distributed with CMAQ, MCIP is compiled with a Makefile and then run with a run script. Instructions on how to compile and run MCIP are provided in the <a class="reference internal" href="#../../PREP/mcip/README.md"><span class="xref myst">README.md</span></a> file in the PREP/mcip folder.</p>
 </section>
 <section id="initial-conditions-processor-icon">
-<h3>4.2.2 Initial Conditions Processor (ICON)<a class="headerlink" href="#initial-conditions-processor-icon" title="Link to this heading">#</a></h3>
+<h3>4.2.2 Initial Conditions Processor (ICON)<a class="headerlink" href="#initial-conditions-processor-icon" title="Link to this heading">¶</a></h3>
 <p>ICON generates a gridded netCDF file of the chemical conditions for all grid cells in the modeling domain for the initial time of a simulation. It can generate these initial conditions from either an existing CCTM output file or one of four ASCII files of vertically resolved concentration profiles distributed with CMAQ. Running ICON requires that the user already generated MCIP files for their target modeling domain. For both input file options, ICON will interpolate the data to the horizontal and vertical structure of the target domain as defined in the MCIP files. The species in the ICON output file are identical to those in the input (either CCTM output or ASCII profile) file.</p>
 <p>Using an existing CCTM output file to generate initial conditions is applicable when interpolating initial conditions from a coarse to a fine grid domain, as may occur when setting up nested simulations (simulations with finer-resolution grids that cover part of coarser-resolution grids). This is the preferred mode of specifying initial conditions since the spatial concentration patterns derived from the coarser-resolution simulation can be considered a first approximation of the concentration fields over the finer-resolution subdomain at the beginning of the simulation.</p>
 <p>The four ASCII files of vertically resolved concentration profiles <a class="reference internal" href="#../../PREP/bcon/src/profile"><span class="xref myst">distributed with CMAQ</span></a> represent annual average concentrations at a grid cell over the Pacific derived from a simulation with the hemispheric version of CMAQv5.3 beta2 for the year 2016. As such, these concentration profiles are reflective of conditions in a remote marine environment. The simulation was performed with the cb6r3m_ae7_kmtbr chemical mechanism and profiles for racm_ae6_aq, saprc07tc_ae6_aq, and saprc07tic_ae7i_aq were derived using the species mapping approach described in Step 3 of the <a class="reference internal" href="Tutorials/CMAQ_UG_tutorial_HCMAQ_IC_BC.html"><span class="std std-doc">CMAQ Tutorial on creating Initial and Boundary Conditions from Seasonal Average Hemispheric CMAQ Output</span></a>. If one of these ASCII profile files is used to generate initial conditions, the resulting concentration fields will be uniform over the modeling domain and will not be a realistic representation of conditions over the modeling domain. As a result, simulations initialized with profile-derived rather than CCTM-derived concentration fields may require longer spin-up periods before conditions simulated within the domain no longer are influenced by these unrealistic initial concentration fields.</p>
 <p>The configuration options for ICON include choosing whether the initial conditions are generated from an existing CCTM output file or from an ASCII profile, and defining the horizontal and vertical grids and time for which initial conditions are to be generated. Information on configuring ICON for the different kinds of input data, environment variables, input and output files, compiling and running ICON are provided in the <a class="reference internal" href="#../../PREP/icon/README.md"><span class="xref myst">README.md</span></a> file in the PREP/icon folder.</p>
 </section>
 <section id="boundary-conditions-processor-bcon">
-<h3>4.2.3 Boundary Conditions Processor (BCON)<a class="headerlink" href="#boundary-conditions-processor-bcon" title="Link to this heading">#</a></h3>
+<h3>4.2.3 Boundary Conditions Processor (BCON)<a class="headerlink" href="#boundary-conditions-processor-bcon" title="Link to this heading">¶</a></h3>
 <p>BCON generates a netCDF file of the chemical conditions along the lateral boundaries of the modeling domain. BCON will generate an output file with chemical concentrations for all grid cells along the modeling domain’s horizontal boundaries. It can generate these boundary conditions from either an existing CCTM output file or one of four ASCII files of vertically resolved concentration profiles distributed with CMAQ. Running BCON requires that the user already generated MCIP files for their target modeling domain. For both input file options, BCON will interpolate the data to the horizontal and vertical structure of the target domain as defined in the MCIP files. The species in the BCON output file are identical to those in the input (either CCTM output or ASCII profile) file. Depending on user specified options and/or input datasets, the boundary conditions generated by BCON can be time varying, time independent, and either spatially uniform or variable across the model boundaries.</p>
 <p>Using an existing CCTM output file to generate boundary conditions is applicable when setting up windowed simulations (simulations with the same resolution that cover only a part of the outer domain) or nested simulations (simulations with finer-resolution grids that cover part of coarser-resolution grids). This is the preferred mode of specifying boundary conditions since the spatial concentration patterns derived from the coarser-resolution simulation will be spatially varying along the boundaries of the finer-resolution domain. Boundary conditions generated from CCTM output files will be either time varying or time independent.</p>
 <p>The four ASCII files of vertically resolved concentration profiles <a class="reference internal" href="#../../PREP/bcon/src/profile"><span class="xref myst">distributed with CMAQ</span></a> represent annual average concentrations at a grid cell over the Pacific derived from a simulation with the hemispheric version of CMAQv5.3 beta2 for the year 2016. As such, these concentration profiles are reflective of conditions in a remote marine environment. The simulation was performed with the cb6r3m_ae7_kmtbr chemical mechanism and profiles for racm_ae6_aq, saprc07tc_ae6_aq, and saprc07tic_ae7i_aq were derived using the species mapping approach described in Step 3 of the <a class="reference internal" href="Tutorials/CMAQ_UG_tutorial_HCMAQ_IC_BC.html"><span class="std std-doc">CMAQ Tutorial on creating Initial and Boundary Conditions from Seasonal Average Hemispheric CMAQ Output</span></a>. If one of these ASCII profile files is used to generate boundary conditions, the resulting concentration fields will be uniform along the boundaries of the modeling domain and will not vary in time. Therefore, they are not a realistic representation of conditions along the domain boundaries and should only be used in cases where boundary conditions are not expected to affect the interpretation of model results.</p>
@@ -377,7 +86,7 @@
 <p>The configuration options for BCON include choosing whether the boundary conditions are generated from an existing CCTM output file or from an ASCII profile, and defining the horizontal and vertical grids and time period for which boundary conditions are to be generated. Information on configuring BCON for the different kinds of input data, environment variables, input and output files, compiling and running BCON are provided in the <a class="reference internal" href="#../../PREP/bcon/README.md"><span class="xref myst">README.md</span></a> file in the PREP/bcon folder.</p>
 </section>
 <section id="external-software-programs-for-preparing-cmaq-inputs">
-<h3>4.2.4 External Software Programs for Preparing CMAQ Inputs<a class="headerlink" href="#external-software-programs-for-preparing-cmaq-inputs" title="Link to this heading">#</a></h3>
+<h3>4.2.4 External Software Programs for Preparing CMAQ Inputs<a class="headerlink" href="#external-software-programs-for-preparing-cmaq-inputs" title="Link to this heading">¶</a></h3>
 <p>The SMOKE and FEST-C modeling systems and the Spatial Allocator tools are used to create CMAQ emissions and land surface inputs. These systems are maintained by EPA and CMAS developers and are hosted and supported by the CMAS Center.  Links to documentation and software download for each system are provided below.</p>
 <p><strong>Emissions Processor (SMOKE)</strong>
 <a class="reference external" href="https://www.cmascenter.org/smoke/">Sparse Matrix Operator Kerner Emissions (SMOKE) Modeling System</a> is designed to create gridded, speciated, hourly emissions for input into CMAQ and other air quality models. SMOKE supports area, biogenic, mobile (both onroad and nonroad), and point source emissions processing for criteria, particulate, and toxic pollutants. For biogenic emissions modeling, SMOKE uses the Biogenic Emission Inventory System.</p>
@@ -394,7 +103,7 @@ An ocean mask file (OCEAN) containing OPEN (open ocean) and SURF (surf zone) is 
 </section>
 </section>
 <section id="cmaq-input-files">
-<h2>4.3 CMAQ Input Files<a class="headerlink" href="#cmaq-input-files" title="Link to this heading">#</a></h2>
+<h2>4.3 CMAQ Input Files<a class="headerlink" href="#cmaq-input-files" title="Link to this heading">¶</a></h2>
 <p><a class="reference internal" href="#Input_Table"><span class="xref myst">Jump to Table of Input Files</span></a><br>
 <a class="reference internal" href="CMAQ_UG_ch07_model_outputs.html"><span class="std std-doc">Jump to CCTM Output Files in Chapter 7</span></a></p>
 <p>CMAQ requires a basic set of input files: initial condition file, which is created by ICON process or previous day output; boundary condition file, which is created by BCON process; emission files; and meteorological data created by MCIP using WRF and terrain data. Additional input files may be required based on specific run time options. CMAQ output files include a basic set of files with aerosol and gas-phase species concentrations, wet and dry deposition estimates, and visibility metrics, and an auxiliary set of output files for diagnosing model performance and in-line-calculated emissions.  Model outputs are discussed in <a class="reference internal" href="CMAQ_UG_ch07_model_outputs.html"><span class="std std-doc">Chapter 7</span></a>.</p>
@@ -403,7 +112,7 @@ An ocean mask file (OCEAN) containing OPEN (open ocean) and SURF (surf zone) is 
 <p><a id=Input_Table></a>
 <a id=Table4-1></a>
 <strong>Table 4-1. CMAQ input files.</strong>  Note that when “Time-Dependence” is listed as “Hourly”, it is shorthand for a time-varying file.  It is recommended that CMAQ use a time increment that is no longer than one hour.  However, CMAQ can be run with a Time Dependence that is shorter than hourly.</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Environment Variable Name for File</strong></p></th>
 <th class="head"><p><strong>File Type</strong></p></th>
@@ -794,17 +503,16 @@ An ocean mask file (OCEAN) containing OPEN (open ocean) and SURF (surf zone) is 
 </tr>
 </tbody>
 </table>
-</div>
 <p>*XXX - three-digit variable indicating emission stream number. Gridded and Inline Point emissions are numbered independently.</p>
 <section id="windowing-capability">
-<h3>4.3.1 Windowing Capability<a class="headerlink" href="#windowing-capability" title="Link to this heading">#</a></h3>
+<h3>4.3.1 Windowing Capability<a class="headerlink" href="#windowing-capability" title="Link to this heading">¶</a></h3>
 <p>Under the assumption that all inputs utilize the same projection and grid resolution, CMAQ allows users to provide a gridded input files which covers a different geographic extent but are a proper super set of the simulation domain. Proper super set means that the simulated domain must be at least one grid cell smaller at all sides than the gridded input (see Figure 4-3-1 below). This capability excludes the chemical boundary condition file (BCFILE) which must be created for the simulated domain using the BCON program. This capability applies to meteorological data files, however, METBDY3D won’t be used, and the meteorological boundary information will be extracted from METCRO3D directly. For point source files, CMAQ already can discern if a particular point source is within the simulation domain or not as long as the files also use the same projection.</p>
 <p><a id=Figure4-3-1></a> <img alt="Figure 4-3-1" src="../_images/Figure4-3-1.png" /></p>
 <p><strong>Figure 4-3-1. Appropriate Windowing Domain illustration</strong></p>
 </section>
 </section>
 <section id="griddesc-and-species-namelist-files">
-<h2>4.4 GRIDDESC and Species Namelist Files<a class="headerlink" href="#griddesc-and-species-namelist-files" title="Link to this heading">#</a></h2>
+<h2>4.4 GRIDDESC and Species Namelist Files<a class="headerlink" href="#griddesc-and-species-namelist-files" title="Link to this heading">¶</a></h2>
 <p><a id=griddesc></a>
 <strong>GRIDDESC: Horizontal domain definition</strong></p>
 <!-- BEGIN COMMENT -->
@@ -854,7 +562,7 @@ An ocean mask file (OCEAN) containing OPEN (open ocean) and SURF (surf zone) is 
 <p>The namelist files contain header information that describe which class of species are contained in the file, the number of parameters contained in the file, headers describing the parameter fields, and then a series of rows with configuration parameters for every model species. <a class="reference internal" href="#Table4-2"><span class="xref myst">Table 4-2</span></a> contains the namelist file format for the gas-phase (GC) species namelist file. The namelist files for the other species classifications (AE, NR, TR) are similar to the format shown in <a class="reference internal" href="#Table4-2"><span class="xref myst">Table 4-2</span></a>.</p>
 <p><a id=Table4-2></a></p>
 <p><strong>Table 4-2. GC species namelist file format</strong></p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Line</strong></p></th>
 <th class="head"><p><strong>Column</strong></p></th>
@@ -993,7 +701,6 @@ An ocean mask file (OCEAN) containing OPEN (open ocean) and SURF (surf zone) is 
 </tr>
 </tbody>
 </table>
-</div>
 <p>The namelist files for the other pollutant classes have similar configurations as the gas-phase species configuration shown in <a class="reference internal" href="#Table4-2"><span class="xref myst">Table 4-2</span></a>. For an example see this <a class="reference internal" href="#../../CCTM/src/MECHS/cb06r3_ae7_aq/GC_cb6r3_ae7_aq.nml"><span class="xref myst">link</span></a> to the GC namelist species file for the cb06r3_ae7_aq mechanism.</p>
 <p><a id=miscctrl></a></p>
 <p><strong>CMAQ_Control_Misc.nml: Miscellaneous Control Variables</strong></p>
@@ -1023,7 +730,7 @@ The &amp;Chemical_FamVars section should be used to define the total number of c
 <p><a id=init_conc_1></a></p>
 </section>
 <section id="initial-conditions-input">
-<h2>4.5 Initial Conditions Input<a class="headerlink" href="#initial-conditions-input" title="Link to this heading">#</a></h2>
+<h2>4.5 Initial Conditions Input<a class="headerlink" href="#initial-conditions-input" title="Link to this heading">¶</a></h2>
 <p><strong>INIT_CONC_1: Initial conditions</strong></p>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#init_conc_1_t"><span class="xref myst">Return to Table 4-1</span></a></p>
@@ -1033,7 +740,7 @@ The &amp;Chemical_FamVars section should be used to define the total number of c
 <p><a id=bndy_conc_1></a></p>
 </section>
 <section id="boundary-conditions-input">
-<h2>4.6 Boundary Conditions Input<a class="headerlink" href="#boundary-conditions-input" title="Link to this heading">#</a></h2>
+<h2>4.6 Boundary Conditions Input<a class="headerlink" href="#boundary-conditions-input" title="Link to this heading">¶</a></h2>
 <p><strong>BNDY_CONC_1: Boundary conditions</strong></p>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#bndy_conc_1_t"><span class="xref myst">Return to Table 4-1</span></a></p>
@@ -1043,7 +750,7 @@ The &amp;Chemical_FamVars section should be used to define the total number of c
 <p>Each species being modeled should be in the BNDY_CONC_1 file. If some modeled species are not contained in this file, the boundary condition for these species will default to the value 1 × 10e<sup>-30</sup>. The perimeter of the CMAQ domain is NTHIK cell wide (typically NTHIK = 1), where the number of boundary cells = NTHIK*(2*NCOLS + 2*NROWS +4*NTHIK).</p>
 </section>
 <section id="meteorological-inputs-processed-for-the-cmaq-system-using-mcip">
-<h2>4.7 Meteorological Inputs (Processed for the CMAQ System using MCIP)<a class="headerlink" href="#meteorological-inputs-processed-for-the-cmaq-system-using-mcip" title="Link to this heading">#</a></h2>
+<h2>4.7 Meteorological Inputs (Processed for the CMAQ System using MCIP)<a class="headerlink" href="#meteorological-inputs-processed-for-the-cmaq-system-using-mcip" title="Link to this heading">¶</a></h2>
 <p><a id=grid_cro_2d></a>
 <a id=grid_bdy_2d></a>
 <a id=grid_dot_2d></a>
@@ -1081,7 +788,7 @@ The &amp;Chemical_FamVars section should be used to define the total number of c
 <p>Used by: ICON, BCON, CCTM, and some optional programs</p>
 <p><a id=Table4-3></a></p>
 <p><strong>Table 4-3</strong>  MCIP output variables used within the CMAQ system.  All fields are located at cell centers, except where noted in the Description.  The Dimensions are:  XY=horizontal, T=time-varying, Z=layers above ground, S=layers below ground, L=land use categories, M=mosaic land use categories.</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable Name</strong></p></th>
 <th class="head"><p><strong>Description</strong></p></th>
@@ -1773,10 +1480,9 @@ The &amp;Chemical_FamVars section should be used to define the total number of c
 </tr>
 </tbody>
 </table>
-</div>
 </section>
 <section id="emissions-inputs">
-<h2>4.8 Emissions Inputs<a class="headerlink" href="#emissions-inputs" title="Link to this heading">#</a></h2>
+<h2>4.8 Emissions Inputs<a class="headerlink" href="#emissions-inputs" title="Link to this heading">¶</a></h2>
 <p><a id=emis_xxx></a></p>
 <p><a id=desidctrl></a>
 <strong>DESID_Ctrl_nml: DESID Control Namelist</strong></p>
@@ -1839,7 +1545,7 @@ The &amp;Chemical_FamVars section should be used to define the total number of c
 <p>The NLDN lightning strikes file is used for calculating online NO emissions from hourly observed strike counts. (Hourly NLDN lightning strike data can be purchased from a private vendor.) This file contains the following variables interpolated to the modeling grid:</p>
 <p><a id=Table4-4></a></p>
 <p><strong>Table 4-4</strong> Variables in hourly observed lightning strike file.</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable Name</strong></p></th>
 <th class="head"><p><strong>Description</strong></p></th>
@@ -1855,7 +1561,6 @@ The &amp;Chemical_FamVars section should be used to define the total number of c
 </tr>
 </tbody>
 </table>
-</div>
 <p><a id=ltngparm_file></a></p>
 <p>Use of lightning strike data in CMAQ simulations is discussed further in <a class="reference internal" href="CMAQ_UG_ch06_model_configuration_options.html"><span class="std std-doc">Chapter 6</span></a>.</p>
 <p><strong>LTNGPARMS_FILE: Lightning parameters file</strong></p>
@@ -1868,7 +1573,7 @@ This file can be downloaded from the <a class="reference external" href="https:/
 <p>This file contains the following variables interpolated to the modeling grid:</p>
 <p><a id=Table4-5></a></p>
 <p><strong>Table 4-5</strong> Variables in lightning parameters file.</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable Name</strong></p></th>
 <th class="head"><p><strong>Description</strong></p></th>
@@ -1914,12 +1619,11 @@ This file can be downloaded from the <a class="reference external" href="https:/
 </tr>
 </tbody>
 </table>
-</div>
 <p>*Regression equation generates flash counts (or log flash counts) per square km per cm convectic precipitation.</p>
 <p>Use of lightning strike data in CMAQ simulations is discussed further in <a class="reference internal" href="CMAQ_UG_ch06_model_configuration_options.html"><span class="std std-doc">Chapter 6</span></a>.</p>
 </section>
 <section id="biogenic-and-land-surface-inputs">
-<h2>4.9 Biogenic and Land Surface Inputs<a class="headerlink" href="#biogenic-and-land-surface-inputs" title="Link to this heading">#</a></h2>
+<h2>4.9 Biogenic and Land Surface Inputs<a class="headerlink" href="#biogenic-and-land-surface-inputs" title="Link to this heading">¶</a></h2>
 <p><a id=ocean_1></a></p>
 <p><strong>OCEAN_1: Sea spray mask</strong></p>
 <!-- BEGIN COMMENT -->
@@ -2029,14 +1733,14 @@ This file can be downloaded from the <a class="reference external" href="https:/
 <p>This is a 3-D daily file created by the EPIC to CMAQ tool via the FEST-C interface.  The tool extracts EPIC simulated soil chemistry information including fertilization for the Layer 1 and Layer 2 soil profiles along with plant growth information in each grid cell with agricultural land.  The FEST-C interface facilitates EPIC simulations for any CMAQ modeling domain over the conterminous U.S. area.  Additional information on the EPIC simulation and the FEST-C interface are available at https://www.cmascenter.org/fest-c/.</p>
 </section>
 <section id="stage-deposition-option">
-<h2>STAGE Deposition Option<a class="headerlink" href="#stage-deposition-option" title="Link to this heading">#</a></h2>
+<h2>STAGE Deposition Option<a class="headerlink" href="#stage-deposition-option" title="Link to this heading">¶</a></h2>
 <p><a id=stagectrl_nml></a></p>
 <p><strong>STAGECTRL_NML: STAGE Control Namelist</strong></p>
 <!-- BEGIN COMMENT -->
 <p><a class="reference internal" href="#stagectrl_nml"><span class="xref myst">Return to Table 4-1</span></a></p>
 <!-- END COMMENT -->
 <p><strong>Table 4-6</strong> Variables in the STAGE_DATA section of STAGECTRL_NML.</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable Name</strong></p></th>
 <th class="head"><p><strong>Description</strong></p></th>
@@ -2066,10 +1770,9 @@ This file can be downloaded from the <a class="reference external" href="https:/
 </tr>
 </tbody>
 </table>
-</div>
 <p>The STAGE_DATA section allows for the user to add species that exist in GC,TR, or NR namelists to dry deposition estiamtes without the need to recompile CMAQ.</p>
 <p><strong>Table 4-7</strong> Variables in the STAGE_LU section of STAGECTRL_NML.</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable Name</strong></p></th>
 <th class="head"><p><strong>Description</strong></p></th>
@@ -2151,14 +1854,13 @@ This file can be downloaded from the <a class="reference external" href="https:/
 </tr>
 </tbody>
 </table>
-</div>
 <p><sub>1</sub> Available land use tags are WATER, AG, AGMOS, HAY, URBAN, DECFORB, DECFORN, EVEFORB, EVEFORN, MIXFOR, HERB, SHRUB, GRASS, and WETLAND
 <sub>2</sub> This is used relatively preserving the area averaged stomatal resistance from the meteorological model
 <sub>3</sub> Used in NH3 the bidirectional exchange option.
 <sub>4</sub> Used in Hg the bidirectional exchange option.</p>
 <p>STAGE is a tiled surface exchange option that estimates deposition and emissions by land use and area weights them to the grid cell. There is the option to develop custom land use mappings to reduce the redundancy in model calculations and allow the user to customize land use specific deposition for their specific ecosystem exposure or deposition needs. The MET_TO_STAGE_LU section of CMAQ_Control_STAGE namelist allows for the mapping of the meteorological model’s land use data to the user defined STAGE land use categories. These tables have been populated for WRF implimentations of MODIS, NLCD and USGS land use types and require no further modification for the default land use mapping.</p>
 <p><strong>Table 4-8</strong> Variables in the MET_TO_STAGE_LU section of STAGECTRL_NML.</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Variable Name</strong></p></th>
 <th class="head"><p><strong>Description</strong></p></th>
@@ -2185,10 +1887,9 @@ This file can be downloaded from the <a class="reference external" href="https:/
 </tr>
 </tbody>
 </table>
-</div>
 </section>
 <section id="photolysis-inputs">
-<h2>4.10 Photolysis Inputs<a class="headerlink" href="#photolysis-inputs" title="Link to this heading">#</a></h2>
+<h2>4.10 Photolysis Inputs<a class="headerlink" href="#photolysis-inputs" title="Link to this heading">¶</a></h2>
 <p><a id=omi></a></p>
 <p><strong>OMI: Ozone Monitoring Instrument Column Data</strong></p>
 <!-- BEGIN COMMENT -->
@@ -2210,120 +1911,79 @@ CMAQv5.5 User’s Guide <br></p>
 </section>
 
 
-                </article>
-              
-              
-              
-              
-              
-                <footer class="prev-next-footer d-print-none">
-                  
-<div class="prev-next-area">
-</div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">4.1 Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmaq-pre-processors">4.2 CMAQ Pre-processors</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meteorology-chemistry-interface-processor-mcip">4.2.1 Meteorology-Chemistry Interface Processor (MCIP)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-conditions-processor-icon">4.2.2 Initial Conditions Processor (ICON)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions-processor-bcon">4.2.3 Boundary Conditions Processor (BCON)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#external-software-programs-for-preparing-cmaq-inputs">4.2.4 External Software Programs for Preparing CMAQ Inputs</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmaq-input-files">4.3 CMAQ Input Files</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windowing-capability">4.3.1 Windowing Capability</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#griddesc-and-species-namelist-files">4.4 GRIDDESC and Species Namelist Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-conditions-input">4.5 Initial Conditions Input</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions-input">4.6 Boundary Conditions Input</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meteorological-inputs-processed-for-the-cmaq-system-using-mcip">4.7 Meteorological Inputs (Processed for the CMAQ System using MCIP)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emissions-inputs">4.8 Emissions Inputs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biogenic-and-land-surface-inputs">4.9 Biogenic and Land Surface Inputs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stage-deposition-option">STAGE Deposition Option</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#photolysis-inputs">4.10 Photolysis Inputs</a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/Users_Guide/CMAQ_UG_ch04_model_inputs.md.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-
-</div></div>
-              
-            
           </div>
-          <footer class="bd-footer-content">
-            
-          </footer>
-        
-      </main>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">CMAQ_Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_README.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">CMAQ User’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials/README.html">     Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html"><strong>Developers’ Guide for the Community Multiscale Air Quality (CMAQ) Modeling System</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html#motivation">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html#summary-of-developer-workflow">Summary of Developer Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html#development-life-cycle">Development Life-cycle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html#making-contributions">Making Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html#copyright-information">Copyright Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developers_Guide/CMAQ_Dev_Guide.html#appendix">Appendix</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-  </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
 
-  <footer class="bd-footer">
-<div class="bd-footer__inner bd-page-width">
-  
-    <div class="footer-items__start">
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, CMAQ Developers.
       
-        <div class="footer-item">
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../_sources/Users_Guide/CMAQ_UG_ch04_model_inputs.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
 
-  <p class="copyright">
     
-      © Copyright 2024, CMAQ Developers.
-      <br/>
+
     
-  </p>
-</div>
-      
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
-    <br/>
-  </p>
-</div>
-      
-    </div>
-  
-  
-  
-    <div class="footer-items__end">
-      
-        <div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
-</p></div>
-      
-    </div>
-  
-</div>
-
-  </footer>
   </body>
 </html>
