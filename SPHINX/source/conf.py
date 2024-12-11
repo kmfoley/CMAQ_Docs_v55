@@ -21,7 +21,7 @@ extensions = ['myst_parser',
 myst_enable_extensions = ['colon_fence']
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**.ipynb_checkpoints']
 source_suffix = {
         '.rst': 'restructuredtext',
         '.txt': 'restructuredtext',
@@ -33,10 +33,10 @@ source_suffix = {
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 import pydata_sphinx_theme
 html_theme = 'pydata_sphinx_theme'
-html_static_path = ['./_static']
+html_static_path = ['_static']
 html_baseurl = 'https://jbrunto.github.io/CMAQ_Docs_v55/'
 
-html_sidebars = {}
+html_sidebars = {'**': ['searchbar.html']}
 
 
 
