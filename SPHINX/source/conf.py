@@ -36,7 +36,7 @@ html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
 html_baseurl = 'https://jbrunto.github.io/CMAQ_Docs_v55/'
 
-html_sidebars = {'**': ['searchbar.html']}
+html_sidebars = {'**': ['searchbox.html']}
 
 
 
