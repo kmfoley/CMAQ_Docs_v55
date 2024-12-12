@@ -16,7 +16,7 @@ release = '0.2'
 import sys, os
 extensions = ['myst_parser',
         'sphinx.ext.githubpages',
-        'sphinx_design',
+#        'sphinx_design',
         'pydata_sphinx_theme']
 myst_enable_extensions = ['colon_fence']
 
@@ -34,7 +34,7 @@ source_suffix = {
 import pydata_sphinx_theme
 html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
-#html_baseurl = 'https://jbrunto.github.io/CMAQ_Docs_v55/'
+html_baseurl = 'https://jbrunto.github.io/CMAQ_Docs_v55/'
 
 html_sidebars = {'**': ['searchbox.html']}
 
