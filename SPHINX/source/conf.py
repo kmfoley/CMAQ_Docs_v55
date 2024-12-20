@@ -16,15 +16,20 @@ release = '0.2'
 import sys, os
 extensions = ['myst_parser',
         'sphinx.ext.githubpages',
-#        'sphinx_design',
-        'pydata_sphinx_theme']
-myst_enable_extensions = ['colon_fence']
+        'sphinx_design',
+        'pydata_sphinx_theme',
+        'sphinx.ext.intersphinx',
+        'sphinx.ext.autodoc',
+        'sphinx.ext.autosectionlabel']
 
+autosectionlabel_prefix_document=True
+myst_enable_extensions = ['colon_fence']
+myst_heading_anchors = 1
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**.ipynb_checkpoints']
 source_suffix = {
         '.rst': 'restructuredtext',
-        '.txt': 'restructuredtext',
+        '.txt': 'markdown',
         '.md': 'markdown'
         }
 
@@ -36,7 +41,7 @@ html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
 html_baseurl = 'https://jbrunto.github.io/CMAQ_Docs_v55/'
 
-html_sidebars = {'**': ['searchbox.html']}
+html_sidebars = {'**': ['globaltoc.html', 'searchbox.html']}
 
 
 html_theme_options = {
@@ -44,6 +49,7 @@ html_theme_options = {
     "logo": {
         "image_light": "_static/CMAQ_Logo_2_inch.png",
         "image_dark": "_static/CMAQ_Logo_2_inch.png",
+    "navigation_depth": 0
     }
 }
 
