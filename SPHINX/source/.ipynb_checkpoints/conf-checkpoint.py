@@ -42,8 +42,7 @@ html_static_path = ['_static']
 html_baseurl = 'https://jbrunto.github.io/CMAQ_Docs_v55/'
 
 html_sidebars = {'**': ['sidebar-nav-bs.html',
-                        'search-button-field',
-                        'globaltoc.html']}
+                        'search-button-field']}
 
 
 html_theme_options = {
