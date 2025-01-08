@@ -50,7 +50,7 @@ Technical notes on the new features and science in this release of CMAQ are avai
 ::::
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 3
 :hidden:
 Users_Guide/README.md
 Users_Guide/Tutorials/README.md
