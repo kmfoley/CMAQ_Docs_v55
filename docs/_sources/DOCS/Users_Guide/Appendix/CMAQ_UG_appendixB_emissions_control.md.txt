@@ -302,7 +302,7 @@ These gridded mask files are read by CMAQ through environmental variables, which
 * [Link to grid mask files on CMAS Data Warehouse Google Drive](https://drive.google.com/drive/folders/1x9mJUbKjJaMDFawgy2PUbETwEUopAQDl)
 * [Link to metadata for the grid mask files is posted on the CMAS Center Dataverse site](https://doi.org/10.15139/S3/XDYYB9)
 
-Custom mask files may also be made using the [shp2cmaq](../../../PREP/shp2cmaq/README.md) tool, which provides instructions for obtaining geospatial data via shape files and converting them to CMAQ gridded input files. One may also populate a CMAQ gridded input file with arbitrary geometric shapes (e.g. squares, diamonds, or other polygons) using the IOAPI library of tools and any common coding language (e.g. Fortran, R, or Python).
+Custom mask files may also be made using the [shp2cmaq](../../../PYTOOLS/shp2cmaq/README.md) tool, which provides instructions for obtaining geospatial data via shape files and converting them to CMAQ gridded input files. One may also populate a CMAQ gridded input file with arbitrary geometric shapes (e.g. squares, diamonds, or other polygons) using the IOAPI library of tools and any common coding language (e.g. Fortran, R, or Python).
 
 #### B.3.4.3 Region Families
 Users can define families of regions to reduce the number emission rules needed to operate on a group of regions. 

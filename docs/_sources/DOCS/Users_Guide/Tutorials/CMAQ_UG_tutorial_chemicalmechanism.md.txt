@@ -294,7 +294,7 @@ If the mechanism does not already exist, then clobber_mech will have no effect, 
 <a id=github></a>
 ## 3. Reflecting the changes in Github ##
 ### 3.1 Fork from USEPA CMAQ.
-On the [CMAQ Github page](../../../README.md), fork the main branch to your personal repository using the Fork button in the upper right.
+On the [CMAQ Github page](https://github.com/USEPA/CMAQ/tree/main), fork the main branch to your personal repository using the Fork button in the upper right.
 
 ### 3.2 Clone.
 Clone your repository to your remote account. For example:

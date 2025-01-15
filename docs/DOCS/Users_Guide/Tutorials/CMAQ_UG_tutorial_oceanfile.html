@@ -475,7 +475,7 @@ getlatestchlo = False</p>
 <section id="option-3-zero-out-sea-spray-emissions-in-cmaqv5-2-or-earlier">
 <h1>OPTION 3: Zero Out Sea-Spray Emissions in CMAQv5.2 or earlier<a class="headerlink" href="#option-3-zero-out-sea-spray-emissions-in-cmaqv5-2-or-earlier" title="Link to this heading">#</a></h1>
 <p>Even if your modeling domain does not contain areas of sea spray emissions, you need to provide an OCEAN file to the CCTM. You can create a dummy OCEAN file for domains with no sea spray sources or if you prefer to set sea spray emissions to zero. Copy and run the following I/O API Tool m3fake script to create an OCEAN file containing zeros for the open ocean and surf zone coverage fractions. Using this file will effectively configure a CCTM simulation with zero sea spray emissions.</p>
-<p>Note that you will need the <a class="reference internal" href="#www.cmascenter.org/ioapi"><span class="xref myst">I/O API Tools</span></a> installed and compiled on your Linux system to use this script.</p>
+<p>Note that you will need the <a class="reference external" href="https://www.cmascenter.org/ioapi">I/O API Tools</a> installed and compiled on your Linux system to use this script.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/csh -f
 
 # m3fake script to create a dummy ocean file
