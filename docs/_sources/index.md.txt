@@ -9,12 +9,22 @@ Not the official CMAQ User's Guide
 
 This website contains documentation for the [Community Multiscale Air Quality (CMAQ)](https://epa.gov/cmaq) modeling system. While documentation is packaged with the code when it is downloaded or cloned, users are encouraged to go [online](https://github.com/USEPA/CMAQ/tree/main/DOCS) to view the latest version.
 
-::::{grid} 1 1 2 2 
+::::{grid} 3
 :gutter: 1
+
+:::{grid-item-card}  Getting Started
+:text-align: center
+:img-top: _static/getting_started_sq.png
+
+A beginning guide to working with CMAQ:
+
+[Start](./DOCS/Getting_Started.md)
+
+:::
 
 :::{grid-item-card}  User's Guide
 :text-align: center
-:img-top: _static/auto_stories_blue.svg
+:img-top: _static/users_guide_sq.png
 
 Instructions on how to set up and run the model and information on CMAQ's different science options and instrumented versions.
 
@@ -24,7 +34,7 @@ Instructions on how to set up and run the model and information on CMAQ's differ
 
 :::{grid-item-card}  Tutorials
 :text-align: center
-:img-top: _static/edit_document_green.svg
+:img-top: _static/tutorials_sq.png
 
 Included with the User's Guide, a series of short tutorials provide practical examples of how to set up and run CMAQ, exercise different features in the software, and better understand the software system.
 
@@ -32,25 +42,36 @@ Included with the User's Guide, a series of short tutorials provide practical ex
 
 :::
 
-:::{grid-item-card}  Developers' Guide
-:text-align: center
-:img-top: _static/terminal_green.svg
-
-A guide to version control practices and expectations adopted by the CMAQ development team and enforced on itself and any other collaborators who wish to contribute code.
-
-[Developers' Guide](./DOCS/Developers_Guide/CMAQ_Dev_Guide.md)
-
-:::
-
 :::{grid-item-card}  Release Notes
 :text-align: center
-:img-top: _static/air_blue.svg
+:img-top: _static/release_notes_sq.png
 
 Technical notes on the new features and science in this release of CMAQ are available on the CMAQ Wiki.
 
-[Release Notes](./RELEASE_NOTES/Home.md)
+[Release Notes](./DOCS/Release_Notes/CMAQ-Release-Notes.md)
 
 :::
+
+:::{grid-item-card}  FAQ Pages
+:text-align: center
+:img-top: _static/faq_pages_sq.png
+
+Frequently asked questions and recommendations for migrating to CMAQ's newest version.
+
+[FAQ Pages](./DOCS/Release_Notes/FAQ_README.md)
+
+:::
+
+:::{grid-item-card}  Community Support
+:text-align: center
+:img-top: _static/community_support_sq.png
+
+Resources and forums that guide our research and development community.
+
+[Community Support](./DOCS/Community_Support.md)
+
+:::
+
 ::::
 
 ```{toctree}
@@ -59,7 +80,7 @@ Technical notes on the new features and science in this release of CMAQ are avai
 :hidden:
 DOCS/Users_Guide/README.md
 DOCS/Users_Guide/Tutorials/README.md
-DOCS/Developers_Guide/CMAQ_Dev_Guide.md
-Release Notes  <./RELEASE_NOTES/Home.md>
+Release Notes  <DOCS/Release_Notes/CMAQ-Release-Notes.md>
+FAQs <DOCS/Release_Notes/FAQ_README.md>
 
 ```
