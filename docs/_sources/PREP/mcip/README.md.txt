@@ -61,7 +61,7 @@ The variables listed here are set by the user in the MCIP script (run_mcip.csh),
 -   `InGeoFile [default: None]`  
     Name and location of input WRF Geogrid file
 -   `LPV: [default: 0]`  
-    Compute and output potential vorticity. This must be activated to support the [CCTM O3 potential vorticity scaling](../../CCTM/docs/ReleaseNotes/Potential_Vorticity_Scaling.md).
+    Compute and output potential vorticity. This must be activated to support the [CCTM O3 potential vorticity scaling](https://github.com/USEPA/CMAQ/wiki/CMAQ-Release-Notes).
     -   `0`: Do not compute and output potential vorticity
     -   `1`: Compute and output potential vorticity
 -   `LWOUT [default: 0]`  

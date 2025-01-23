@@ -20,6 +20,5 @@ Brief Summary on New particle Formation
 
 The aerosol processing module in CMAQv5.2 includes several important revisions over CMAQv5.1, most noticeably to the representation of dust and organic aerosol (OA). 
 
-  * [Aerosol Transmission Factors](../../docs/Release_Notes/Aerosol_Transmission_Factors.md)
-  * [Update of Gas-Phase Deposition Rates](../../docs/Release_Notes/Gas-Phase_Dep_H2O2_HACET_OrgNtr_s07tic_Species.md)
-
+  * [Aerosol Transmission Factors](https://github.com/USEPA/CMAQ/wiki/CMAQ-Release-Notes)
+  * [Update of Gas-Phase Deposition Rates](https://github.com/USEPA/CMAQ/wiki/CMAQ-Release-Notes)

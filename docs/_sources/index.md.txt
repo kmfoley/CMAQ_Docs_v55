@@ -7,13 +7,14 @@ CMAQ: The Community Multiscale Air Quality Modeling System
 Not the official CMAQ User's Guide
 :::
 
-This website contains documentation for the [Community Multiscale Air Quality (CMAQ)](https://epa.gov/cmaq) modeling system. While documentation is packaged with the code when it is downloaded or cloned, users are encouraged to go [online] (https://github.com/USEPA/CMAQ/tree/main/DOCS) to view the latest version.
+This website contains documentation for the [Community Multiscale Air Quality (CMAQ)](https://epa.gov/cmaq) modeling system. While documentation is packaged with the code when it is downloaded or cloned, users are encouraged to go [online](https://github.com/USEPA/CMAQ/tree/main/DOCS) to view the latest version.
 
 ::::{grid} 1 1 2 2 
 :gutter: 1
 
 :::{grid-item-card}  User's Guide
 :text-align: center
+:img-top: _static/auto_stories_blue.svg
 
 Instructions on how to set up and run the model and information on CMAQ's different science options and instrumented versions.
 
@@ -23,6 +24,7 @@ Instructions on how to set up and run the model and information on CMAQ's differ
 
 :::{grid-item-card}  Tutorials
 :text-align: center
+:img-top: _static/edit_document_green.svg
 
 Included with the User's Guide, a series of short tutorials provide practical examples of how to set up and run CMAQ, exercise different features in the software, and better understand the software system.
 
@@ -30,8 +32,9 @@ Included with the User's Guide, a series of short tutorials provide practical ex
 
 :::
 
-:::{grid-item-card}  Developer's Guide
+:::{grid-item-card}  Developers' Guide
 :text-align: center
+:img-top: _static/terminal_green.svg
 
 A guide to version control practices and expectations adopted by the CMAQ development team and enforced on itself and any other collaborators who wish to contribute code.
 
@@ -41,18 +44,22 @@ A guide to version control practices and expectations adopted by the CMAQ develo
 
 :::{grid-item-card}  Release Notes
 :text-align: center
+:img-top: _static/air_blue.svg
 
 Technical notes on the new features and science in this release of CMAQ are available on the CMAQ Wiki.
 
-[Release Notes](https://github.com/USEPA/CMAQ/wiki/CMAQ-Release-Notes)
+[Release Notes](./RELEASE_NOTES/Home.md)
 
 :::
 ::::
 
 ```{toctree}
+:name: CMAQ Documentation
 :maxdepth: 3
 :hidden:
 DOCS/Users_Guide/README.md
 DOCS/Users_Guide/Tutorials/README.md
 DOCS/Developers_Guide/CMAQ_Dev_Guide.md
+Release Notes  <./RELEASE_NOTES/Home.md>
+
 ```
