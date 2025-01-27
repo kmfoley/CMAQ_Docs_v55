@@ -1,7 +1,7 @@
 ### Correction to Species Tables for cb6r5hap_ae7_aq
 **Type of update**: Documentation update  
 **Release Version/Date**: CMAQ version 5.5   
-**Description** [See release note under Carbon Bond 6 Mechanism](https://github.com/USEPA/CMAQ/wiki/CMAQ-Release-Notes:-Chemistry:-Carbon-Bond-6-Mechanism-(CB6)#correction-to-molecular-weight-of-hgiigas-in-species-tables)   
+**Description** [See release note under Carbon Bond 6 Mechanism](./CMAQ-Release-Notes:-Chemistry:-Carbon-Bond-6-Mechanism-(CB6).md#correction-to-molecular-weight-of-hgiigas-in-species-tables)   
 
 
 ### Multi-Pollutant version of the cb6r5hap_ae7_aq mechanism

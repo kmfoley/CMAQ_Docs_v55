@@ -1,8 +1,8 @@
-## [calc_tmetric](https://github.com/USEPA/CMAQ/tree/main/POST/calc_tmetric) 
+## [calc_tmetric](../../POST/calc_tmetric/README.md) 
  No changes were made to this tool in CMAQv5.5.
 
 
-## [combine](https://github.com/USEPA/CMAQ/tree/main/POST/combine)
+## [combine](../../POST/combine/README.md)
 
 ### Improve Checks on Formulas Used by COMBINE
 [William T. Hutzell](mailto:Hutzell.Bill@epa.gov), U.S. Environmental Protection Agency  
@@ -52,7 +52,7 @@ O3_ERROR5 , ppmV, O3[1]O3[1]
 |:------:|:-------:|
 |[Merge for PR#966](https://github.com/USEPA/CMAQ/commit/1433cdb44cdc64b4f8209cf388c034510b18856e) | [PR#966](https://github.com/USEPA/CMAQ_Dev/pull/966)  |  
 
-## [hr2day](https://github.com/USEPA/CMAQ/tree/main/POST/hr2day)
+## [hr2day](../../POST/hr2day/README.md)
 ### Updating tz.csv to Natural Earth  
 **Primary Contact**: [Barron Henderson](mailto:henderson.barron@epa.gov), U.S. Environmental Protection Agency  
 **Type of update**: Change in input file  
@@ -86,10 +86,10 @@ A new tz.csv file was created from the Natural Earth 10m time zone shapefile (v4
 |:------:|:-------:|
 |[Merge for PR#859](https://github.com/USEPA/CMAQ/commit/3fbf66df2a123de5d4cc4c75352c08016a1123d2) | [PR#859](https://github.com/USEPA/CMAQ_Dev/pull/859)  |    
 
-## [sitecmp](https://github.com/USEPA/CMAQ/tree/main/POST/sitecmp)
+## [sitecmp](../../POST/sitecmp/README.md)
  No changes were made to this tool in CMAQv5.5.
 
-## [sitecmp_dailyo3](https://github.com/USEPA/CMAQ/tree/main/POST/sitecmp_dailyo3)
+## [sitecmp_dailyo3](../../POST/sitecmp_dailyo3/README.md)
 ### Increase of station ID character limit  
 [Christian Hogrefe](mailto:hogrefe.christian@epa.gov), U.S. Environmental Protection Agency  
 **Type of update**: expand code functionality    

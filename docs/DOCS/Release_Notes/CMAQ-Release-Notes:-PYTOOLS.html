@@ -434,7 +434,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">shp2cmaq: Create CMAQ-Ready File from Shapefile</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="xref myst">shp2cmaq: Create CMAQ-Ready File from Shapefile</span></span></li>
   </ul>
 </nav>
 </div>
@@ -452,17 +452,17 @@
                 <article class="bd-article">
                   
   <section id="shp2cmaq-create-cmaq-ready-file-from-shapefile">
-<h1><a class="reference external" href="https://github.com/USEPA/CMAQ/tree/main/PREP/shp2cmaq/README.md">shp2cmaq: Create CMAQ-Ready File from Shapefile</a><a class="headerlink" href="#shp2cmaq-create-cmaq-ready-file-from-shapefile" title="Link to this heading">#</a></h1>
+<h1><a class="reference internal" href="../../PYTOOLS/shp2cmaq/README.html"><span class="std std-doc">shp2cmaq: Create CMAQ-Ready File from Shapefile</span></a><a class="headerlink" href="#shp2cmaq-create-cmaq-ready-file-from-shapefile" title="Link to this heading">#</a></h1>
 <p><a class="reference external" href="mailto:henderson&#46;barron&#37;&#52;&#48;epa&#46;gov">Barron Henderson</a>, U.S. Environmental Protection Agency<br />
 <strong>Type of update</strong>: New Pre-Processing Tool<br />
 <strong>Release Version/Date</strong>: CMAQv5.5</p>
-<p><strong>Description</strong>: This Python Notebook converts GIS shapefiles into gridded netCDF mask files that represent spatial features such as political boundaries. This tool works on both CONUS and Northern Hemisphere domains and has the capability to represent quantitative variables such as population.  The CMAQ-ready mask files can be used for <a class="reference external" href="https://github.com/USEPA/CMAQ/blob/research/DOCS/Users_Guide/Appendix/CMAQ_UG_appendixB_emissions_control.md#b34-defining-and-using-regions-and-region-families">defining regions and region families with DESID</a> and using <a class="reference external" href="https://github.com/USEPA/CMAQ/blob/research/DOCS/Users_Guide/CMAQ_UG_ch11_ISAM.md#1131-isam-control-file-sa_iolist">geographic source regions when running CMAQ-ISAM</a>.  The mask files can also be used to spatially subset CMAQ input and output files for analysis, for example calculating emissions totals by state or averaging modeled ambient concentrations over census tracts.  The code relies on <a class="reference external" href="https://geopandas.org/en/stable/">geopandas</a> and <a class="reference external" href="https://github.com/barronh/cmaqsatproc">cmaqsatproc</a> to perform spatial operations and create IOAPI-like files for CMAQ. The overall process requires a shapefile with attributes and a GRIDDESC file. It produces variables that specify grid cell fractional coverage by each unique value of a specified attribute. It also produces total and dominant attribute variables. The total specifies the fraction coverage of any attribute. The dominant variable specifies which attribute has the largest area coverage.</p>
+<p><strong>Description</strong>: This Python Notebook converts GIS shapefiles into gridded netCDF mask files that represent spatial features such as political boundaries. This tool works on both CONUS and Northern Hemisphere domains and has the capability to represent quantitative variables such as population.  The CMAQ-ready mask files can be used for <a class="reference internal" href="../Users_Guide/Appendix/CMAQ_UG_appendixB_emissions_control.html#b34-defining-and-using-regions-and-region-families"><span class="std std-ref">defining regions and region families with DESID</span></a> and using <a class="reference internal" href="../Users_Guide/CMAQ_UG_ch11_ISAM.html#1131-isam-control-file-sa_iolist"><span class="std std-ref">geographic source regions when running CMAQ-ISAM</span></a>.  The mask files can also be used to spatially subset CMAQ input and output files for analysis, for example calculating emissions totals by state or averaging modeled ambient concentrations over census tracts.  The code relies on <a class="reference external" href="https://geopandas.org/en/stable/">geopandas</a> and <a class="reference external" href="https://github.com/barronh/cmaqsatproc">cmaqsatproc</a> to perform spatial operations and create IOAPI-like files for CMAQ. The overall process requires a shapefile with attributes and a GRIDDESC file. It produces variables that specify grid cell fractional coverage by each unique value of a specified attribute. It also produces total and dominant attribute variables. The total specifies the fraction coverage of any attribute. The dominant variable specifies which attribute has the largest area coverage.</p>
 <p><strong>Example of a gridded mask file for state boundaries in the contiguous US.</strong>
 <img width="85%" src=https://github.com/user-attachments/assets/9e12c366-8985-46c7-8482-4d5edf373113></p>
 <p><strong>Significance and Impact</strong>: No impact on core model results. The significance of this tool is to provide a simple shapefile processor to use the DESID masking feature. Spatial mask files can also be used for ISAM simulations or as part of post-processing model output.</p>
 <p><strong>References</strong>:<br />
-<a class="reference external" href="https://github.com/USEPA/CMAQ/blob/research/DOCS/Users_Guide/Tutorials/CMAQ_UG_tutorial_emissions.md">DESID Tutorial</a><br />
-<a class="reference external" href="https://github.com/USEPA/CMAQ/blob/research/DOCS/Users_Guide/Tutorials/CMAQ_UG_tutorial_ISAM.md">ISAM Tutorial</a></p>
+<a class="reference internal" href="../Users_Guide/Tutorials/CMAQ_UG_tutorial_emissions.html"><span class="std std-doc">DESID Tutorial</span></a><br />
+<a class="reference internal" href="../Users_Guide/Tutorials/CMAQ_UG_tutorial_ISAM.html"><span class="std std-doc">ISAM Tutorial</span></a></p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Merge Commit</p></th>
@@ -483,7 +483,7 @@
 <strong>Type of update</strong>: New Pre-Processing Tool<br />
 <strong>Release Version/Date</strong>: CMAQv5.4</p>
 <p><strong>Description</strong>: Depending on the chemical mechanism selected, the traditional “Ocean” file maybe required to contain temporal ocean dimethyl sulfide (DMS) and chlorophyll-a (CHLO) concentrations for atmospheric DMS and halogen chemistry, respectively. To create these fields for input, a new Python tool called “DMSCHLO” is released to augment standard CMAQ “Ocean” files with this data.</p>
-<p><strong>Significance and Impact</strong>: No impact on core model results. The significance of this tool is to provide an easy to use tool in which to augment the standard “Ocean” file for use with CCTM.  See the <a class="reference external" href="https://github.com/USEPA/CMAQ/blob/main/DOCS/Users_Guide/Tutorials/CMAQ_UG_tutorial_oceanfile.md">Ocean File Tutorial</a> for further information.</p>
+<p><strong>Significance and Impact</strong>: No impact on core model results. The significance of this tool is to provide an easy to use tool in which to augment the standard “Ocean” file for use with CCTM.  See the <a class="reference internal" href="../Users_Guide/Tutorials/CMAQ_UG_tutorial_oceanfile.html"><span class="std std-doc">Ocean File Tutorial</span></a> for further information.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Merge Commit</p></th>
@@ -528,7 +528,7 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">shp2cmaq: Create CMAQ-Ready File from Shapefile</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><span class="xref myst">shp2cmaq: Create CMAQ-Ready File from Shapefile</span></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dmschlo-augment-the-standard-ocean-file-for-marine-chemistry">DMSCHLO: Augment the Standard Ocean File for Marine Chemistry</a></li>
 </ul>
 

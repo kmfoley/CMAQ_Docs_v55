@@ -53,7 +53,7 @@ Starting from WRF V4.4 and CMAQ v5.4, users can construct the coupled model with
 
 The "setenv WRF_CMAQ 1" must be there when you compile or recompile code and the "setenv IOAPI the_path_IOAPI" must be there before typing configure.
 
-A complete step by step build process and run instructions are provided in the [WRF-CMAQ Tutorial](../Users_Guide/Tutorials/CMAQ_UG_tutorial_WRF-CMAQ_build_gcc.md).
+A complete step by step build process and run instructions are provided in the [WRF-CMAQ Tutorial](../Users_Guide/Tutorials/CMAQ_UG_tutorial_WRF-CMAQ_Benchmark.md).
 
 **Significance and Impact**  This simplifies the WRF-CMAQ coupled model construction process and lets users have choices to build the coupled model with a desirable version of WRF and CMAQ.
  

@@ -40,7 +40,7 @@ CMAQv5.5 includes many scientific enhancements and new features that will benefi
 * In M3DRY, (1) changes to Ammonia (NH3) deposition in M3DRY for model configurations without NH3 BIDI, (2) changes to NH3 dry deposition flux and NH3 emissions flux calculations in M3DRY, upward and downwards fluxes changed, but net flux remains the same. See the [M3DRY release note](./CMAQ-Release-Notes:-Dry-Deposition-Air-Surface-Exchange:-M3DRY.md#revised-dry-dep-flux-for-nh3) to learn more. 
 
 #### Stratosphere-Troposphere Exchange
-* Removed dependency on sigma-P coordinate system in PV-O3 scaling. The update impacted O3 distributions between 300-100hPa and generally improved model estimates relative to observations at these levels. See the [Stratospheric-Troposphere exchange release note](./CMAQ-Release-Notes:-Stratospheric-Tropospheric-Exchange-(STE).md) for more information. 
+* Removed dependency on sigma-P coordinate system in PV-O3 scaling. The update impacted O3 distributions between 300-100hPa and generally improved model estimates relative to observations at these levels. See the [Stratospheric-Troposphere exchange release note](./CMAQ-Release-Notes:-Stratospheric‐Tropospheric-Exchange-(STE))for more information. 
 
 #### Emissions
 * Updates to the in-line version of MEGAN BDSNP, which corrects a bug in the pulsing subroutine of BDSNP (small impact on estimated soil NO). See the [MEGAN-BDSNP](./CMAQ-Release-Notes:-Emissions-Updates:-Model-of-Emissions-of-Gases-and-Aerosols-from-Nature-(MEGAN)-Biogenic-Emissions.md#bdsnp-dry-hours-calculation.md) to learn more. 
@@ -49,7 +49,7 @@ CMAQv5.5 includes many scientific enhancements and new features that will benefi
 * Fixes to Sulfur Tracking Model (STM) correct errors in attribution of sulfate from gas phase chemistry, which inadvertently got introduced in the previous model version. See [CMAQ-STM Release Notes](./CMAQ-Release-Notes:-Process-Analysis-&-Sulfur-Tracking-Model-(STM).md#fix-to-option-for-sulfur-tracking-model) for more information. 
 
 #### Structural Improvements
-* Updated model code and run-scripts so that PV-O3 scaling can be invoked now as a runtime option. See the [Stratospheric-Troposphere exchange release note](./CMAQ-Release-Notes:-Stratospheric-Tropospheric-Exchange-(STE).md#potential-vorticity-scaling-of-ozone-pvo3-a-runtime-option) for more information. 
+* Updated model code and run-scripts so that PV-O3 scaling can be invoked now as a runtime option. See the [Stratospheric-Troposphere exchange release note](./CMAQ-Release-Notes:-Stratospheric‐Tropospheric-Exchange-(STE)) for more information. 
 
 #### Diagnostic Options
 * Updates to ELMO to fix erroneous output for various PM aggregates (PMF_OC, PMF_NCOM, TNO3, etc.). See the [Diagnostic Options](./CMAQ-Release-Notes:-Diagnostic-Options.md) release notes to learn more. 
