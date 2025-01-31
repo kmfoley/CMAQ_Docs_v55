@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>CMAQ Installation &amp; Benchmarking Tutorial for CB6R5 &#8212; CMAQ_Documentation 0.3 documentation</title>
+    <title>CMAQ Installation &amp; Benchmarking Tutorial for CB6R5 &#8212; CMAQ 5.5+ documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=b489f392"></script>
+    <script src="../../../_static/documentation_options.js?v=eec9c716"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
@@ -115,8 +115,8 @@
       
     
     
-    <img src="../../../_static/CMAQ_Logo_2_inch.png" class="logo__image only-light" alt="CMAQ_Documentation 0.3 documentation - Home"/>
-    <img src="../../../_static/CMAQ_Logo_2_inch.png" class="logo__image only-dark pst-js-only" alt="CMAQ_Documentation 0.3 documentation - Home"/>
+    <img src="../../../_static/CMAQ_Logo_2_inch.png" class="logo__image only-light" alt="CMAQ 5.5+ documentation - Home"/>
+    <img src="../../../_static/CMAQ_Logo_2_inch.png" class="logo__image only-dark pst-js-only" alt="CMAQ 5.5+ documentation - Home"/>
   
   
 </a></div>
@@ -690,7 +690,7 @@ setenv INPDIR  ${CMAQ_DATA}/2018_12NE3
 <li><p>CMAQv5.5</p></li>
 </ul>
 <p>The CMAQv5.5 reference output data includes a set of CCTM_ACONC_*.nc files with layer 1 average model species concentrations for each model hour for 226 variables and a set of CCTM_WETDEP1_*.nc files with cumulative hourly wet deposition fluxes for an additional 136 variables.</p>
-<p>Use your netCDF evaluation tool of choice to evaluate your benchmark results. For example, <a class="reference external" href="https://www.verdi-tool.org/">VERDI</a> is a visualization tool to view CCTM results as tile plots. Statistical comparison of the results can be made with the I/O API Tools or R.</p>
+<p>Use your netCDF evaluation tool of choice to evaluate your benchmark results. For example, <a class="reference external" href="https://www.cmascenter.org/verdi/">VERDI</a> is a visualization tool to view CCTM results as tile plots. Statistical comparison of the results can be made with the I/O API Tools or R.</p>
 <p>Note, even with a successful installation and run of the benchmark case, some differences between your simulation and the reference data can occur due to differences in domain decomposition for multi-processor simulations as well as differences in compiler.  These differences tend to manifest in upper layers of the model and are mostly found in predicting aerosol water (AH2O) and aerosol acidity (AH3OP), while differences are smaller for other key species like ASO4, ANO3, ACL, ALOO1, etc. These species have short atmospheric lifetimes with large changes in time and space derivatives or have model physics sensitive to small changes in concentration. Predicting these species is more sensitive to small changes in machine precision and accuracy.</p>
 </section>
 </section>
@@ -770,7 +770,7 @@ setenv INPDIR  ${CMAQ_DATA}/2018_12NE3
 
   <p class="copyright">
     
-      © Copyright 2024, CMAQ Developers.
+      © Copyright license.md.
       <br/>
     
   </p>
