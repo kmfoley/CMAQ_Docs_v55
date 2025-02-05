@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,29 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-wrf-cmaq">Installing WRF-CMAQ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-out-a-new-branch-in-the-cmaq-repository">Check Out a new Branch in the CMAQ Repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-and-running-in-a-user-specified-directory-outside-of-the-repository">Building and running in a user-specified directory outside of the repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuring-the-wrf-cmaq-environment">Configuring the WRF-CMAQ Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compiling-wrf-cmaq">Compiling WRF-CMAQ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-the-bldit-cctm-csh">Modify the bldit_cctm.csh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-bldit-cctm-csh-script">Run the bldit_cctm.csh script</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-wrf-cmaq-reference-input-benchmark-data">Install the WRF-CMAQ reference input benchmark data</a></li>
 </ul>
-</div>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-wrf-cmaq-model">Running the WRF-CMAQ model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-that-the-run-was-successful">Verify that the run was successful</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
     </div>
   
   
@@ -723,37 +727,6 @@ set NPROCS =    32
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-wrf-cmaq">Installing WRF-CMAQ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-out-a-new-branch-in-the-cmaq-repository">Check Out a new Branch in the CMAQ Repository</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-and-running-in-a-user-specified-directory-outside-of-the-repository">Building and running in a user-specified directory outside of the repository</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuring-the-wrf-cmaq-environment">Configuring the WRF-CMAQ Environment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compiling-wrf-cmaq">Compiling WRF-CMAQ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-the-bldit-cctm-csh">Modify the bldit_cctm.csh</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-bldit-cctm-csh-script">Run the bldit_cctm.csh script</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-wrf-cmaq-reference-input-benchmark-data">Install the WRF-CMAQ reference input benchmark data</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-wrf-cmaq-model">Running the WRF-CMAQ model</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-that-the-run-was-successful">Verify that the run was successful</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

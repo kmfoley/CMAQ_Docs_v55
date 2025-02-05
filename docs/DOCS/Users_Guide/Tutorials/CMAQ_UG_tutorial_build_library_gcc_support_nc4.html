@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,34 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Building with netCDF-4 and the Remote Data Client</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#versions-required-are-at-least-hdf5-1-8-9-zlib-1-2-5-and-curl-7-18-0-or-later">Versions required are at least HDF5 1.8.9, zlib 1.2.5, and curl 7.18.0 or later.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unset-environment-variables-that-would-conflict-with-this-installation">unset environment variables that would conflict with this installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
 </ul>
-</div>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-zlib">Install zlib</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-curl-check-first-to-determine-if-it-is-already-installed">Install curl (check first to determine if it is already installed)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-hdf5">Install HDF5</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-netcdf-c">Install netCDF-C</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-netcdf-fortran">Install netCDF-Fortran</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-i-o-api">Install I/O API</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-cmaqv55">Install CMAQv55</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-benchmark-input-data">Download Benchmark Input Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#update-equates-benchmark-run-script-to-specify-path-to-downloaded-input-data">Update EQUATES Benchmark Run Script to specify path to downloaded input data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-benchmark-post-processing-scripts-for-your-installation">Modify Benchmark Post-processing Scripts for your installation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-combine-run-script">Run the combine run script</a></li>
+</ul>
+
+  </nav></div>
     </div>
   
   
@@ -1060,42 +1069,6 @@ These scripts will need to be edited</p></li>
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Building with netCDF-4 and the Remote Data Client</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#versions-required-are-at-least-hdf5-1-8-9-zlib-1-2-5-and-curl-7-18-0-or-later">Versions required are at least HDF5 1.8.9, zlib 1.2.5, and curl 7.18.0 or later.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unset-environment-variables-that-would-conflict-with-this-installation">unset environment variables that would conflict with this installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-zlib">Install zlib</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-curl-check-first-to-determine-if-it-is-already-installed">Install curl (check first to determine if it is already installed)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-hdf5">Install HDF5</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-netcdf-c">Install netCDF-C</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-netcdf-fortran">Install netCDF-Fortran</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-i-o-api">Install I/O API</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-cmaqv55">Install CMAQv55</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-benchmark-input-data">Download Benchmark Input Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#update-equates-benchmark-run-script-to-specify-path-to-downloaded-input-data">Update EQUATES Benchmark Run Script to specify path to downloaded input data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-benchmark-post-processing-scripts-for-your-installation">Modify Benchmark Post-processing Scripts for your installation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-combine-run-script">Run the combine run script</a></li>
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>

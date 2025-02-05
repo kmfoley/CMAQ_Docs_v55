@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,48 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Users_Guide/README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Users_Guide/Tutorials/README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-i-need-to-update-from-v5-4-to-v5-5">Do I need to update from v5.4 to v5.5?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instrumented-models">Instrumented Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#on-line-coupling-of-cmaq-with-meteorological-models">On-line coupling of CMAQ with meteorological models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chemistry">Chemistry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dry-deposition-air-surface-exchange">Dry Deposition/Air Surface Exchange</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stratosphere-troposphere-exchange">Stratosphere-Troposphere Exchange</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emissions">Emissions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#process-analysis-sulfur-tracking-model-stm">Process Analysis &amp; Sulfur Tracking Model (STM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structural-improvements">Structural Improvements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagnostic-options">Diagnostic Options</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-processors-and-utilities">Pre-processors and Utilities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-processors">Post-processors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-tools">Python Tools</a></li>
 </ul>
-</div>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-i-need-to-do-to-update-from-v5-4-to-v5-5">What do I need to do to update from v5.4 to v5.5?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-differences-should-i-expect-in-the-required-model-input-files">What differences should I expect in the required model input files?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-differences-should-i-expect-in-my-model-output-files">What differences should I expect in my model output files?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-differences-should-i-expect-in-my-model-results-with-v5-5-compared-to-v5-4">What differences should I expect in my model results with v5.5 compared to v5.4?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-emissions">Natural Emissions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ozone">Ozone</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm2-5">PM2.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deposition">Deposition</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#are-there-new-benchmark-data-and-documentation-updates">Are there new benchmark data and documentation updates?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#community-contributions">Community Contributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-cite-cmaq">How to Cite CMAQ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-faq">Additional FAQ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-support-for-cmaq">Technical support for CMAQ</a></li>
+</ul>
+  </nav></div>
     </div>
   
   
@@ -745,56 +768,6 @@ and pre- and post-processing utilities, should be directed to the <a class="refe
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-i-need-to-update-from-v5-4-to-v5-5">Do I need to update from v5.4 to v5.5?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instrumented-models">Instrumented Models</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#on-line-coupling-of-cmaq-with-meteorological-models">On-line coupling of CMAQ with meteorological models</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chemistry">Chemistry</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dry-deposition-air-surface-exchange">Dry Deposition/Air Surface Exchange</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stratosphere-troposphere-exchange">Stratosphere-Troposphere Exchange</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emissions">Emissions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#process-analysis-sulfur-tracking-model-stm">Process Analysis &amp; Sulfur Tracking Model (STM)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structural-improvements">Structural Improvements</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagnostic-options">Diagnostic Options</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-processors-and-utilities">Pre-processors and Utilities</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-processors">Post-processors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-tools">Python Tools</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-i-need-to-do-to-update-from-v5-4-to-v5-5">What do I need to do to update from v5.4 to v5.5?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-differences-should-i-expect-in-the-required-model-input-files">What differences should I expect in the required model input files?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-differences-should-i-expect-in-my-model-output-files">What differences should I expect in my model output files?</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-differences-should-i-expect-in-my-model-results-with-v5-5-compared-to-v5-4">What differences should I expect in my model results with v5.5 compared to v5.4?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-emissions">Natural Emissions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ozone">Ozone</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm2-5">PM2.5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deposition">Deposition</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#are-there-new-benchmark-data-and-documentation-updates">Are there new benchmark data and documentation updates?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#community-contributions">Community Contributions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-cite-cmaq">How to Cite CMAQ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-faq">Additional FAQ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-support-for-cmaq">Technical support for CMAQ</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

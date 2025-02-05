@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,34 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Users_Guide/README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Users_Guide/Tutorials/README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Release_Notes/FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code-management">Source Code Management</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-need-for-a-configuration-management-tool">The need for a configuration-management tool</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choice-of-a-configuration-management-tool">Choice of a configuration-management tool</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-explained">git Explained</a></li>
 </ul>
-</div>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guidelines-for-developing-new-cmaq-source-code">Guidelines for Developing New CMAQ Source Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-oriented-concepts">Object-oriented concepts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-name-data-table">Global name data table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thin-interface">Thin Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-guidelines">Coding guidelines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-guidelines">Documentation guidelines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#science-process-code-template">Science process code template</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compiling-cmaq-with-new-source-code">Compiling CMAQ with New Source Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guidelines-to-writing-shell-scripts-for-cmaq">Guidelines to Writing Shell Scripts for CMAQ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-and-distribution-of-development-source-code">Testing and Distribution of Development Source Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-for-chapter-11-code-management">References for Chapter 11: Code Management</a></li>
+</ul>
+  </nav></div>
     </div>
   
   
@@ -1800,42 +1809,6 @@ Use the following command to get the changes that have been made to the remote g
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code-management">Source Code Management</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-need-for-a-configuration-management-tool">The need for a configuration-management tool</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choice-of-a-configuration-management-tool">Choice of a configuration-management tool</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-explained">git Explained</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guidelines-for-developing-new-cmaq-source-code">Guidelines for Developing New CMAQ Source Code</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-oriented-concepts">Object-oriented concepts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-name-data-table">Global name data table</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thin-interface">Thin Interface</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-guidelines">Coding guidelines</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-guidelines">Documentation guidelines</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#science-process-code-template">Science process code template</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compiling-cmaq-with-new-source-code">Compiling CMAQ with New Source Code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guidelines-to-writing-shell-scripts-for-cmaq">Guidelines to Writing Shell Scripts for CMAQ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-and-distribution-of-development-source-code">Testing and Distribution of Development Source Code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-for-chapter-11-code-management">References for Chapter 11: Code Management</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

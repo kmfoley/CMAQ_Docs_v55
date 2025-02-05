@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,36 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-and-run-the-cmaqv5-5-benchmark-case-without-isam-to-confirm-that-your-model-run-is-consistent-with-the-provided-benchmark-output">Step 1: Download and run the CMAQv5.5 benchmark case (without ISAM) to confirm that your model run is consistent with the provided benchmark output.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-read-the-user-guide-chapter-on-integrated-source-apportionment-method">Step 2: Read the User Guide Chapter on Integrated Source Apportionment Method.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-optional-choose-your-compiler-and-load-it-using-the-module-command-if-it-is-available-on-your-system">Step 3 (optional): choose your compiler, and load it using the module command if it is available on your system</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-optional-install-i-o-api-note-this-assumes-you-have-already-installed-netcdf-c-and-fortran-libraries">Step 4 (optional): Install I/O API (note, this assumes you have already installed netCDF C and Fortran Libraries)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-install-cmaq-with-isam">Step 5: Install CMAQ with ISAM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-edit-the-config-cmaq-csh-to-specify-the-paths-of-the-ioapi-and-netcdf-libraries">Step 6. Edit the config_cmaq.csh to specify the paths of the ioapi and netCDF libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-modify-the-bldit-cctm-csh-to-activate-isam">Step 7: Modify the bldit_cctm.csh to activate ISAM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-modify-the-bldit-cctm-csh-to-specify-the-cb6r5-ae7-aq-mechanism-and-the-m3dry-dry-deposition-scheme-and-update-the-bld-directory-name">Step 8: Modify the bldit_cctm.csh to specify the cb6r5_ae7_aq mechanism and the m3dry dry deposition scheme and update the BLD directory name.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-run-the-bldit-cctm-isam-csh-script">Step 9: Run the bldit_cctm_isam.csh script</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-edit-the-emission-control-namelist-to-recognize-the-cmaq-regions-file">Step 10: Edit the Emission Control Namelist to recognize the CMAQ_REGIONS file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-example-of-emissions-scaling-reduce-the-pt-egu-emissions-in-ny-by-25-optional-step-described-here-but-not-used">Step 11: Example of emissions scaling (Reduce the PT_EGU emissions in NY by 25%) (Optional step, described here, but not used)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-install-the-cmaq-isam-reference-input-and-output-benchmark-data">Step 12: Install the CMAQ-ISAM reference input and output benchmark data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-edit-the-cmaq-isam-runscript">Step 13: Edit the CMAQ-ISAM runscript</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-verify-that-the-run-was-successful">Step 14: Verify that the run was successful</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-compare-output-with-the-2-day-benchmark-outputs-provided-on-the-google-drive">Step 15: Compare output with the 2 day benchmark outputs provided on the google drive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-compare-the-tagged-species-in-cctm-sa-aconc-output-file-to-the-species-in-cctm-aconc-output-file">Step 16: Compare the tagged species in <code class="docutils literal notranslate"><span class="pre">CCTM_SA_ACONC</span></code> output file to the species in <code class="docutils literal notranslate"><span class="pre">CCTM_ACONC</span></code> output file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-17-obtain-scripts-and-species-definition-files-to-post-process-cmaq-isam">Step 17: Obtain scripts and species definition files to post process CMAQ-ISAM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-18-build-and-run-combine">Step 18: Build and run combine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-19-review-the-species-definition-files-for-the-isam-run">Step 19: Review the species definition files for the ISAM run.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-20-build-and-run-calc-tmetric-to-calculate-the-average-of-all-tagged-species-and-the-average-of-all-species-for-your-isam-run">Step 20: Build and run calc_tmetric to calculate the average of all tagged species, and the average of all species for your ISAM run.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-21-build-and-run-hr2day-to-calculate-the-daily-average-concentration-for-each-tagged-and-aggregated-species">Step 21: Build and run hr2day to calculate the daily average concentration for each tagged and aggregated species.</a></li>
 </ul>
-</div>
+  </nav></div>
     </div>
   
   
@@ -887,44 +898,6 @@ verdi -f $cwd/COMBINE_ACONC_v55_ISAM_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_m3dry_201
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-and-run-the-cmaqv5-5-benchmark-case-without-isam-to-confirm-that-your-model-run-is-consistent-with-the-provided-benchmark-output">Step 1: Download and run the CMAQv5.5 benchmark case (without ISAM) to confirm that your model run is consistent with the provided benchmark output.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-read-the-user-guide-chapter-on-integrated-source-apportionment-method">Step 2: Read the User Guide Chapter on Integrated Source Apportionment Method.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-optional-choose-your-compiler-and-load-it-using-the-module-command-if-it-is-available-on-your-system">Step 3 (optional): choose your compiler, and load it using the module command if it is available on your system</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-optional-install-i-o-api-note-this-assumes-you-have-already-installed-netcdf-c-and-fortran-libraries">Step 4 (optional): Install I/O API (note, this assumes you have already installed netCDF C and Fortran Libraries)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-install-cmaq-with-isam">Step 5: Install CMAQ with ISAM</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-edit-the-config-cmaq-csh-to-specify-the-paths-of-the-ioapi-and-netcdf-libraries">Step 6. Edit the config_cmaq.csh to specify the paths of the ioapi and netCDF libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-modify-the-bldit-cctm-csh-to-activate-isam">Step 7: Modify the bldit_cctm.csh to activate ISAM</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-modify-the-bldit-cctm-csh-to-specify-the-cb6r5-ae7-aq-mechanism-and-the-m3dry-dry-deposition-scheme-and-update-the-bld-directory-name">Step 8: Modify the bldit_cctm.csh to specify the cb6r5_ae7_aq mechanism and the m3dry dry deposition scheme and update the BLD directory name.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-run-the-bldit-cctm-isam-csh-script">Step 9: Run the bldit_cctm_isam.csh script</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-edit-the-emission-control-namelist-to-recognize-the-cmaq-regions-file">Step 10: Edit the Emission Control Namelist to recognize the CMAQ_REGIONS file</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-example-of-emissions-scaling-reduce-the-pt-egu-emissions-in-ny-by-25-optional-step-described-here-but-not-used">Step 11: Example of emissions scaling (Reduce the PT_EGU emissions in NY by 25%) (Optional step, described here, but not used)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-install-the-cmaq-isam-reference-input-and-output-benchmark-data">Step 12: Install the CMAQ-ISAM reference input and output benchmark data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-edit-the-cmaq-isam-runscript">Step 13: Edit the CMAQ-ISAM runscript</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-verify-that-the-run-was-successful">Step 14: Verify that the run was successful</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-compare-output-with-the-2-day-benchmark-outputs-provided-on-the-google-drive">Step 15: Compare output with the 2 day benchmark outputs provided on the google drive</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-compare-the-tagged-species-in-cctm-sa-aconc-output-file-to-the-species-in-cctm-aconc-output-file">Step 16: Compare the tagged species in <code class="docutils literal notranslate"><span class="pre">CCTM_SA_ACONC</span></code> output file to the species in <code class="docutils literal notranslate"><span class="pre">CCTM_ACONC</span></code> output file</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-17-obtain-scripts-and-species-definition-files-to-post-process-cmaq-isam">Step 17: Obtain scripts and species definition files to post process CMAQ-ISAM</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-18-build-and-run-combine">Step 18: Build and run combine</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-19-review-the-species-definition-files-for-the-isam-run">Step 19: Review the species definition files for the ISAM run.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-20-build-and-run-calc-tmetric-to-calculate-the-average-of-all-tagged-species-and-the-average-of-all-species-for-your-isam-run">Step 20: Build and run calc_tmetric to calculate the average of all tagged species, and the average of all species for your ISAM run.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-21-build-and-run-hr2day-to-calculate-the-daily-average-concentration-for-each-tagged-and-aggregated-species">Step 21: Build and run hr2day to calculate the daily average concentration for each tagged and aggregated species.</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

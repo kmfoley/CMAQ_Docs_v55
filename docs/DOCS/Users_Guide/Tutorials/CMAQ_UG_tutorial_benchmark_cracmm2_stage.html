@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,33 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-checks">System Checks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-cmaq-and-required-libraries">Install CMAQ and Required Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-out-a-new-branch-in-the-cmaq-repository">Check Out a new Branch in the CMAQ Repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-the-cmaq-build-environment">Configure the CMAQ build environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-and-run-in-a-user-specified-directory-outside-of-the-repository">Build and run in a user-specified directory outside of the repository</a></li>
 </ul>
-</div>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-the-cmaq-libraries">Link the CMAQ Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-cmaq-reference-input-and-output-benchmark-data">Install the CMAQ reference input and output benchmark data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compiling-cmaq">Compiling CMAQ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-for-multi-processor-runs-default">Configuration for multi-processor runs (default):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-for-single-processor-runs-optional">Configuration for single-processor runs (optional):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-cmaq-benchmark-science-modules">Configure CMAQ benchmark Science Modules:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-the-cctm-script">Configure the CCTM script</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#confirm-that-the-benchmark-simulation-completed">Confirm that the Benchmark Simulation Completed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-cmaq-benchmark-results">Check the CMAQ Benchmark Results</a></li>
+</ul>
+  </nav></div>
     </div>
   
   
@@ -713,41 +721,6 @@ setenv INPDIR  ${CMAQ_DATA}/2018_12NE3
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-checks">System Checks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-cmaq-and-required-libraries">Install CMAQ and Required Libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-out-a-new-branch-in-the-cmaq-repository">Check Out a new Branch in the CMAQ Repository</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-the-cmaq-build-environment">Configure the CMAQ build environment</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-and-run-in-a-user-specified-directory-outside-of-the-repository">Build and run in a user-specified directory outside of the repository</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-the-cmaq-libraries">Link the CMAQ Libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-cmaq-reference-input-and-output-benchmark-data">Install the CMAQ reference input and output benchmark data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compiling-cmaq">Compiling CMAQ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-for-multi-processor-runs-default">Configuration for multi-processor runs (default):</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-for-single-processor-runs-optional">Configuration for single-processor runs (optional):</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-cmaq-benchmark-science-modules">Configure CMAQ benchmark Science Modules:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-the-cctm-script">Configure the CCTM script</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#confirm-that-the-benchmark-simulation-completed">Confirm that the Benchmark Simulation Completed</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-cmaq-benchmark-results">Check the CMAQ Benchmark Results</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

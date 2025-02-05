@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,28 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">CMAQ Tutorial</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-ocean-file-for-input-to-cmaq">Creating an OCEAN file for input to CMAQ</a></li>
 </ul>
-</div>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-create-ocean-file-from-shapefile-of-domain">OPTION 1: Create OCEAN file from shapefile of domain</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-the-spatial-allocator">STEP 1: Download the Spatial Allocator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-the-ocean-file">STEP 2: Create the OCEAN file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-add-dms-and-chlo-to-the-ocean-file">STEP 3: Add DMS and CHLO to the OCEAN file</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-run-without-an-ocean-input-file-in-cmaqv5-3-and-later">OPTION 2: Run without an OCEAN input file in CMAQv5.3 and later</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#option-3-zero-out-sea-spray-emissions-in-cmaqv5-2-or-earlier">OPTION 3: Zero Out Sea-Spray Emissions in CMAQv5.2 or earlier</a></li>
+</ul>
+
+  </nav></div>
     </div>
   
   
@@ -607,36 +610,6 @@ EOF
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">CMAQ Tutorial</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-ocean-file-for-input-to-cmaq">Creating an OCEAN file for input to CMAQ</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-create-ocean-file-from-shapefile-of-domain">OPTION 1: Create OCEAN file from shapefile of domain</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-the-spatial-allocator">STEP 1: Download the Spatial Allocator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-the-ocean-file">STEP 2: Create the OCEAN file</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-add-dms-and-chlo-to-the-ocean-file">STEP 3: Add DMS and CHLO to the OCEAN file</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-run-without-an-ocean-input-file-in-cmaqv5-3-and-later">OPTION 2: Run without an OCEAN input file in CMAQv5.3 and later</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#option-3-zero-out-sea-spray-emissions-in-cmaqv5-2-or-earlier">OPTION 3: Zero Out Sea-Spray Emissions in CMAQv5.2 or earlier</a></li>
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>

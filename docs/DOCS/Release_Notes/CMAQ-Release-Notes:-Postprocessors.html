@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,34 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Users_Guide/README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Users_Guide/Tutorials/README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><span class="xref myst">calc_tmetric</span></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#combine"><span class="xref myst">combine</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#improve-checks-on-formulas-used-by-combine">Improve Checks on Formulas Used by COMBINE</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#corrected-deposition-species-definition-specdef-dep-files-for-missing-nitrogen-species">Corrected Deposition Species Definition (SpecDef_Dep) files for missing nitrogen species</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-specdef-deposition-updates-for-hno4-and-clno2">CRACMM SpecDef Deposition Updates for HNO4 and CLNO2</a></li>
 </ul>
-</div>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hr2day"><span class="xref myst">hr2day</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-tz-csv-to-natural-earth">Updating tz.csv to Natural Earth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clarification-of-w126-daily-index-computation-and-minor-code-corrections">Clarification of W126 Daily Index Computation and Minor Code Corrections</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp"><span class="xref myst">sitecmp</span></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-dailyo3"><span class="xref myst">sitecmp_dailyo3</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#increase-of-station-id-character-limit">Increase of station ID character limit</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#removal-of-appendwrf-bldoverlay-and-blockextract">Removal of appendwrf, bldoverlay and blockextract</a></li>
+</ul>
+
+  </nav></div>
     </div>
   
   
@@ -640,42 +649,6 @@ The POST tools appendwrf, bldoverlay, and blockextract are no longer maintained 
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><span class="xref myst">calc_tmetric</span></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#combine"><span class="xref myst">combine</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#improve-checks-on-formulas-used-by-combine">Improve Checks on Formulas Used by COMBINE</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#corrected-deposition-species-definition-specdef-dep-files-for-missing-nitrogen-species">Corrected Deposition Species Definition (SpecDef_Dep) files for missing nitrogen species</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-specdef-deposition-updates-for-hno4-and-clno2">CRACMM SpecDef Deposition Updates for HNO4 and CLNO2</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hr2day"><span class="xref myst">hr2day</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-tz-csv-to-natural-earth">Updating tz.csv to Natural Earth</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clarification-of-w126-daily-index-computation-and-minor-code-corrections">Clarification of W126 Daily Index Computation and Minor Code Corrections</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp"><span class="xref myst">sitecmp</span></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-dailyo3"><span class="xref myst">sitecmp_dailyo3</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#increase-of-station-id-character-limit">Increase of station ID character limit</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#removal-of-appendwrf-bldoverlay-and-blockextract">Removal of appendwrf, bldoverlay and blockextract</a></li>
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>

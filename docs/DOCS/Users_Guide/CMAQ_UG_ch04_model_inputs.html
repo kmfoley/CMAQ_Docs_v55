@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,35 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tutorials/README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Release_Notes/FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">4.1 Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmaq-pre-processors">4.2 CMAQ Pre-processors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meteorology-chemistry-interface-processor-mcip">4.2.1 Meteorology-Chemistry Interface Processor (MCIP)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-conditions-processor-icon">4.2.2 Initial Conditions Processor (ICON)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions-processor-bcon">4.2.3 Boundary Conditions Processor (BCON)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#external-software-programs-for-preparing-cmaq-inputs">4.2.4 External Software Programs for Preparing CMAQ Inputs</a></li>
 </ul>
-</div>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmaq-input-files">4.3 CMAQ Input Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windowing-capability">4.3.1 Windowing Capability</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#griddesc-and-species-namelist-files">4.4 GRIDDESC and Species Namelist Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-conditions-input">4.5 Initial Conditions Input</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions-input">4.6 Boundary Conditions Input</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meteorological-inputs-processed-for-the-cmaq-system-using-mcip">4.7 Meteorological Inputs (Processed for the CMAQ System using MCIP)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emissions-inputs">4.8 Emissions Inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biogenic-and-land-surface-inputs">4.9 Biogenic and Land Surface Inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stage-deposition-option">STAGE Deposition Option</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#photolysis-inputs">4.10 Photolysis Inputs</a></li>
+</ul>
+  </nav></div>
     </div>
   
   
@@ -2353,43 +2363,6 @@ CMAQv5.5 User’s Guide <br></p>
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">4.1 Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmaq-pre-processors">4.2 CMAQ Pre-processors</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meteorology-chemistry-interface-processor-mcip">4.2.1 Meteorology-Chemistry Interface Processor (MCIP)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-conditions-processor-icon">4.2.2 Initial Conditions Processor (ICON)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions-processor-bcon">4.2.3 Boundary Conditions Processor (BCON)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#external-software-programs-for-preparing-cmaq-inputs">4.2.4 External Software Programs for Preparing CMAQ Inputs</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmaq-input-files">4.3 CMAQ Input Files</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windowing-capability">4.3.1 Windowing Capability</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#griddesc-and-species-namelist-files">4.4 GRIDDESC and Species Namelist Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-conditions-input">4.5 Initial Conditions Input</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions-input">4.6 Boundary Conditions Input</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meteorological-inputs-processed-for-the-cmaq-system-using-mcip">4.7 Meteorological Inputs (Processed for the CMAQ System using MCIP)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emissions-inputs">4.8 Emissions Inputs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biogenic-and-land-surface-inputs">4.9 Biogenic and Land Surface Inputs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stage-deposition-option">STAGE Deposition Option</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#photolysis-inputs">4.10 Photolysis Inputs</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,84 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tutorials/README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Release_Notes/FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">6.1 Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-approach">6.2 Numerical Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-configuration">6.3 Grid Configuration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-domains-and-lateral-boundaries">6.3.1 Horizontal Domains and Lateral Boundaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vertical-domains">6.3.2 Vertical Domains</a></li>
 </ul>
-</div>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#science-configurations">6.4 Science Configurations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advection">6.5 Advection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-diffusion">6.6 Horizontal Diffusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vertical-diffusion">6.7 Vertical Diffusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dry-deposition-air-surface-exchange">6.8 Dry Deposition/Air-surface exchange</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dry-deposition-m3dry">6.8.1 Dry Deposition - M3Dry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dry-depostion-stage">6.8.2 Dry Depostion - STAGE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enhanced-ozone-deposition">6.8.3 Enhanced Ozone Deposition</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emissions">6.9 Emissions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emission-streams">6.9.1 Emission Streams</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#online-streams">Online Streams:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gridded-stream-offline">Gridded Stream (offline):</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#point-stream-offline">Point Stream (offline):</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#online-emission-streams">6.9.2 Online Emission Streams</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biogenics">Biogenics</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#beis">BEIS</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#megan">MEGAN</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#windblown-dust">Windblown Dust</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-spray">Sea Spray</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dimethyl-sulfide-dms-and-halocarbon-emissions">Dimethyl sulfide (DMS) and Halocarbon emissions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lightning-no">Lightning NO</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-inline-no-with-nldn-or-wwllns-data-user-uses-hourly-nldn-or-wwllns-lightning-strike-netcdf-file">Option 1 - Inline NO with NLDN or WWLLNs Data – user uses hourly NLDN or WWLLNs lightning strike netCDF file.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-inline-no-without-nldn-data-lightning-no-is-calculated-within-cctm-based-on-statistical-relationships-with-the-simulated-convective-rainfall-rate">Option 2 - Inline NO without NLDN Data –  lightning NO is calculated within CCTM based on statistical relationships with the simulated convective rainfall rate.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emission-compatibility-for-cmaqv5-3">6.9.3 Emission Compatibility for CMAQv5.3+</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-combustion-soa">Potential Combustion SOA</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pinene-separated-from-other-monoterpenes">α-Pinene separated from other monoterpenes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-phase-chemistry">6.10 Gas Phase Chemistry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-phase-chemical-mechanisms">6.10.1 Gas Phase Chemical Mechanisms</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-predefined-chemical-mechanisms">Using predefined chemical mechanisms</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solvers">6.10.2 Solvers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#photolysis">6.10.3 Photolysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nitrous-acid-hono">6.10.4 Nitrous Acid (HONO)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-version-1-0-2-0">6.10.5 CRACMM Version 1.0-2.0</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-species-description-file">CRACMM Species Description File</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-metadata-in-species-nml">CRACMM Metadata in Species nml</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-supporting-code-archive">CRACMM supporting code archive</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aerosol-dynamics-and-chemistry">6.11 Aerosol Dynamics and Chemistry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aerosol-boundary-and-initial-conditions">6.11.1 Aerosol Boundary and Initial Conditions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aqueous-chemistry-scavenging-and-wet-deposition">6.12 Aqueous Chemistry, Scavenging and Wet Deposition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-vorticity-scaling">6.13 Potential Vorticity Scaling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">6.14 References</a></li>
+</ul>
+  </nav></div>
     </div>
   
   
@@ -1680,92 +1739,6 @@ CMAQv5.5 User’s Guide <br></p>
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">6.1 Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-approach">6.2 Numerical Approach</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-configuration">6.3 Grid Configuration</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-domains-and-lateral-boundaries">6.3.1 Horizontal Domains and Lateral Boundaries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vertical-domains">6.3.2 Vertical Domains</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#science-configurations">6.4 Science Configurations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advection">6.5 Advection</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-diffusion">6.6 Horizontal Diffusion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vertical-diffusion">6.7 Vertical Diffusion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dry-deposition-air-surface-exchange">6.8 Dry Deposition/Air-surface exchange</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dry-deposition-m3dry">6.8.1 Dry Deposition - M3Dry</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dry-depostion-stage">6.8.2 Dry Depostion - STAGE</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enhanced-ozone-deposition">6.8.3 Enhanced Ozone Deposition</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emissions">6.9 Emissions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emission-streams">6.9.1 Emission Streams</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#online-streams">Online Streams:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gridded-stream-offline">Gridded Stream (offline):</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#point-stream-offline">Point Stream (offline):</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#online-emission-streams">6.9.2 Online Emission Streams</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biogenics">Biogenics</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#beis">BEIS</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#megan">MEGAN</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#windblown-dust">Windblown Dust</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-spray">Sea Spray</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dimethyl-sulfide-dms-and-halocarbon-emissions">Dimethyl sulfide (DMS) and Halocarbon emissions</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lightning-no">Lightning NO</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-inline-no-with-nldn-or-wwllns-data-user-uses-hourly-nldn-or-wwllns-lightning-strike-netcdf-file">Option 1 - Inline NO with NLDN or WWLLNs Data – user uses hourly NLDN or WWLLNs lightning strike netCDF file.</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-inline-no-without-nldn-data-lightning-no-is-calculated-within-cctm-based-on-statistical-relationships-with-the-simulated-convective-rainfall-rate">Option 2 - Inline NO without NLDN Data –  lightning NO is calculated within CCTM based on statistical relationships with the simulated convective rainfall rate.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emission-compatibility-for-cmaqv5-3">6.9.3 Emission Compatibility for CMAQv5.3+</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-combustion-soa">Potential Combustion SOA</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pinene-separated-from-other-monoterpenes">α-Pinene separated from other monoterpenes</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-phase-chemistry">6.10 Gas Phase Chemistry</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-phase-chemical-mechanisms">6.10.1 Gas Phase Chemical Mechanisms</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-predefined-chemical-mechanisms">Using predefined chemical mechanisms</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solvers">6.10.2 Solvers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#photolysis">6.10.3 Photolysis</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nitrous-acid-hono">6.10.4 Nitrous Acid (HONO)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-version-1-0-2-0">6.10.5 CRACMM Version 1.0-2.0</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-species-description-file">CRACMM Species Description File</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-metadata-in-species-nml">CRACMM Metadata in Species nml</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cracmm-supporting-code-archive">CRACMM supporting code archive</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aerosol-dynamics-and-chemistry">6.11 Aerosol Dynamics and Chemistry</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aerosol-boundary-and-initial-conditions">6.11.1 Aerosol Boundary and Initial Conditions</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aqueous-chemistry-scavenging-and-wet-deposition">6.12 Aqueous Chemistry, Scavenging and Wet Deposition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-vorticity-scaling">6.13 Potential Vorticity Scaling</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">6.14 References</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,43 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../DOCS/Users_Guide/README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../DOCS/Users_Guide/Tutorials/README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../DOCS/Release_Notes/CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../DOCS/Release_Notes/FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-chemmech">Using CHEMMECH</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chemmech-inputs">CHEMMECH Inputs</a></li>
 </ul>
-</div>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-output-files-in-the-cmaq-model">Using output files in the CMAQ model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-files-for-f0am-box-modeling">Output Files for F0AM Box Modeling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-for-elemental-balance-check">Option for Elemental Balance Check.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-reactions-input-format">Chemical Reactions Input Format <a name="Chemical Reactions Input Format"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-rules">General rules. <a name="General rules"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-elements">Defining Elements. <a name="Defining Elements"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#format-of-specific-blocks">Format of Specific Blocks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanism-name">Mechanism Name.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#special">SPECIAL.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminate">ELIMINATE.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reactions">REACTIONS.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#constants">CONSTANTS</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">FUNCTIONS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-chemmech">Debugging CHEMMECH</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reporting-errors-or-problems-with-chemmech">Reporting errors or problems with CHEMMECH</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References.</a></li>
+</ul>
+  </nav></div>
     </div>
   
   
@@ -1066,51 +1084,6 @@ Atmospheric Environment, 42 (31) , pp. 7185-7193</p>
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-chemmech">Using CHEMMECH</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chemmech-inputs">CHEMMECH Inputs</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-output-files-in-the-cmaq-model">Using output files in the CMAQ model</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-files-for-f0am-box-modeling">Output Files for F0AM Box Modeling</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-for-elemental-balance-check">Option for Elemental Balance Check.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-reactions-input-format">Chemical Reactions Input Format <a name="Chemical Reactions Input Format"></a></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-rules">General rules. <a name="General rules"></a></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-elements">Defining Elements. <a name="Defining Elements"></a></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#format-of-specific-blocks">Format of Specific Blocks</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanism-name">Mechanism Name.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#special">SPECIAL.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminate">ELIMINATE.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reactions">REACTIONS.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#constants">CONSTANTS</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">FUNCTIONS</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-chemmech">Debugging CHEMMECH</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reporting-errors-or-problems-with-chemmech">Reporting errors or problems with CHEMMECH</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References.</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

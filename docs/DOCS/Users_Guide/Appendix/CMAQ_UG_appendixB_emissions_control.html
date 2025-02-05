@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,44 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorials/README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-1-emissions-control-with-the-detailed-emissions-scaling-isolation-and-diagnostics-module-desid">B.1 Emissions Control with the Detailed Emissions Scaling, Isolation and Diagnostics Module (DESID)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-chemical-mapping-control">B.2 Chemical Mapping Control</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-1-default-rules">B.2.1 Default Rules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-2-modifying-default-rules">B.2.2 Modifying Default rules</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-2-1-supporting-the-volatility-basis-set">B.2.2.1 Supporting the Volatility Basis Set</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-2-2-supporting-potential-combustion-soa">B.2.2.2 Supporting Potential Combustion SOA</a></li>
 </ul>
-</div>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-desid-control">B.3 DESID Control</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-1-general-options">B.3.1 General Options</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-2-area-normalization-and-projection-adjustment">B.3.2 Area Normalization and Projection Adjustment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-3-aerosol-size-distributions">B.3.3 Aerosol Size Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-4-defining-and-using-regions-and-region-families">B.3.4 Defining and Using Regions and Region Families</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-4-1-using-defined-regions">B.3.4.1 Using Defined Regions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-4-2-defining-regions">B.3.4.2 Defining Regions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-4-3-region-families">B.3.4.3 Region Families</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-5-stream-families">B.3.5 Stream Families</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-6-chemical-families">B.3.6 Chemical Families</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-7-emissions-diagnostics">B.3.7 Emissions Diagnostics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-7-1-summary-output-to-processor-specific-logfiles">B.3.7.1 Summary Output to Processor-Specific Logfiles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-7-2-diagnostic-gridded-output-files">B.3.7.2 Diagnostic Gridded Output Files</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
     </div>
   
   
@@ -893,52 +912,6 @@ CMAQv5.5 User’s Guide <br></p>
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-1-emissions-control-with-the-detailed-emissions-scaling-isolation-and-diagnostics-module-desid">B.1 Emissions Control with the Detailed Emissions Scaling, Isolation and Diagnostics Module (DESID)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-chemical-mapping-control">B.2 Chemical Mapping Control</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-1-default-rules">B.2.1 Default Rules</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-2-modifying-default-rules">B.2.2 Modifying Default rules</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-2-1-supporting-the-volatility-basis-set">B.2.2.1 Supporting the Volatility Basis Set</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-2-2-2-supporting-potential-combustion-soa">B.2.2.2 Supporting Potential Combustion SOA</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-desid-control">B.3 DESID Control</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-1-general-options">B.3.1 General Options</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-2-area-normalization-and-projection-adjustment">B.3.2 Area Normalization and Projection Adjustment</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-3-aerosol-size-distributions">B.3.3 Aerosol Size Distributions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-4-defining-and-using-regions-and-region-families">B.3.4 Defining and Using Regions and Region Families</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-4-1-using-defined-regions">B.3.4.1 Using Defined Regions</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-4-2-defining-regions">B.3.4.2 Defining Regions</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-4-3-region-families">B.3.4.3 Region Families</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-5-stream-families">B.3.5 Stream Families</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-6-chemical-families">B.3.6 Chemical Families</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-7-emissions-diagnostics">B.3.7 Emissions Diagnostics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-7-1-summary-output-to-processor-specific-logfiles">B.3.7.1 Summary Output to Processor-Specific Logfiles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-3-7-2-diagnostic-gridded-output-files">B.3.7.2 Diagnostic Gridded Output Files</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

@@ -15,7 +15,7 @@ This website contains documentation for the [Community Multiscale Air Quality (C
 :text-align: center
 :padding: 4
 :img-top: _static/gs_fin.svg
-:class-img-top: w-25 m-auto px-1 py-2 dark-light
+:class-img-top: w-25 m-auto py-4 dark-light
 :shadow: lg
 
 Text text text text text text text text text text text text text text text text text text!
@@ -33,7 +33,7 @@ Start
 :text-align: center
 :padding: 4
 :img-top: _static/ug_fin.svg
-:class-img-top: w-25  m-auto px-1 py-2 dark-light
+:class-img-top: w-25  m-auto py-4 dark-light
 :shadow: lg
 
 Text text text text text text text text text text text text text text text text text text!
@@ -51,7 +51,7 @@ User's Guide
 :text-align: center
 :padding: 4
 :img-top: _static/tut_fin.svg
-:class-img-top: w-25 m-auto px-1 py-2 dark-light
+:class-img-top: w-25 m-auto py-4 dark-light
 :shadow: lg
 
 Text text text text text text text text text text text text text text text text text text!
@@ -69,7 +69,7 @@ Tutorials
 :text-align: center
 :padding: 4
 :img-top: _static/rn_fin.svg
-:class-img-top: w-25 m-auto px-1 py-2 dark-light
+:class-img-top: w-25 m-auto py-4 dark-light
 :shadow: lg
 
 Text text text text text text text text text text text text text text text text text text!
@@ -87,7 +87,7 @@ Release Notes
 :text-align: center
 :padding: 4
 :img-top: _static/faq_fin.svg
-:class-img-top: w-25 m-auto px-1 py-2 dark-light
+:class-img-top: w-25 m-auto py-4 dark-light
 :shadow: lg
 
 Text text text text text text text text text text text text text text text text text text!
@@ -105,7 +105,7 @@ FAQ Pages
 :text-align: center
 :padding: 4
 :img-top: _static/cs_fin.svg
-:class-img-top: w-25 m-auto px-1 py-2 dark-light
+:class-img-top: w-25 m-auto py-4 dark-light
 :shadow: lg
 
 Text text text text text text text text text text text text text text text text text text!
@@ -121,6 +121,7 @@ Community Support
 
 ::::
 
+Please see our 'How to Cite CMAQ' page if you are interested in referencing one of our released model versions, scientific algorithms, or model output in your own publication: [https://www.epa.gov/cmaq/how-cite-cmaq](https://www.epa.gov/cmaq/how-cite-cmaq)
 
 Open Source License Information here: [MIT License](./license.md)
 

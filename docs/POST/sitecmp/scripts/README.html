@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,43 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../DOCS/Users_Guide/README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../DOCS/Users_Guide/Tutorials/README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../DOCS/Release_Notes/CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../DOCS/Release_Notes/FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-configuration-options-for-aeronet">SITECMP Configuration Options for AERONET</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-configuration-options-for-amon">SITECMP Configuration Options for AMON</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-configuration-options-for-hourly-castnet-data">SITECMP Configuration Options for Hourly CASTNET data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-configuration-options-for-weekly-castnet-data">SITECMP Configuration Options for Weekly CASTNET data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-environment-options-for-csn-formally-stn">Runtime Environment Options for CSN (formally STN)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csn-for-2009-and-earlier">CSN for 2009 and earlier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csn-for-2010">CSN for 2010</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csn-for-2011-2013">CSN for 2011-2013</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csn-for-2014-and-later">CSN for 2014 and later</a></li>
 </ul>
-</div>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-configuration-options-for-improve">SITECMP Configuration Options for IMPROVE</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-configuration-options-for-nadp">SITECMP Configuration Options for NADP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-environment-options-for-hourly-search">Runtime Environment Options for Hourly SEARCH</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hourly-search-for-2004-and-earlier">Hourly SEARCH for 2004 and earlier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hourly-search-for-2005">Hourly SEARCH for 2005</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hourly-search-for-2006-to-2010">Hourly SEARCH for 2006 to 2010</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hourly-search-for-2011-and-later">Hourly SEARCH for 2011 and later</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-environment-options-for-daily-search">Runtime Environment Options for Daily SEARCH</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daily-search-for-2007-and-earlier">Daily SEARCH for 2007 and earlier</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Runtime Environment Options for Daily SEARCH</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daily-search-for-2008-and-later">Daily SEARCH for 2008 and later</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
     </div>
   
   
@@ -1448,51 +1466,6 @@
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-configuration-options-for-aeronet">SITECMP Configuration Options for AERONET</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-configuration-options-for-amon">SITECMP Configuration Options for AMON</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-configuration-options-for-hourly-castnet-data">SITECMP Configuration Options for Hourly CASTNET data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-configuration-options-for-weekly-castnet-data">SITECMP Configuration Options for Weekly CASTNET data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-environment-options-for-csn-formally-stn">Runtime Environment Options for CSN (formally STN)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csn-for-2009-and-earlier">CSN for 2009 and earlier</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csn-for-2010">CSN for 2010</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csn-for-2011-2013">CSN for 2011-2013</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csn-for-2014-and-later">CSN for 2014 and later</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-configuration-options-for-improve">SITECMP Configuration Options for IMPROVE</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitecmp-configuration-options-for-nadp">SITECMP Configuration Options for NADP</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-environment-options-for-hourly-search">Runtime Environment Options for Hourly SEARCH</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hourly-search-for-2004-and-earlier">Hourly SEARCH for 2004 and earlier</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hourly-search-for-2005">Hourly SEARCH for 2005</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hourly-search-for-2006-to-2010">Hourly SEARCH for 2006 to 2010</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hourly-search-for-2011-and-later">Hourly SEARCH for 2011 and later</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-environment-options-for-daily-search">Runtime Environment Options for Daily SEARCH</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daily-search-for-2007-and-earlier">Daily SEARCH for 2007 and earlier</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Runtime Environment Options for Daily SEARCH</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daily-search-for-2008-and-later">Daily SEARCH for 2008 and later</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

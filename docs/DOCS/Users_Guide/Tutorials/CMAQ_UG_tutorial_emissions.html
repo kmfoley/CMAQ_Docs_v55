@@ -250,10 +250,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -382,21 +378,39 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/CMAQ-Release-Notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Release_Notes/FAQ_README.html">FAQs</a></li>
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prescribing-emissions-using-desid-detailed-emissions-scaling-isolation-and-diagnostics-module">Prescribing Emissions Using DESID (Detailed Emissions Scaling, Isolation and Diagnostics) Module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-of-terms">Definitions of Terms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-notes-to-remember">Important Notes to Remember</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-use-cases">Example Use Cases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-out-emissions">1. Zero Out Emissions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-using-options-in-the-cmaq-runscript">a. Using Options in the CMAQ RunScript</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-creating-rules-in-the-chemical-mapping-control-namelist-cmaq-control-desid-mech-nml">b. Creating Rules in the Chemical Mapping Control Namelist (CMAQ_Control_DESID_${MECH}.nml)</a></li>
 </ul>
-</div>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-emissions-for-a-new-chemical-species">2. Add Emissions For a New Chemical Species</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-emissions-from-one-stream-by-a-common-factor">3. Scale emissions from one stream by a common factor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-emissions-for-one-species-on-all-streams">4. Scale emissions for one species on all streams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-all-gas-phase-emissions-but-leave-aerosols-alone">5. Scale all gas phase emissions but leave aerosols alone</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-all-aerosols">6. Scale all aerosols</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-or-subtract-emissions-from-one-surrogate-to-existing-emissions">7. Add or subtract emissions from one surrogate to existing emissions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overwrite-the-scale-factor-for-a-single-stream-or-species">8. Overwrite the scale factor for a single stream or species</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-all-species-except-one-by-a-common-factor">9. Scale all species except one by a common factor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apply-scaling-while-conserving-moles-or-mass">10. Apply scaling while conserving moles or mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apply-scaling-with-spatial-dependence">11. Apply scaling with spatial dependence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-families-of-streams-regions-or-chemical-species">12.  Define families of streams, regions, or chemical species</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-family-of-streams-to-scale-emissions-for-a-group-of-sources">13. Use a family of streams to scale emissions for a group of sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-family-of-regions-to-scale-emissions-in-a-new-location">14. Use a family of regions to scale emissions in a new location</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-family-of-species-to-scale-emissions-for-a-custom-group-of-pollutants">15. Use a family of species to scale emissions for a custom group of pollutants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-notes">16. Miscellaneous Notes</a></li>
+</ul>
+  </nav></div>
     </div>
   
   
@@ -848,47 +862,6 @@ Without the precaution in place, adding relationships for ALL surrogates to ALL 
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prescribing-emissions-using-desid-detailed-emissions-scaling-isolation-and-diagnostics-module">Prescribing Emissions Using DESID (Detailed Emissions Scaling, Isolation and Diagnostics) Module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-of-terms">Definitions of Terms</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-notes-to-remember">Important Notes to Remember</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-use-cases">Example Use Cases</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-out-emissions">1. Zero Out Emissions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-using-options-in-the-cmaq-runscript">a. Using Options in the CMAQ RunScript</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-creating-rules-in-the-chemical-mapping-control-namelist-cmaq-control-desid-mech-nml">b. Creating Rules in the Chemical Mapping Control Namelist (CMAQ_Control_DESID_${MECH}.nml)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-emissions-for-a-new-chemical-species">2. Add Emissions For a New Chemical Species</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-emissions-from-one-stream-by-a-common-factor">3. Scale emissions from one stream by a common factor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-emissions-for-one-species-on-all-streams">4. Scale emissions for one species on all streams</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-all-gas-phase-emissions-but-leave-aerosols-alone">5. Scale all gas phase emissions but leave aerosols alone</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-all-aerosols">6. Scale all aerosols</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-or-subtract-emissions-from-one-surrogate-to-existing-emissions">7. Add or subtract emissions from one surrogate to existing emissions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overwrite-the-scale-factor-for-a-single-stream-or-species">8. Overwrite the scale factor for a single stream or species</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-all-species-except-one-by-a-common-factor">9. Scale all species except one by a common factor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apply-scaling-while-conserving-moles-or-mass">10. Apply scaling while conserving moles or mass</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apply-scaling-with-spatial-dependence">11. Apply scaling with spatial dependence</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-families-of-streams-regions-or-chemical-species">12.  Define families of streams, regions, or chemical species</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-family-of-streams-to-scale-emissions-for-a-group-of-sources">13. Use a family of streams to scale emissions for a group of sources</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-family-of-regions-to-scale-emissions-in-a-new-location">14. Use a family of regions to scale emissions in a new location</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-family-of-species-to-scale-emissions-for-a-custom-group-of-pollutants">15. Use a family of species to scale emissions for a custom group of pollutants</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-notes">16. Miscellaneous Notes</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

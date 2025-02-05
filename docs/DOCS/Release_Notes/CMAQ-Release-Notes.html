@@ -263,7 +263,7 @@
       
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -376,31 +376,6 @@
     
   </div>
   
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-<nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"></div>
-</nav></div>
-        <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item">
-<h3><a href="../../index.html">Table of Contents</a></h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../Users_Guide/README.html">CMAQ User’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Users_Guide/Tutorials/README.html">CMAQ Tutorials</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FAQ_README.html">FAQs</a></li>
-</ul>
-</div>
-    </div>
-  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
@@ -474,26 +449,6 @@
 <li><p><a class="reference internal" href="CMAQ-Release-Notes%3A-Stratospheric%E2%80%90Tropospheric-Exchange-%28STE%29.html"><span class="doc std std-doc">Stratospheric-Tropospheric Exchange (STE)</span></a></p></li>
 </ul>
 <p>For a high level summary and comparison to previous versions please see the <a class="reference internal" href="CMAQv5.4-Series-FAQ.html"><span class="std std-doc">CMAQv5.4 Series FAQ</span></a>.</p>
-<p>To add new entries to the release notes Wiki Page please use the template below.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="c1">## Template</span>
-<span class="n">Find</span> <span class="n">the</span> <span class="n">appropriate</span> <span class="n">section</span> <span class="n">below</span><span class="o">.</span>  <span class="n">Copy</span> <span class="ow">and</span> <span class="n">fill</span> <span class="n">out</span> <span class="n">the</span> <span class="n">following</span> <span class="n">template</span> <span class="k">with</span> <span class="n">the</span> <span class="n">information</span> <span class="n">about</span> <span class="n">your</span> <span class="n">code</span> <span class="n">change</span><span class="o">.</span> <span class="n">Feel</span> <span class="n">free</span> <span class="n">to</span> <span class="n">add</span> <span class="n">additional</span> <span class="n">topics</span> <span class="ow">or</span> <span class="n">subtopics</span> <span class="n">to</span> <span class="n">improve</span> <span class="n">the</span> <span class="n">overall</span> <span class="n">organization</span><span class="o">.</span> 
-
-<span class="c1">### Title</span>
-<span class="p">[</span><span class="n">Contact</span> <span class="n">name</span><span class="p">](</span><span class="n">mailto</span><span class="p">:</span><span class="n">contact</span><span class="o">.</span><span class="n">email</span><span class="nd">@epa</span><span class="o">.</span><span class="n">gov</span><span class="p">),</span> <span class="n">U</span><span class="o">.</span><span class="n">S</span><span class="o">.</span> <span class="n">Environmental</span> <span class="n">Protection</span> <span class="n">Agency</span>    
-<span class="o">**</span><span class="n">Type</span> <span class="n">of</span> <span class="n">update</span><span class="o">**</span><span class="p">:</span> <span class="p">[</span><span class="n">examples</span><span class="p">:</span> <span class="n">Bug</span> <span class="n">Fix</span><span class="p">,</span> <span class="n">Science</span> <span class="n">Update</span><span class="p">,</span> <span class="n">Documentation</span><span class="p">,</span> <span class="n">New</span> <span class="n">Feature</span><span class="p">]</span>   
-<span class="o">**</span><span class="n">Release</span> <span class="n">Version</span><span class="o">/</span><span class="n">Date</span><span class="o">**</span><span class="p">:</span>  
-<span class="o">**</span><span class="n">Description</span><span class="o">**</span><span class="p">:</span>  
-<span class="o">**</span><span class="n">Significance</span> <span class="ow">and</span> <span class="n">Impact</span><span class="o">**</span><span class="p">:</span>    
-<span class="o">**</span><span class="n">References</span><span class="o">**</span><span class="p">:</span> 
-
-<span class="o">|</span><span class="n">Merge</span> <span class="n">Commit</span> <span class="o">|</span> <span class="n">Internal</span> <span class="n">record</span><span class="o">|</span>
-<span class="o">|</span><span class="p">:</span><span class="o">------</span><span class="p">:</span><span class="o">|</span><span class="p">:</span><span class="o">-------</span><span class="p">:</span><span class="o">|</span>
-<span class="o">|</span><span class="p">[</span><span class="n">Merge</span> <span class="k">for</span> <span class="n">PR</span><span class="c1">#xxx](https://github.com/USEPA/CMAQ/commit/xxx - will be filled in by documentation team) | [PR#xxx](https://github.com/USEPA/CMAQ_Dev/pull/xxx)  |  </span>
-
-
-</pre></div>
-</div>
 </section>
 
 
