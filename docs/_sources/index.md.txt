@@ -9,7 +9,7 @@ Not the official CMAQ User's Guide
 
 This website contains documentation for the [Community Multiscale Air Quality (CMAQ)](https://epa.gov/cmaq) modeling system. While documentation is packaged with the code when it is downloaded or cloned, users are encouraged to go [online](https://github.com/USEPA/CMAQ/tree/main/DOCS) to view the latest version.
 
-::::{grid} 3
+::::{grid} 2 2 3 3
 
 :::{grid-item-card}
 :text-align: center
