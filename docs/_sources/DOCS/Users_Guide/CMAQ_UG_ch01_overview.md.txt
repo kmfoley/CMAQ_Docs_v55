@@ -73,7 +73,7 @@ Building on previous versions of the modeling system, numerous updates to the pr
 
 4. A  new option for estimation of photolysis rates was included.  This option includes a new approach to estimate the effects of aerosol optical properties on photolysis rates. The approach provides a better match to optical properties determined by solving Mie scattering theory for spherical particles than the default method (FastOptics) but at comparable runtimes.
    
-See the [CMAQv5.5 Series FAQ](../Release_Notes/CMAQv5.5-Series-FAQ) for more information on model updates in the new release. 
+See the [CMAQv5.5 Series FAQ](../Release_FAQ/CMAQv5.5-Series-FAQ) for more information on model updates in the new release. 
 
 ## 1.5 System Recommendations
 CMAQ is a comprehensive air pollution modeling system whose source code is written mostly in Fortran. CMAQ execution is typically performed on Linux based systems. The hardware configuration of such a system depends on the domain size, grid resolution and simulation duration. Since typical input and output data sets for CMAQ entail three dimensional descriptions of the dynamical and chemical state of the simulated atmosphere, these data sets could require upwards of several gigabytes of disk storage per simulation day.

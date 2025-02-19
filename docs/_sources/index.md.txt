@@ -1,10 +1,10 @@
 CMAQ: The Community Multiscale Air Quality Modeling System
 ==========================================================
 
-**CMAQ (see-mak):** an active open-source development project of the U.S. EPA that consists of a suite of programs for conducting air quality model simulations. CMAQ combines current knowledge in atmospheric science and air quality modeling, multi-processor computing techniques, and an open source framework to deliver fast, technically sound estimates of ozone, particulates, toxics and acid deposition.
+This website contains documentation for the [Community Multiscale Air Quality (CMAQ; "see-mak")](https://epa.gov/cmaq) modeling system. Source code and sample scripts are provided in the CMAQ GitHub repository: [https://github.com/USEPA/CMAQ](https://github.com/USEPA/CMAQ)
 
 :::{note}
-Not the official CMAQ User's Guide
+This documentation is currently under development. Please email CMAQ_Team@epa.gov if you encounter any issues.
 :::
 
 This website contains documentation for the [Community Multiscale Air Quality (CMAQ)](https://epa.gov/cmaq) modeling system. While documentation is packaged with the code when it is downloaded or cloned, users are encouraged to go [online](https://github.com/USEPA/CMAQ/tree/main/DOCS) to view the latest version.
@@ -18,7 +18,7 @@ This website contains documentation for the [Community Multiscale Air Quality (C
 :class-img-top: w-25 m-auto py-4 dark-light
 :shadow: lg
 
-A brief model introduction for new and returning users!
+A brief introduction for new and returning users!
 
 +++
 
@@ -36,7 +36,7 @@ Getting Started
 :class-img-top: w-25  m-auto py-4 dark-light
 :shadow: lg
 
-Install, configure, and execute the CMAQ model on Linux systems.
+Overview of science processes and directions on how to run CMAQ.
 
 +++
 
@@ -54,7 +54,7 @@ User's Guide
 :class-img-top: w-25 m-auto py-4 dark-light
 :shadow: lg
 
-Examples of how to build and run CMAQ along with its different software features.
+Practical examples of how to run CMAQ and exercise different features.
 
 +++
 
@@ -72,11 +72,11 @@ Tutorials
 :class-img-top: w-25 m-auto py-4 dark-light
 :shadow: lg
 
-Notes on specific changes made to modeling system in the latest release.
+Notes on specific model changes from each CMAQ release.
 
 +++
 
-```{button-link} DOCS/Release_Notes/CMAQ-Release-Notes.html
+```{button-link} DOCS/Release_Notes/README.html
 :color: info
 :shadow:
 Release Notes
@@ -94,7 +94,7 @@ Frequently asked questions for upgrading to the latest CMAQ versions.
 
 +++
 
-```{button-link} DOCS/Release_Notes/FAQ_README.html
+```{button-link} DOCS/Release_FAQ/README.html
 :color: info
 :shadow:
 FAQ Pages
@@ -108,7 +108,7 @@ FAQ Pages
 :class-img-top: w-25 m-auto py-4 dark-light
 :shadow: lg
 
-Resources for CMAQ and atmospheric modeling support and discussion.
+User support resources to connect with CMAQ users around the world.
 
 +++
 
@@ -135,7 +135,7 @@ Open Source License Information here: [MIT License](./license.md)
 :hidden:
 DOCS/Users_Guide/README.md
 DOCS/Users_Guide/Tutorials/README.md
-Release Notes  <DOCS/Release_Notes/CMAQ-Release-Notes.md>
-FAQs <DOCS/Release_Notes/FAQ_README.md>
+Release Notes  <DOCS/Release_Notes/README.md>
+FAQs <DOCS/Release_FAQ/README.md>
 
 ```
