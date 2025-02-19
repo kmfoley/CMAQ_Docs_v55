@@ -1,6 +1,6 @@
 # Community Support
 
-<a id=CMAQ-Forum></a> ![](./Release_Notes/images/CMAQ_Forum.png)
+<a id=CMAQ-Forum></a> [![](./Release_Notes/images/CMAQ_Forum.png)](https://forum.cmascenter.org/)
 
 Technical support for CMAQ, including questions about model inputs, downloading, compiling, and running the model, 
 and pre- and post-processing utilities, should be directed to the [CMAS Center User Forum](https://forum.cmascenter.org/). 
