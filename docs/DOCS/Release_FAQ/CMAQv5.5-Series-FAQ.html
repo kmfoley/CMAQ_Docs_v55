@@ -43,8 +43,8 @@
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'DOCS/Release_Notes/CMAQv5.5-Series-FAQ';</script>
-    <link rel="canonical" href="https://jbrunto.github.io/CMAQ_Docs_v55/DOCS/Release_Notes/CMAQv5.5-Series-FAQ.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'DOCS/Release_FAQ/CMAQv5.5-Series-FAQ';</script>
+    <link rel="canonical" href="https://jbrunto.github.io/CMAQ_Docs_v55/DOCS/Release_FAQ/CMAQv5.5-Series-FAQ.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -146,14 +146,14 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="CMAQ-Release-Notes.html">
+  <a class="nav-link nav-internal" href="../Release_Notes/README.html">
     Release Notes
   </a>
 </li>
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="FAQ_README.html">
+  <a class="nav-link nav-internal" href="README.html">
     FAQs
   </a>
 </li>
@@ -293,14 +293,14 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="CMAQ-Release-Notes.html">
+  <a class="nav-link nav-internal" href="../Release_Notes/README.html">
     Release Notes
   </a>
 </li>
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="FAQ_README.html">
+  <a class="nav-link nav-internal" href="README.html">
     FAQs
   </a>
 </li>
@@ -501,81 +501,81 @@
 <section id="instrumented-models">
 <h3>Instrumented Models<a class="headerlink" href="#instrumented-models" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Several updates were incorporated in CMAQ-ISAM: (1) includes the capability to quantify source contributions to total secondary organic aerosol (SOA) and individual species; (2) accounts for the loss of aerosol mass from gravitational settling was incorporated, so that the tagged and bulk concentrations matched more precisely; (3) incorporates a tag to attribute O3 to be of “stratospheric origin” based on the PV-scaling methodology; (4) addressed instabilities associated with mass distribution between tags immediately after cloud chemistry. See: <a class="reference internal" href="CMAQ-Release-Notes%3A-Instrumented-Models%3A-CMAQ-ISAM.html"><span class="std std-doc">CMAQ-ISAM Release Notes</span></a> for more information.</p></li>
-<li><p>In CMAQ-DDM: (1) enabled estimation of sensitivity of O3 to PV-O3 specification; (2) corrected calculation of second-order sensitivity in chemistry routines; (3) corrected error that caused incorrect dry deposition sensitivity in output. See  <a class="reference internal" href="CMAQ-Release-Notes%3A-Instrumented-Models%3A-CMAQ-DDM3D.html#cmaq-hddm-3d-second-order-sensitivity-fix"><span class="std std-ref">CMAQ-DDM Release Notes</span></a> for more information.</p></li>
+<li><p>Several updates were incorporated in CMAQ-ISAM: (1) includes the capability to quantify source contributions to total secondary organic aerosol (SOA) and individual species; (2) accounts for the loss of aerosol mass from gravitational settling was incorporated, so that the tagged and bulk concentrations matched more precisely; (3) incorporates a tag to attribute O3 to be of “stratospheric origin” based on the PV-scaling methodology; (4) addressed instabilities associated with mass distribution between tags immediately after cloud chemistry. See: <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Instrumented-Models%3A-CMAQ-ISAM.html"><span class="std std-doc">CMAQ-ISAM Release Notes</span></a> for more information.</p></li>
+<li><p>In CMAQ-DDM: (1) enabled estimation of sensitivity of O3 to PV-O3 specification; (2) corrected calculation of second-order sensitivity in chemistry routines; (3) corrected error that caused incorrect dry deposition sensitivity in output. See  <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Instrumented-Models%3A-CMAQ-DDM3D.html#cmaq-hddm-3d-second-order-sensitivity-fix"><span class="std std-ref">CMAQ-DDM Release Notes</span></a> for more information.</p></li>
 </ul>
 </section>
 <section id="on-line-coupling-of-cmaq-with-meteorological-models">
 <h3>On-line coupling of CMAQ with meteorological models<a class="headerlink" href="#on-line-coupling-of-cmaq-with-meteorological-models" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>CMAQv5.5 is the first public release that allows coupling of CMAQ with the Model for Prediction Across Scales (MPAS). Please see the <a class="reference internal" href="CMAQ-Release-Notes%3A-MPAS-CMAQ-Coupled-Model.html"><span class="std std-doc">MPAS-CMAQ release note</span></a> to learn more.</p></li>
-<li><p>A bug was identified within the CMAQ to WRF coupling routine in the CMAQv5.4 series; layer heights were incorrectly being assigned to wind speed in the plume rise calculations leading to erroneous allocation of point source emissions. Users of WRF-CMAQ are strongly encouraged to update to CMAQv5.5. See the <a class="reference internal" href="CMAQ-Release-Notes%3A-WRF-CMAQ-Coupled-Model.html#new-wrf-cmaq-model-using-wrfv44-and-cmaqv54"><span class="std std-ref">WRF-CMAQ Release Notes</span></a> for more information.</p></li>
+<li><p>CMAQv5.5 is the first public release that allows coupling of CMAQ with the Model for Prediction Across Scales (MPAS). Please see the <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-MPAS-CMAQ-Coupled-Model.html"><span class="std std-doc">MPAS-CMAQ release note</span></a> to learn more.</p></li>
+<li><p>A bug was identified within the CMAQ to WRF coupling routine in the CMAQv5.4 series; layer heights were incorrectly being assigned to wind speed in the plume rise calculations leading to erroneous allocation of point source emissions. Users of WRF-CMAQ are strongly encouraged to update to CMAQv5.5. See the <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-WRF-CMAQ-Coupled-Model.html#new-wrf-cmaq-model-using-wrfv44-and-cmaqv54"><span class="std std-ref">WRF-CMAQ Release Notes</span></a> for more information.</p></li>
 </ul>
 </section>
 <section id="chemistry">
 <h3>Chemistry<a class="headerlink" href="#chemistry" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>In the Community Regional Atmospheric Chemistry Multiphase Mechanism version 1 (CRACMM1), the rate of sulfate catalyzed IEPOX was updated. The impact is to increase sulfate (as less sulfate is taken up as organosulfate) and to decrease organic aerosol. If you are interested in learning more, please see the <a class="reference internal" href="CMAQ-Release-Notes%3A-Chemistry%3A-Community-Regional-Atmospheric-Chemistry-Multiphase-Mechanism-%28CRACMM%29.html#bug-fixes-for-cracmm1-iepox-uptake-rate"><span class="std std-ref">CRACMM1 release note</span></a>.</p></li>
-<li><p>CMAQv5.5 introduces CRACMM version 2. CRACMM2 includes several updates to CRACMM1. Many updates are intended to improve the representation of secondary formaldehyde (HCHO) in CRACMM. These include the incorporation of the AMORE v1.2 isoprene condensation into the primary CRACMM mechanism, updates to HCHO yields from monoterpenes, and the addition of styrene as a new explicit species.  Additional updates include changes to monoterpene nitrates that affect SOA formation and NOx recycling, the inclusion of emitted methane (ECH4), heterogeneous uptake of HO2 and NO3 radicals, and changes in how emissions of certain aromatic species are mapped to CRACMM species. If you are interested in learning more, please see the <a class="reference internal" href="CMAQ-Release-Notes%3A-Chemistry%3A-Community-Regional-Atmospheric-Chemistry-Multiphase-Mechanism-%28CRACMM%29.html#updated-mechanism-cracmm2"><span class="std std-ref">CRACMM2 release note</span></a>.</p></li>
-<li><p>The photolysis module was updated to correct an error in calculation of cloud optical depth for grid cells with sub-grid/convective clouds. The net impact is to increase the attenuation of photolysis frequencies under cloudy conditions. Please see the <a class="reference internal" href="CMAQ-Release-Notes%3A-Chemistry%3A-Photolysis.html"><span class="std std-doc">photolysis release note</span></a> to learn more.</p></li>
+<li><p>In the Community Regional Atmospheric Chemistry Multiphase Mechanism version 1 (CRACMM1), the rate of sulfate catalyzed IEPOX was updated. The impact is to increase sulfate (as less sulfate is taken up as organosulfate) and to decrease organic aerosol. If you are interested in learning more, please see the <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Chemistry%3A-Community-Regional-Atmospheric-Chemistry-Multiphase-Mechanism-%28CRACMM%29.html#bug-fixes-for-cracmm1-iepox-uptake-rate"><span class="std std-ref">CRACMM1 release note</span></a>.</p></li>
+<li><p>CMAQv5.5 introduces CRACMM version 2. CRACMM2 includes several updates to CRACMM1. Many updates are intended to improve the representation of secondary formaldehyde (HCHO) in CRACMM. These include the incorporation of the AMORE v1.2 isoprene condensation into the primary CRACMM mechanism, updates to HCHO yields from monoterpenes, and the addition of styrene as a new explicit species.  Additional updates include changes to monoterpene nitrates that affect SOA formation and NOx recycling, the inclusion of emitted methane (ECH4), heterogeneous uptake of HO2 and NO3 radicals, and changes in how emissions of certain aromatic species are mapped to CRACMM species. If you are interested in learning more, please see the <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Chemistry%3A-Community-Regional-Atmospheric-Chemistry-Multiphase-Mechanism-%28CRACMM%29.html#updated-mechanism-cracmm2"><span class="std std-ref">CRACMM2 release note</span></a>.</p></li>
+<li><p>The photolysis module was updated to correct an error in calculation of cloud optical depth for grid cells with sub-grid/convective clouds. The net impact is to increase the attenuation of photolysis frequencies under cloudy conditions. Please see the <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Chemistry%3A-Photolysis.html"><span class="std std-doc">photolysis release note</span></a> to learn more.</p></li>
 </ul>
 </section>
 <section id="dry-deposition-air-surface-exchange">
 <h3>Dry Deposition/Air Surface Exchange<a class="headerlink" href="#dry-deposition-air-surface-exchange" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>In STAGE, updates were made to land use mappings to an internal land use category via CMAQ_Control_STAGE.nml that is user customizable.  Updates were also made to rectify an underflow encountered in the STAGE Emerson in debug mode. See the <a class="reference internal" href="CMAQ-Release-Notes%3A-Dry-Deposition-Air-Surface-Exchange%3A-Surface-Tiled-Aerosol-and-Gaseous-Exchange-%28STAGE%29.html"><span class="std std-doc">STAGE release notes</span></a> to learn more.</p></li>
-<li><p>In M3DRY, (1) changes to Ammonia (NH3) deposition in M3DRY for model configurations without NH3 BIDI, (2) changes to NH3 dry deposition flux and NH3 emissions flux calculations in M3DRY, upward and downwards fluxes changed, but net flux remains the same. See the <a class="reference internal" href="CMAQ-Release-Notes%3A-Dry-Deposition-Air-Surface-Exchange%3A-M3DRY.html#revised-dry-dep-flux-for-nh3"><span class="std std-ref">M3DRY release note</span></a> to learn more.</p></li>
+<li><p>In STAGE, updates were made to land use mappings to an internal land use category via CMAQ_Control_STAGE.nml that is user customizable.  Updates were also made to rectify an underflow encountered in the STAGE Emerson in debug mode. See the <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Dry-Deposition-Air-Surface-Exchange%3A-Surface-Tiled-Aerosol-and-Gaseous-Exchange-%28STAGE%29.html"><span class="std std-doc">STAGE release notes</span></a> to learn more.</p></li>
+<li><p>In M3DRY, (1) changes to Ammonia (NH3) deposition in M3DRY for model configurations without NH3 BIDI, (2) changes to NH3 dry deposition flux and NH3 emissions flux calculations in M3DRY, upward and downwards fluxes changed, but net flux remains the same. See the <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Dry-Deposition-Air-Surface-Exchange%3A-M3DRY.html#revised-dry-dep-flux-for-nh3"><span class="std std-ref">M3DRY release note</span></a> to learn more.</p></li>
 </ul>
 </section>
 <section id="stratosphere-troposphere-exchange">
 <h3>Stratosphere-Troposphere Exchange<a class="headerlink" href="#stratosphere-troposphere-exchange" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Removed dependency on sigma-P coordinate system in PV-O3 scaling. The update impacted O3 distributions between 300-100hPa and generally improved model estimates relative to observations at these levels. See the <a class="reference internal" href="CMAQ-Release-Notes%3A-Stratospheric%E2%80%90Tropospheric-Exchange-%28STE%29.html"><span class="doc std std-doc">Stratospheric-Troposphere exchange release note</span></a>for more information.</p></li>
+<li><p>Removed dependency on sigma-P coordinate system in PV-O3 scaling. The update impacted O3 distributions between 300-100hPa and generally improved model estimates relative to observations at these levels. See the <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Stratospheric%E2%80%90Tropospheric-Exchange-%28STE%29.html"><span class="doc std std-doc">Stratospheric-Troposphere exchange release note</span></a>for more information.</p></li>
 </ul>
 </section>
 <section id="emissions">
 <h3>Emissions<a class="headerlink" href="#emissions" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Updates to the in-line version of MEGAN BDSNP, which corrects a bug in the pulsing subroutine of BDSNP (small impact on estimated soil NO). See the <a class="reference internal" href="CMAQ-Release-Notes%3A-Emissions-Updates%3A-Model-of-Emissions-of-Gases-and-Aerosols-from-Nature-%28MEGAN%29-Biogenic-Emissions.html#bdsnp-dry-hours-calculation.md"><span class="std std-ref">MEGAN-BDSNP</span></a> to learn more.</p></li>
+<li><p>Updates to the in-line version of MEGAN BDSNP, which corrects a bug in the pulsing subroutine of BDSNP (small impact on estimated soil NO). See the <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Emissions-Updates%3A-Model-of-Emissions-of-Gases-and-Aerosols-from-Nature-%28MEGAN%29-Biogenic-Emissions.html#bdsnp-dry-hours-calculation.md"><span class="std std-ref">MEGAN-BDSNP</span></a> to learn more.</p></li>
 </ul>
 </section>
 <section id="process-analysis-sulfur-tracking-model-stm">
 <h3>Process Analysis &amp; Sulfur Tracking Model (STM)<a class="headerlink" href="#process-analysis-sulfur-tracking-model-stm" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Fixes to Sulfur Tracking Model (STM) correct errors in attribution of sulfate from gas phase chemistry, which inadvertently got introduced in the previous model version. See <a class="reference internal" href="CMAQ-Release-Notes%3A-Process-Analysis-%26-Sulfur-Tracking-Model-%28STM%29.html#fix-to-option-for-sulfur-tracking-model"><span class="std std-ref">CMAQ-STM Release Notes</span></a> for more information.</p></li>
+<li><p>Fixes to Sulfur Tracking Model (STM) correct errors in attribution of sulfate from gas phase chemistry, which inadvertently got introduced in the previous model version. See <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Process-Analysis-%26-Sulfur-Tracking-Model-%28STM%29.html#fix-to-option-for-sulfur-tracking-model"><span class="std std-ref">CMAQ-STM Release Notes</span></a> for more information.</p></li>
 </ul>
 </section>
 <section id="structural-improvements">
 <h3>Structural Improvements<a class="headerlink" href="#structural-improvements" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Updated model code and run-scripts so that PV-O3 scaling can be invoked now as a runtime option. See the <a class="reference internal" href="CMAQ-Release-Notes%3A-Stratospheric%E2%80%90Tropospheric-Exchange-%28STE%29.html"><span class="doc std std-doc">Stratospheric-Troposphere exchange release note</span></a> for more information.</p></li>
+<li><p>Updated model code and run-scripts so that PV-O3 scaling can be invoked now as a runtime option. See the <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Stratospheric%E2%80%90Tropospheric-Exchange-%28STE%29.html"><span class="doc std std-doc">Stratospheric-Troposphere exchange release note</span></a> for more information.</p></li>
 </ul>
 </section>
 <section id="diagnostic-options">
 <h3>Diagnostic Options<a class="headerlink" href="#diagnostic-options" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Updates to ELMO to fix erroneous output for various PM aggregates (PMF_OC, PMF_NCOM, TNO3, etc.). See the <a class="reference internal" href="CMAQ-Release-Notes%3A-Diagnostic-Options.html"><span class="std std-doc">Diagnostic Options</span></a> release notes to learn more.</p></li>
+<li><p>Updates to ELMO to fix erroneous output for various PM aggregates (PMF_OC, PMF_NCOM, TNO3, etc.). See the <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Diagnostic-Options.html"><span class="std std-doc">Diagnostic Options</span></a> release notes to learn more.</p></li>
 </ul>
 </section>
 <section id="pre-processors-and-utilities">
 <h3>Pre-processors and Utilities<a class="headerlink" href="#pre-processors-and-utilities" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>MCIP: Updates were implemented to the definition of grid origin for fine-scale lambert conformal grids (i.e. &lt; 4km resolution). See the <a class="reference internal" href="CMAQ-Release-Notes%3A-Preprocessors.html#mcip"><span class="std std-ref">MCIP release note</span></a> for additional details.</p></li>
+<li><p>MCIP: Updates were implemented to the definition of grid origin for fine-scale lambert conformal grids (i.e. &lt; 4km resolution). See the <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Preprocessors.html#mcip"><span class="std std-ref">MCIP release note</span></a> for additional details.</p></li>
 </ul>
 </section>
 <section id="post-processors">
 <h3>Post-processors<a class="headerlink" href="#post-processors" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Corrected deposition SpecDef for NOy species. See <a class="reference internal" href="CMAQ-Release-Notes%3A-Postprocessors.html#corrected-deposition-species-definition-specdef_dep-files-for-missing-nitrogen-species"><span class="std std-ref">release note</span></a> for more information.</p></li>
-<li><p>Improved checks on formulas used by Combine. See <a class="reference internal" href="CMAQ-Release-Notes%3A-Postprocessors.html#improve-checks-on-formulas-used-by-combine"><span class="std std-ref">combine release note</span></a> for more details.</p></li>
-<li><p>Increase character limit for station ID in sitecmp_dailyO3 to accommodate emerging networks. See <a class="reference internal" href="CMAQ-Release-Notes%3A-Postprocessors.html#sitecmp_dailyo3"><span class="std std-ref">Site Compare Daily O3 release note</span></a> for more details.</p></li>
-<li><p>Updated time zone csv file used to time shift CMAQ outputs in HR2DAY program to version 4.1.0 released by Natural Earth. Minor impacts on h2day calculations due to time zone updates. See <a class="reference internal" href="CMAQ-Release-Notes%3A-Postprocessors.html#updating-tzcsv-to-natural-earth"><span class="std std-ref">HR2DAY release note</span></a> for more details.</p></li>
+<li><p>Corrected deposition SpecDef for NOy species. See <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Postprocessors.html#corrected-deposition-species-definition-specdef_dep-files-for-missing-nitrogen-species"><span class="std std-ref">release note</span></a> for more information.</p></li>
+<li><p>Improved checks on formulas used by Combine. See <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Postprocessors.html#improve-checks-on-formulas-used-by-combine"><span class="std std-ref">combine release note</span></a> for more details.</p></li>
+<li><p>Increase character limit for station ID in sitecmp_dailyO3 to accommodate emerging networks. See <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Postprocessors.html#sitecmp_dailyo3"><span class="std std-ref">Site Compare Daily O3 release note</span></a> for more details.</p></li>
+<li><p>Updated time zone csv file used to time shift CMAQ outputs in HR2DAY program to version 4.1.0 released by Natural Earth. Minor impacts on h2day calculations due to time zone updates. See <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Postprocessors.html#updating-tzcsv-to-natural-earth"><span class="std std-ref">HR2DAY release note</span></a> for more details.</p></li>
 </ul>
 </section>
 <section id="python-tools">
 <h3>Python Tools<a class="headerlink" href="#python-tools" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>New Python tool to create CMAQ-ready grid masks from a shape file for defining regions and region families with DESID and using geographic source regions when running CMAQ-ISAM. See <a class="reference internal" href="CMAQ-Release-Notes%3A-PYTOOLS.html#shp2cmaq-create-cmaq-ready-file-from-shapefile"><span class="std std-ref">CMAQ-Python tools release note</span></a>. for more details.</p></li>
+<li><p>New Python tool to create CMAQ-ready grid masks from a shape file for defining regions and region families with DESID and using geographic source regions when running CMAQ-ISAM. See <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-PYTOOLS.html#shp2cmaq-create-cmaq-ready-file-from-shapefile"><span class="std std-ref">CMAQ-Python tools release note</span></a>. for more details.</p></li>
 </ul>
 <p><a id=update_v54_v55></a></p>
 </section>
@@ -602,7 +602,7 @@
 <h2>What differences should I expect in my model results with v5.5 compared to v5.4?<a class="headerlink" href="#what-differences-should-i-expect-in-my-model-results-with-v5-5-compared-to-v5-4" title="Link to this heading">#</a></h2>
 <p>The following summary is based on our testing of CMAQv5.4 and CMAQv5.5 using annual 2018 simulations performed over both the northern hemisphere (108 km horizontal grid spacing, 44 vertical layers) and the CONUS (12 km horizontal grid resolution, 35 vertical layers). The 108 km simulations were used to generate lateral boundary conditions for the 12 km simulations, with science options (except chemical mechanisms &amp; bidi-directional ammonia exchange) matching across both domains.</p>
 <p>All CMAQv5.5 108 km simulations used the cb6r5m_ae7_aq chemical mechanism that includes a detailed representation of halogen chemistry while the 12 km simulations used either the cb6r5_ae7_aq (simplified halogen chemistry) or cracmm2 chemical mechanisms. The CMAQv5.4 108 km simulations used the cb6r5m_ae7_aq chemical mechanism while the 12 km simulations used either the cb6r5_ae7_aq (simplified halogen chemistry), or cracmm1 chemical mechanisms.</p>
-<p>The updates made to the representation of aerosol dry deposition in CMAQv5.4 differ markedly between the M3Dry and STAGE dry deposition schemes. CMAQv5.4 M3Dry updates are based on on <a class="reference external" href="https://doi.org/10.1029/2022MS003050">Pleim et al., 2022</a> (<a class="reference internal" href="CMAQ-Release-Notes%3A-Dry-Deposition-Air-Surface-Exchange%3A-M3DRY.html#new-aerosol-deposition-model-aero_depv"><span class="std std-ref">see M3DRY release notes</span></a>) and STAGE updates in its default configuration are based on <a class="reference external" href="https://doi.org/10.1073/pnas.2014761117">Emerson et al., 2020</a> (<a class="reference internal" href="CMAQ-Release-Notes%3A-Dry-Deposition-Air-Surface-Exchange%3A-Surface-Tiled-Aerosol-and-Gaseous-Exchange-%28STAGE%29.html"><span class="std std-doc">see STAGE release notes</span></a>). To investigate whether the impacts of switching from CMAQv5.4 to CMAQv5.5 differ depending on whether users select the M3Dry or STAGE dry deposition scheme, all simulations comparing v5.4 and v5.5 were performed for both M3Dry and STAGE and results for both schemes are summarized below</p>
+<p>The updates made to the representation of aerosol dry deposition in CMAQv5.4 differ markedly between the M3Dry and STAGE dry deposition schemes. CMAQv5.4 M3Dry updates are based on on <a class="reference external" href="https://doi.org/10.1029/2022MS003050">Pleim et al., 2022</a> (<a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Dry-Deposition-Air-Surface-Exchange%3A-M3DRY.html#new-aerosol-deposition-model-aero_depv"><span class="std std-ref">see M3DRY release notes</span></a>) and STAGE updates in its default configuration are based on <a class="reference external" href="https://doi.org/10.1073/pnas.2014761117">Emerson et al., 2020</a> (<a class="reference internal" href="#./CMAQ-Release-Notes:-Dry-Deposition-Air-Surface-Exchange:-Surface-Tiled-Aerosol-and-Gaseous-Exchange-(STAGE).md"><span class="xref myst">see STAGE release notes</span></a>). To investigate whether the impacts of switching from CMAQv5.4 to CMAQv5.5 differ depending on whether users select the M3Dry or STAGE dry deposition scheme, all simulations comparing v5.4 and v5.5 were performed for both M3Dry and STAGE and results for both schemes are summarized below</p>
 <section id="natural-emissions">
 <h3>Natural Emissions<a class="headerlink" href="#natural-emissions" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -722,11 +722,11 @@
 <h2>Community Contributions<a class="headerlink" href="#community-contributions" title="Link to this heading">#</a></h2>
 <p>The CMAQ team would like to thank our user community for contributing to model updates in CMAQv5.5 by identifying issues, performing tests, and/or proposing code changes. The following v5.5 updates include a community contribution*.</p>
 <ul class="simple">
-<li><p>Updates to unidirectional fluxes in M3DRY came out of fruitful conversations with researchers Brett Schichtel and Gustavo Cuchiara Copstein from Colorado State’s Cooperative Institute for Research in the Atmosphere <a class="reference internal" href="CMAQ-Release-Notes%3A-Dry-Deposition-Air-Surface-Exchange%3A-M3DRY.html#revised-dry-dep-flux-for-nh3"><span class="std std-ref">(Release Note)</span></a>.</p></li>
-<li><p>An issue identified by shatani on the <a class="reference external" href="https://forum.cmascenter.org/t/aerosol-bulk-name-as-emission-species-name-in-the-desid-chemical-mapping-control/3692/1">CMAS User Forum</a> led to an updated to the DESID module <a class="reference internal" href="CMAQ-Release-Notes%3A-Emissions-Updates%3A-Detailed-Emissions-Scaling-Isolation-and-Diagnostics-Module-%28DESID%29.html#chemical-family-support"><span class="std std-ref">(Release Note)</span></a>.</p></li>
-<li><p>Bonyoung Koo identified an issue on the <a class="reference external" href="https://forum.cmascenter.org/t/incorrect-pm25-na-calculation-in-the-elmo-module/4615">CMAS User Forum </a> that led to an update to the ELMO module <a class="reference internal" href="CMAQ-Release-Notes%3A-Diagnostic-Options.html#correct-calculation-of-pm1-pm25-and-pm25to10-as-well-as-speciated-na-k-ca-and-mg-in-elmo"><span class="std std-ref">(Release Note)</span></a>.</p></li>
+<li><p>Updates to unidirectional fluxes in M3DRY came out of fruitful conversations with researchers Brett Schichtel and Gustavo Cuchiara Copstein from Colorado State’s Cooperative Institute for Research in the Atmosphere <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Dry-Deposition-Air-Surface-Exchange%3A-M3DRY.html#revised-dry-dep-flux-for-nh3"><span class="std std-ref">(Release Note)</span></a>.</p></li>
+<li><p>An issue identified by shatani on the <a class="reference external" href="https://forum.cmascenter.org/t/aerosol-bulk-name-as-emission-species-name-in-the-desid-chemical-mapping-control/3692/1">CMAS User Forum</a> led to an updated to the DESID module <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Emissions-Updates%3A-Detailed-Emissions-Scaling-Isolation-and-Diagnostics-Module-%28DESID%29.html#chemical-family-support"><span class="std std-ref">(Release Note)</span></a>.</p></li>
+<li><p>Bonyoung Koo identified an issue on the <a class="reference external" href="https://forum.cmascenter.org/t/incorrect-pm25-na-calculation-in-the-elmo-module/4615">CMAS User Forum </a> that led to an update to the ELMO module <a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Diagnostic-Options.html#correct-calculation-of-pm1-pm25-and-pm25to10-as-well-as-speciated-na-k-ca-and-mg-in-elmo"><span class="std std-ref">(Release Note)</span></a>.</p></li>
 <li><p>An issue identified by Abi on the <a class="reference external" href="https://forum.cmascenter.org/t/cmaqv5-2-ddm-not-able-to-output-more-than-one-sens/3669/1">CMAS User Forum</a> led to an update to CMAQ-HDDM to allow for correct sub-setting of variables to the ASENS output file.</p></li>
-<li><p>Sheng-Po Chen identified an error in the molecular weight of HGIIGAS in several species tables on the <a class="reference external" href="https://forum.cmascenter.org/t/error-of-the-molecular-weight-for-hgiigas/4673">CMAS User Forum</a> which has now been fixed (<a class="reference internal" href="CMAQ-Release-Notes%3A-Chemistry%3A-Carbon-Bond-6-Mechanism-%28CB6%29.html#correction-to-molecular-weight-of-hgiigas-in-species-tables"><span class="std std-ref">Release Note</span></a>).</p></li>
+<li><p>Sheng-Po Chen identified an error in the molecular weight of HGIIGAS in several species tables on the <a class="reference external" href="https://forum.cmascenter.org/t/error-of-the-molecular-weight-for-hgiigas/4673">CMAS User Forum</a> which has now been fixed (<a class="reference internal" href="../Release_Notes/CMAQ-Release-Notes%3A-Chemistry%3A-Carbon-Bond-6-Mechanism-%28CB6%29.html#correction-to-molecular-weight-of-hgiigas-in-species-tables"><span class="std std-ref">Release Note</span></a>).</p></li>
 <li><p>Will Hatheway caught a typo in the config_cmaq.csh file and proposed an update on the <a class="reference external" href="https://github.com/USEPA/CMAQ/issues/199">CMAQ GitHub repository</a>.</p></li>
 <li><p>Simon Rosanka, from the University of California, Irvine, proposed a bugfix to CCTM/src/gas/ros3/rbdriver.F on the <a class="reference external" href="https://github.com/USEPA/CMAQ/pull/198">CMAQ GitHug repo</a> to avoid a model crash when using the conditional rbstats option.</p></li>
 <li><p>Feng Liu identified an issue in CMAQ-HDDM on the <a class="reference external" href="https://forum.cmascenter.org/t/cmaqv5-4-hddm-gives-too-high-second-order-sensitivity/3722/1">CMAS User Forum</a> and provided testing and calculations that led to an update to address unreasonably high 2nd order sensitivity coefficients.</p></li>
