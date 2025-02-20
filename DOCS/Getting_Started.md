@@ -21,4 +21,4 @@ There are many resources available for learning about the CMAQ system.  This tab
 
 <a id=cmaq_data></a>
 ## Where to find CMAQ data
-* Many sets of model inputs are cataloged on the [CMAS data warehouse](https://dataverse.unc.edu/dataverse/cmascenter)
+* CMAQ-ready input files are cataloged on the [CMAS Center Data Warehouse](https://dataverse.unc.edu/dataverse/cmascenter)
