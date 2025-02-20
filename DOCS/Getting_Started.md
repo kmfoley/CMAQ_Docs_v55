@@ -4,7 +4,7 @@ There are many resources available for learning about the CMAQ system.  This tab
 
 |**I want to ...**|**Start with**|
 |:--------------|:----|
-|... learn about CMAQ's purpose, history and design, as well as see a sample of CMAQ applications. | [US EPA CMAQ Website](www.epa.gov/cmaq)|
+|... learn about CMAQ's purpose, history and design, as well as see a sample of CMAQ applications. | [US EPA CMAQ Website](https://www.epa.gov/cmaq)|
 |... start running the model but am not sure where to start. | [Running a simulation](#getting_running) section below |
 |... upgrade to the latest version of CMAQ but I'm not sure how my workflow and results will be impacted. | [Release Frequently Asked Questions](./Release_FAQ/README.md) |
 |... see what code changes have happened in a specific section of the model in the last several years. | [CMAQ Release Notes](./Release_Notes/README.md)|
