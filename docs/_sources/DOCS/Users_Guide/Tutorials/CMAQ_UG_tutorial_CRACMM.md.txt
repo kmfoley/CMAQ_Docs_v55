@@ -4,7 +4,7 @@ Author: Havala Pye (pye.havala@epa.gov) | v5.4
 
 Update: Havala Pye (pye.havala@epa.gov) | v5.5
 
-CRACMM was first introduced in CMAQv5.4 as two versions: CRACMM1 and CRACMM1AMORE. Those versions are retained in v5.5 and an updated version, CRACMM2, is released for the first time. CRACMM2 merges the CRACMM and CRACMM-AMORE lines of development into one path going forward. Thus, CRACMM2 is an update to both CRACMM1 and CRACMM1AMORE. CRACMM has a separate supporting repository at https://www.github.com/USEPA/CRACMM which contains additional information to facilitate use of CRACMM in CMAQ. This tutorial provides an overview of how to get starting running CRACMM in CMAQ.
+CRACMM was first introduced in CMAQv5.4 as two versions: CRACMM1 and CRACMM1AMORE. Those versions are retained in v5.5 and an updated version, CRACMM2, is released for the first time. CRACMM2 merges the CRACMM and CRACMM-AMORE lines of development into one path going forward. Thus, CRACMM2 is an update to both CRACMM1 and CRACMM1AMORE. CRACMM has a separate supporting repository at [https://www.github.com/USEPA/CRACMM](https://www.github.com/USEPA/CRACMM) which contains additional information to facilitate use of CRACMM in CMAQ. This tutorial provides an overview of how to get starting running CRACMM in CMAQ.
 
 ## How is running CRACMM different than running other chemical mechanisms in CMAQ?
 
