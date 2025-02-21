@@ -1,11 +1,3 @@
-[](relative_links)  
-
-[link_13.6]: ../../CCTM/scripts/run_cctm_Bench_2018_12NE3.WRFCMAQ.csh  
-
-[](hardcode_links)  
-
-[link_13.6]: https://github.com/USEPA/CMAQ/blob/main/CCTM/scripts/run_cctm_Bench_2018_12NE3.WRFCMAQ.csh  
-
 <!-- BEGIN COMMENT -->
 
 [<< Previous Chapter](CMAQ_UG_ch12_sulfur_tracking.md) - [Home](README.md) - [Next Chapter >>](CMAQ_UG_ch14_MPAS-CMAQ.md)
@@ -97,3 +89,16 @@ and for more details on the 2-way Coupled WRF-CMAQ system see: http://www.cmasce
 [<< Previous Chapter](CMAQ_UG_ch12_sulfur_tracking.md) - [Home](README.md) - [Next Chapter >>](CMAQ_UG_ch14_MPAS-CMAQ.md)<br>
 CMAQv5.5 User's Guide <br>
 <!-- END COMMENT -->
+
+
+[](relative_links_start)  
+
+[link_13.6]: ../../CCTM/scripts/run_cctm_Bench_2018_12NE3.WRFCMAQ.csh  
+
+[](relative_links_end)  
+
+
+[](hardcode_links)  
+
+[link_13.6]: https://github.com/USEPA/CMAQ/blob/main/CCTM/scripts/run_cctm_Bench_2018_12NE3.WRFCMAQ.csh  
+
