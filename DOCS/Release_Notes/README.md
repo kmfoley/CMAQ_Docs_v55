@@ -1,6 +1,6 @@
-# CMAQ 5.5 Release Notes
+# CMAQ Release Notes
 
-This page contains links to Wiki pages describing current and past changes to the CMAQ system.
+The following links provide Release Notes for CMAQv5.4 onward.  Links for Release Notes for previous CMAQ versions are available [here](https://www.epa.gov/cmaq/cmaq-documentation#release-notes).
 
    * [Instrumented Models](./CMAQ-Release-Notes:-Instrumented-Models.md)
    * [MPAS-CMAQ Coupled Model](./CMAQ-Release-Notes:-MPAS-CMAQ-Coupled-Model.md)
@@ -19,4 +19,4 @@ This page contains links to Wiki pages describing current and past changes to th
    * [Stratospheric-Tropospheric Exchange (STE)](./CMAQ-Release-Notes:-Stratospheric‐Tropospheric-Exchange-(STE).md)
 
 
-For a high level summary and comparison to previous versions please see the [CMAQv5.4 Series FAQ](../Release_FAQ/CMAQv5.4-Series-FAQ.md).
+For a high level summary and comparison to previous versions please see the [Release FAQ pages](../Release_FAQ/README.md).
