@@ -44,7 +44,7 @@ See the [WRF-CMAQ Benchmark Tutorial](Tutorials/CMAQ_UG_tutorial_WRF-CMAQ_Benchm
 
 ## 13.6 WRF Namelist Options
 
-As with the previous version of the coupled model (WRFv4.4-CMAQv5.4), all related runtime options are controlled via the WRF namelist under the &wrf_cmaq section. For convenience these options are set as runscript variables (look for the section labeled &wrf_cmaq in the [sample runscript](../../../CCTM/scripts/run_cctm_Bench_2016_12SE1.WRFCMAQ.csh)) and automatically duplicated when creating the WRF namelist. There are five parameters with varying options (see below): 
+As with the previous version of the coupled model (WRFv4.4-CMAQv5.4), all related runtime options are controlled via the WRF namelist under the &wrf_cmaq section. For convenience these options are set as runscript variables (look for the section labeled &wrf_cmaq in the [sample runscript][link_13.6]) and automatically duplicated when creating the WRF namelist. There are five parameters with varying options (see below): 
   
   
 | Name | Value | Description | 
@@ -89,3 +89,16 @@ and for more details on the 2-way Coupled WRF-CMAQ system see: http://www.cmasce
 [<< Previous Chapter](CMAQ_UG_ch12_sulfur_tracking.md) - [Home](README.md) - [Next Chapter >>](CMAQ_UG_ch14_MPAS-CMAQ.md)<br>
 CMAQv5.5 User's Guide <br>
 <!-- END COMMENT -->
+
+
+[](relative_links_start)  
+
+[link_13.6]: ../../CCTM/scripts/run_cctm_Bench_2018_12NE3.WRFCMAQ.csh  
+
+[](relative_links_end)  
+
+
+[](hardcode_links)  
+
+[link_13.6]: https://github.com/USEPA/CMAQ/blob/main/CCTM/scripts/run_cctm_Bench_2018_12NE3.WRFCMAQ.csh  
+
