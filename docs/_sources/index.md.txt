@@ -4,10 +4,8 @@ CMAQ: The Community Multiscale Air Quality Modeling System
 This website contains documentation for the [Community Multiscale Air Quality (CMAQ; "see-mak")](https://epa.gov/cmaq) modeling system. Source code and sample scripts are provided in the CMAQ GitHub repository: [https://github.com/USEPA/CMAQ](https://github.com/USEPA/CMAQ)
 
 :::{note}
-This documentation is currently under development. Please email CMAQ_Team@epa.gov if you encounter any issues.
+This documentation is currently under development. Please email <CMAQ_Team@epa.gov> if you encounter any issues.
 :::
-
-This website contains documentation for the [Community Multiscale Air Quality (CMAQ)](https://epa.gov/cmaq) modeling system. While documentation is packaged with the code when it is downloaded or cloned, users are encouraged to go [online](https://github.com/USEPA/CMAQ/tree/main/DOCS) to view the latest version.
 
 ::::{grid} 2 2 3 3
 
