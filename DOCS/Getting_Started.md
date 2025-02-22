@@ -2,7 +2,7 @@
 
 There are many resources available for learning about the CMAQ system.  This table will help you find the right starting place for your situation. 
 
-|**I want to ...**|**Start with the**|
+|**I want to ...**|**Start with **|
 |:--------------|:----|
 |... learn about CMAQ's purpose, history and design, as well as see a sample of CMAQ applications. | [US EPA CMAQ Website](https://www.epa.gov/cmaq)|
 |... find an overview of the CMAQ system including software requirements, inputs, configuration options, outputs, and analysis tools| [CMAQ's comprehensive User's Guide](./Users_Guide/README.md)|
@@ -18,8 +18,8 @@ There are many resources available for learning about the CMAQ system.  This tab
 |... start running the global MPAS-CMAQ coupled model | [MPAS-CMAQ code repository](https://github.com/USEPA/CMAQ/tree/MPAS_CMAQ) and the [MPAS-CMAQ Benchmark Tutorial](https://github.com/USEPA/CMAQ/blob/MPAS_CMAQ/DOCS/Users_Guide/PDF/MPAS_CMAQ_guide.pdf)|
 |... run CMAQ on a Cloud Service Provider | [CMAS Center tutorial for running CMAQ on Amazon Web Services](https://pcluster-cmaq.readthedocs.io/en/latest/index.html) |
 |... find data files with CMAQ estimates of air pollutants including toxics and deposition | [CMAQ Data](#cmaq_data) section below|
-|... contribute code to the CMAQ repository | Contact [the CMAQ Team](mailto:CMAQ_Team@epa.gov) to learn more|
-|... share model data with the CMAQ user community | The [Data submission form](https://docs.google.com/forms/d/1lH6UdllyVvD-ISATfPxMqwe3Xr6n2ed6AiGkEspxVag/) for the CMAS Center Data Warehouse| 
+|... contribute code to the CMAQ repository | Contacting [the CMAQ Team](mailto:CMAQ_Team@epa.gov) to learn more|
+|... share model data with the CMAQ user community | [Data submission form](https://docs.google.com/forms/d/1lH6UdllyVvD-ISATfPxMqwe3Xr6n2ed6AiGkEspxVag/) for the CMAS Center Data Warehouse| 
 
 
 <a id=cmaq_data></a>
