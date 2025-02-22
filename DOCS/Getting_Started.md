@@ -2,7 +2,7 @@
 
 There are many resources available for learning about the CMAQ system.  This table will help you find the right starting place for your situation. 
 
-|**I want to ...**|**Start with **|
+|**I want to ...**|**Start with**|
 |:--------------|:----|
 |... learn about CMAQ's purpose, history and design, as well as see a sample of CMAQ applications. | [US EPA CMAQ Website](https://www.epa.gov/cmaq)|
 |... find an overview of the CMAQ system including software requirements, inputs, configuration options, outputs, and analysis tools| [CMAQ's comprehensive User's Guide](./Users_Guide/README.md)|
